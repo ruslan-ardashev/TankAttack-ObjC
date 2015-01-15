@@ -11,11 +11,12 @@
 		442D35F71A683F7B0017DDF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D35F61A683F7B0017DDF6 /* AppDelegate.m */; };
 		442D35FA1A683F7B0017DDF6 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D35F91A683F7B0017DDF6 /* GameScene.m */; };
 		442D35FC1A683F7B0017DDF6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 442D35FB1A683F7B0017DDF6 /* GameScene.sks */; };
-		442D35FF1A683F7B0017DDF6 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D35FE1A683F7B0017DDF6 /* GameViewController.m */; };
 		442D36021A683F7B0017DDF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442D36001A683F7B0017DDF6 /* Main.storyboard */; };
 		442D36041A683F7C0017DDF6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 442D36031A683F7C0017DDF6 /* Images.xcassets */; };
 		442D36071A683F7C0017DDF6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 442D36051A683F7C0017DDF6 /* LaunchScreen.xib */; };
 		442D36131A683F7C0017DDF6 /* TankAttackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D36121A683F7C0017DDF6 /* TankAttackTests.m */; };
+		442D36221A6840CE0017DDF6 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D361F1A6840CE0017DDF6 /* GameViewController.m */; };
+		442D36251A6849680017DDF6 /* SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D36241A6849680017DDF6 /* SplashScreen.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,17 +35,19 @@
 		442D35F31A683F7B0017DDF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		442D35F51A683F7B0017DDF6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		442D35F61A683F7B0017DDF6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		442D35F81A683F7B0017DDF6 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
-		442D35F91A683F7B0017DDF6 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		442D35F81A683F7B0017DDF6 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = ../GameScene.h; sourceTree = "<group>"; };
+		442D35F91A683F7B0017DDF6 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GameScene.m; path = ../GameScene.m; sourceTree = "<group>"; };
 		442D35FB1A683F7B0017DDF6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		442D35FD1A683F7B0017DDF6 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
-		442D35FE1A683F7B0017DDF6 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		442D36011A683F7B0017DDF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		442D36031A683F7C0017DDF6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		442D36061A683F7C0017DDF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		442D360C1A683F7C0017DDF6 /* TankAttackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TankAttackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		442D36111A683F7C0017DDF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		442D36121A683F7C0017DDF6 /* TankAttackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TankAttackTests.m; sourceTree = "<group>"; };
+		442D361E1A6840CE0017DDF6 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		442D361F1A6840CE0017DDF6 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		442D36231A6849680017DDF6 /* SplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreen.h; sourceTree = "<group>"; };
+		442D36241A6849680017DDF6 /* SplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreen.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,13 +89,12 @@
 		442D35F01A683F7B0017DDF6 /* TankAttack */ = {
 			isa = PBXGroup;
 			children = (
+				442D361D1A6840CE0017DDF6 /* Controller */,
+				442D36201A6840CE0017DDF6 /* Model */,
+				442D36211A6840CE0017DDF6 /* View */,
 				442D35F51A683F7B0017DDF6 /* AppDelegate.h */,
 				442D35F61A683F7B0017DDF6 /* AppDelegate.m */,
-				442D35F81A683F7B0017DDF6 /* GameScene.h */,
-				442D35F91A683F7B0017DDF6 /* GameScene.m */,
 				442D35FB1A683F7B0017DDF6 /* GameScene.sks */,
-				442D35FD1A683F7B0017DDF6 /* GameViewController.h */,
-				442D35FE1A683F7B0017DDF6 /* GameViewController.m */,
 				442D36001A683F7B0017DDF6 /* Main.storyboard */,
 				442D36031A683F7C0017DDF6 /* Images.xcassets */,
 				442D36051A683F7C0017DDF6 /* LaunchScreen.xib */,
@@ -125,6 +127,33 @@
 				442D36111A683F7C0017DDF6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		442D361D1A6840CE0017DDF6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				442D361E1A6840CE0017DDF6 /* GameViewController.h */,
+				442D361F1A6840CE0017DDF6 /* GameViewController.m */,
+				442D35F81A683F7B0017DDF6 /* GameScene.h */,
+				442D35F91A683F7B0017DDF6 /* GameScene.m */,
+				442D36231A6849680017DDF6 /* SplashScreen.h */,
+				442D36241A6849680017DDF6 /* SplashScreen.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		442D36201A6840CE0017DDF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		442D36211A6840CE0017DDF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +205,7 @@
 				TargetAttributes = {
 					442D35ED1A683F7B0017DDF6 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = PF8FZC9FJZ;
 					};
 					442D360B1A683F7C0017DDF6 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -228,10 +258,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				442D35FF1A683F7B0017DDF6 /* GameViewController.m in Sources */,
+				442D36221A6840CE0017DDF6 /* GameViewController.m in Sources */,
 				442D35F71A683F7B0017DDF6 /* AppDelegate.m in Sources */,
 				442D35FA1A683F7B0017DDF6 /* GameScene.m in Sources */,
 				442D35F41A683F7B0017DDF6 /* main.m in Sources */,
+				442D36251A6849680017DDF6 /* SplashScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +307,7 @@
 		442D36141A683F7C0017DDF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -317,7 +348,7 @@
 		442D36151A683F7C0017DDF6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -422,6 +453,7 @@
 				442D36181A683F7C0017DDF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		442D36191A683F7C0017DDF6 /* Build configuration list for PBXNativeTarget "TankAttackTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +462,7 @@
 				442D361B1A683F7C0017DDF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -11,4 +11,10 @@
 
 @interface GameViewController : UIViewController
 
+// Game Parameters
++ (CGFloat)width;
++ (void)setWidth:(CGFloat)width;
++ (CGFloat)height;
++ (void)setHeight:(CGFloat)height;
+
 @end
