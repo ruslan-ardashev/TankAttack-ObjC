@@ -6,8 +6,17 @@
 //  Copyright (c) 2015 Ruslan Ardashev. All rights reserved.
 //
 
-#import <SpriteKit/SpriteKit.h>
+@class World;
 
-@interface Overlay : SKNode
+#import <SpriteKit/SpriteKit.h>
+#import "World.h"
+#import "Joystick.h"
+
+@interface Overlay : SKSpriteNode
+
+- (id)initIntoWorld:(World *)world;
+- (double)getXVelocity;
+- (double)getYVelocity;
+
 
 @end
