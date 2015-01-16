@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 
+
+#define DEFAULT_FONT @"DamascusBold"
+
 #define PLAYER_SPEED 0.025       // Compensates for a crazy Joystick velocity
 #define MINION_SPEED 5
 
