@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 
+#define PLAYER_SPEED 0.025       // Compensates for a crazy Joystick velocity
+#define MINION_SPEED 5
+
+
 @interface UIColor (HexColor)
 
 + (UIColor *)UIColorFromHexString:(NSString *)string;

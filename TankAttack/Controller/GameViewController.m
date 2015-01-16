@@ -52,6 +52,7 @@
 
 @end
 
+
 @implementation GameViewController {
     
     SKView *_view;
@@ -117,6 +118,7 @@ static CGFloat gameHeight;
     [super viewDidLoad];
     
     sharedInstance = self;
+
     
     [GameViewController setSize:self.view.frame.size];
     
