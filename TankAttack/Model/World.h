@@ -9,6 +9,7 @@
 #import <SpriteKit/SpriteKit.h>
 #import "GameViewController.h"
 #import "Player.h"
+#import "Overlay.h"
 
 @interface World : SKScene
 

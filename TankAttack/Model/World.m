@@ -8,7 +8,10 @@
 
 #import "World.h"
 
+
 @implementation World {
+    
+    Overlay *_overlay;
     
 }
 
@@ -16,15 +19,17 @@
     
     self = [super initWithSize:size];
     NSLog(@"initWithSize on world: x: %f, y: %f", size.width, size.height);
-    self.scaleMode = SKSceneScaleModeAspectFill;
     self.backgroundColor = [UIColor lightGrayColor];
+    self.scaleMode = SKSceneScaleModeResizeFill;
     return self;
     
 }
 
 - (SKScene *)createScene {
     
+    [self createControllerOverlay];
     [self createInitialSprites];
+    
     return self;
     
 }
@@ -38,11 +43,16 @@
     
 }
 
+- (void)createControllerOverlay {
+    
+    _overlay = [[Overlay alloc] initIntoWorld:self];
+    
+}
+
 - (void)createPlayerSprite {
     
-    
-    _playerSprite = [[Player alloc] initWithLocation:[GameViewController playerInitLocation]];
-    NSLog(@"called create player sprite: %@", _playerSprite);
+    NSLog(@"TODO: modify player init to reflect boundaries");
+    _playerSprite = [[Player alloc] initWithLocation:[GameViewController playerInitLocation] WithBottomBoundary:0 WithTopBoundary:1000 WithLeftBoundary:0 WithRightBoundary:1000];
     [self addChild:_playerSprite];
     
 }
@@ -56,7 +66,6 @@
 - (void)update:(CFTimeInterval)currentTime {
     
     /* Called before each frame is rendered */
-    
     [self updateSprites];
     
 }
@@ -65,6 +74,8 @@
     
     // From my own TankAttack-Java done for CS308 (once the course is over, will open-source)
 //    playerSprite.updateLocation();
+    [self handlePlayerSprite];
+    
 //    handleFiring();             // Handle Player Firing
 //    updateEnemySprites();       // also handles enemy fire
 //    updateBulletMovements();    // Bullet Movement
@@ -75,4 +86,39 @@
     
 }
 
+- (void)handlePlayerSprite {
+    
+    [self updatePlayerLocation];
+    [self handlePlayerFiring];
+    
+}
+
+- (void)updatePlayerLocation {
+    
+    double xIncrement = [_overlay getXVelocity];
+    double yIncrement = [_overlay getYVelocity];
+    
+    [_playerSprite updateLocationWithX:xIncrement WithY:yIncrement];
+    
+}
+
+- (void)handlePlayerFiring {
+    
+    
+    
+}
+
+
+
 @end
+
+
+
+
+
+
+
+
+
+
+
