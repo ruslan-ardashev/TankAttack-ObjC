@@ -21,6 +21,7 @@
 + (CGFloat)width;
 + (CGFloat)height;
 + (CGSize)size;
++ (CGPoint)playerInitLocation;
 + (void)setSize:(CGSize)size;
 
 // Class Methods
