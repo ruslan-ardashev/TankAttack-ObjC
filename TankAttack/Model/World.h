@@ -10,4 +10,7 @@
 
 @interface World : SKScene
 
+- (SKScene *)createScene;
+- (void)initAnimation;
+
 @end
