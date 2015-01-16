@@ -6,8 +6,6 @@
 //  Copyright (c) 2015 Ruslan Ardashev. All rights reserved.
 //
 
-#import "GameScene.h"
-
-@interface SplashScreen : GameScene
+@interface SplashScreen : SKScene
 
 @end

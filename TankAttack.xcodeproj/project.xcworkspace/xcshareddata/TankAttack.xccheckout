@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>11AFA8A8-A1DE-45B5-9B49-28B6DE444213</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TankAttack</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>02FB32A7A3E2EB7AD9DDB23ADBEA3ACEE9028AFF</key>
+		<string>https://github.com/TheSneakyNarwhal/SpriteKit-Joystick.git</string>
+		<key>097E6A8CB2A047E911E0D1C3E817C16644718729</key>
+		<string>https://github.com/ruslan120101/TankAttack-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TankAttack.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>02FB32A7A3E2EB7AD9DDB23ADBEA3ACEE9028AFF</key>
+		<string>../../TankAttack/Joystick/</string>
+		<key>097E6A8CB2A047E911E0D1C3E817C16644718729</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ruslan120101/TankAttack-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>097E6A8CB2A047E911E0D1C3E817C16644718729</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>02FB32A7A3E2EB7AD9DDB23ADBEA3ACEE9028AFF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Joystick</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>097E6A8CB2A047E911E0D1C3E817C16644718729</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TankAttack</string>
+		</dict>
+	</array>
+</dict>
+</plist>

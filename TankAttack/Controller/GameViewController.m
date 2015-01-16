@@ -7,8 +7,28 @@
 //
 
 #import "GameViewController.h"
-#import "GameScene.h"
 #import "SplashScreen.h"
+#import "World.h"
+#import "FirstWorld.h"
+#import "
+
+
+@implementation UIColor (HexColor)
+
++ (UIColor *)UIColorFromHexString:(NSString *)string {
+    
+    // http://stackoverflow.com/questions/1560081/how-can-i-create-a-uicolor-from-a-hex-string
+    // Assumes input like "#00FF00" (#RRGGBB).
+    
+    unsigned rgbValue = 0;
+    NSScanner *scanner = [NSScanner scannerWithString:string];
+    [scanner setScanLocation:1]; // bypass '#' character
+    [scanner scanHexInt:&rgbValue];
+    return [UIColor colorWithRed:((rgbValue & 0xFF0000) >> 16)/255.0 green:((rgbValue & 0xFF00) >> 8)/255.0 blue:(rgbValue & 0xFF)/255.0 alpha:1.0];
+    
+}
+
+@end
 
 
 @implementation SKScene (Unarchive)
@@ -33,14 +53,19 @@
 @implementation GameViewController {
     
     SKView *_view;
-    GameScene *_scene;
-    GameScene *_splashScreen;
+    SKScene *_currWorld;
+    SKScene *_splashScreen;
+    NSMutableArray *_worlds;
     
 }
 
+
 // Class Variables
+static GameViewController *sharedInstance;
+static CGSize gameSize;
 static CGFloat gameWidth;
 static CGFloat gameHeight;
+
 
 
 // Class Methods
@@ -56,15 +81,23 @@ static CGFloat gameHeight;
     
 }
 
-+ (void)setWidth:(CGFloat)width {
++ (CGSize)size {
     
-    gameWidth = width;
+    return gameSize;
     
 }
 
-+ (void)setHeight:(CGFloat)height {
++ (void)setSize:(CGSize)size {
     
-    gameHeight = height;
+    gameSize = size;
+    gameWidth = size.width;
+    gameHeight = size.height;
+    
+}
+
++ (GameViewController *)sharedInstance {
+    
+    return sharedInstance;
     
 }
 
@@ -73,53 +106,60 @@ static CGFloat gameHeight;
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    [self configureGameParameters];
-    [self configureAndShowSKView];
-    [self configureAndShowSplashScreen];
+    
+    sharedInstance = self;
+    
+    [GameViewController setSize:self.view.frame.size];
+    
+    [self configureAndShowSKView];                          // The JavaFX equivalent of SKView is Stage
+    [self configureSplashScreen];
     
     // Present the scene.
-    [_view presentScene:_scene];
+    [_view presentScene:_splashScreen];
+    
+    [self allocateAndInitiateWorldsInBackground];
     
 }
 
-- (void)configureGameParameters {
+- (void)allocateAndInitiateWorldsInBackground {
     
-    CGSize size = self.view.frame.size;
-    double width = size.width;
-    double height = size.height;
+    FirstWorld *w1 = [[FirstWorld alloc] init];
+    SecondWorld *w2 = [[SecondWorld alloc] init];
+    ThirdWorld *w3 = [[ThirdWorld alloc] init];
+    FourthWorld *w4 = [[FourthWorld alloc] init];
     
-    [GameViewController setWidth:width];
-    [GameViewController setHeight:height];
+    if (_worlds == nil) {
+        
+        _worlds = [[NSMutableArray alloc] init];
+        
+    }
     
 }
 
 - (void)configureAndShowSKView {
     
-    // Configure the view.
-    _view = (SKView *)self.view;                          // The JavaFX equivalent of SKView is Stage
+    // The JavaFX equivalent of SKView is Stage
+    _view = (SKView *)self.view;
     _view.showsFPS = YES;
     _view.showsNodeCount = YES;
+    
     /* Sprite Kit applies additional optimizations to improve rendering performance */
     _view.ignoresSiblingOrder = YES;
     
 }
 
-- (void)configureAndShowSplashScreen {
-    
-    _splashScreen = [[SplashScreen alloc] init];
-    _scene = _splashScreen;
+- (void)configureSplashScreen {
     
     // Create and configure the scene.
-    
-    _scene = [[GameScene alloc] initWithSize:size];       // The JavaFX equivalent of GameScene is Scene
-    _scene.scaleMode = SKSceneScaleModeAspectFill;
+    _splashScreen = [[SplashScreen alloc] initWithSize:gameSize];       // The JavaFX equivalent of SKScene is Scene
 
-    
 }
 
-
-
-
+- (void)displayScene:(SKScene *)scene {
+    
+    [_view presentScene:scene];
+    
+}
 
 - (BOOL)shouldAutorotate {
     
@@ -150,4 +190,32 @@ static CGFloat gameHeight;
     
 }
 
+- (void)startGame {
+    
+    NSLog(@"successfuly received signal to start game");
+    
+    
+}
+
+
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

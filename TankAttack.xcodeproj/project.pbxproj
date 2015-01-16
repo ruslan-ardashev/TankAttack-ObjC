@@ -7,9 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		441451DF1A68858200D481C0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 441451D81A68858200D481C0 /* .gitignore */; };
+		441451E01A68858200D481C0 /* dpad.png in Resources */ = {isa = PBXBuildFile; fileRef = 441451D91A68858200D481C0 /* dpad.png */; };
+		441451E11A68858200D481C0 /* Joystick.m in Sources */ = {isa = PBXBuildFile; fileRef = 441451DB1A68858200D481C0 /* Joystick.m */; };
+		441451E21A68858200D481C0 /* joystick.png in Resources */ = {isa = PBXBuildFile; fileRef = 441451DC1A68858200D481C0 /* joystick.png */; };
+		441451E31A68858200D481C0 /* pic.png in Resources */ = {isa = PBXBuildFile; fileRef = 441451DD1A68858200D481C0 /* pic.png */; };
+		441451E41A68858200D481C0 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 441451DE1A68858200D481C0 /* README.md */; };
+		441451E71A68B16100D481C0 /* World.m in Sources */ = {isa = PBXBuildFile; fileRef = 441451E61A68B16100D481C0 /* World.m */; };
+		441451EA1A68C2E900D481C0 /* FirstWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 441451E91A68C2E900D481C0 /* FirstWorld.m */; };
+		441451ED1A68C35A00D481C0 /* SecondWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 441451EC1A68C35A00D481C0 /* SecondWorld.m */; };
+		441451F01A68C36000D481C0 /* ThirdWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 441451EF1A68C36000D481C0 /* ThirdWorld.m */; };
+		441451F31A68C36700D481C0 /* FourthWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 441451F21A68C36700D481C0 /* FourthWorld.m */; };
 		442D35F41A683F7B0017DDF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D35F31A683F7B0017DDF6 /* main.m */; };
 		442D35F71A683F7B0017DDF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D35F61A683F7B0017DDF6 /* AppDelegate.m */; };
-		442D35FA1A683F7B0017DDF6 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D35F91A683F7B0017DDF6 /* GameScene.m */; };
 		442D35FC1A683F7B0017DDF6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 442D35FB1A683F7B0017DDF6 /* GameScene.sks */; };
 		442D36021A683F7B0017DDF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442D36001A683F7B0017DDF6 /* Main.storyboard */; };
 		442D36041A683F7C0017DDF6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 442D36031A683F7C0017DDF6 /* Images.xcassets */; };
@@ -30,14 +40,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		441451D81A68858200D481C0 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		441451D91A68858200D481C0 /* dpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dpad.png; sourceTree = "<group>"; };
+		441451DA1A68858200D481C0 /* Joystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Joystick.h; sourceTree = "<group>"; };
+		441451DB1A68858200D481C0 /* Joystick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Joystick.m; sourceTree = "<group>"; };
+		441451DC1A68858200D481C0 /* joystick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = joystick.png; sourceTree = "<group>"; };
+		441451DD1A68858200D481C0 /* pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic.png; sourceTree = "<group>"; };
+		441451DE1A68858200D481C0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		441451E51A68B16100D481C0 /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
+		441451E61A68B16100D481C0 /* World.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = World.m; sourceTree = "<group>"; };
+		441451E81A68C2E900D481C0 /* FirstWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstWorld.h; sourceTree = "<group>"; };
+		441451E91A68C2E900D481C0 /* FirstWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstWorld.m; sourceTree = "<group>"; };
+		441451EB1A68C35A00D481C0 /* SecondWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondWorld.h; sourceTree = "<group>"; };
+		441451EC1A68C35A00D481C0 /* SecondWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondWorld.m; sourceTree = "<group>"; };
+		441451EE1A68C36000D481C0 /* ThirdWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdWorld.h; sourceTree = "<group>"; };
+		441451EF1A68C36000D481C0 /* ThirdWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdWorld.m; sourceTree = "<group>"; };
+		441451F11A68C36700D481C0 /* FourthWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthWorld.h; sourceTree = "<group>"; };
+		441451F21A68C36700D481C0 /* FourthWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthWorld.m; sourceTree = "<group>"; };
 		442D35EE1A683F7B0017DDF6 /* TankAttack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TankAttack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		442D35F21A683F7B0017DDF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		442D35F31A683F7B0017DDF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		442D35F51A683F7B0017DDF6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		442D35F61A683F7B0017DDF6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		442D35F81A683F7B0017DDF6 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = ../GameScene.h; sourceTree = "<group>"; };
-		442D35F91A683F7B0017DDF6 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GameScene.m; path = ../GameScene.m; sourceTree = "<group>"; };
-		442D35FB1A683F7B0017DDF6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		442D35FB1A683F7B0017DDF6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = GameScene.sks; path = ../GameScene.sks; sourceTree = "<group>"; };
 		442D36011A683F7B0017DDF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		442D36031A683F7C0017DDF6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		442D36061A683F7C0017DDF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -68,6 +93,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		441451D71A68858200D481C0 /* Joystick */ = {
+			isa = PBXGroup;
+			children = (
+				441451D81A68858200D481C0 /* .gitignore */,
+				441451D91A68858200D481C0 /* dpad.png */,
+				441451DA1A68858200D481C0 /* Joystick.h */,
+				441451DB1A68858200D481C0 /* Joystick.m */,
+				441451DC1A68858200D481C0 /* joystick.png */,
+				441451DD1A68858200D481C0 /* pic.png */,
+				441451DE1A68858200D481C0 /* README.md */,
+			);
+			path = Joystick;
+			sourceTree = "<group>";
+		};
 		442D35E51A683F7B0017DDF6 = {
 			isa = PBXGroup;
 			children = (
@@ -89,15 +128,13 @@
 		442D35F01A683F7B0017DDF6 /* TankAttack */ = {
 			isa = PBXGroup;
 			children = (
+				441451D71A68858200D481C0 /* Joystick */,
 				442D361D1A6840CE0017DDF6 /* Controller */,
 				442D36201A6840CE0017DDF6 /* Model */,
 				442D36211A6840CE0017DDF6 /* View */,
 				442D35F51A683F7B0017DDF6 /* AppDelegate.h */,
 				442D35F61A683F7B0017DDF6 /* AppDelegate.m */,
-				442D35FB1A683F7B0017DDF6 /* GameScene.sks */,
-				442D36001A683F7B0017DDF6 /* Main.storyboard */,
 				442D36031A683F7C0017DDF6 /* Images.xcassets */,
-				442D36051A683F7C0017DDF6 /* LaunchScreen.xib */,
 				442D35F11A683F7B0017DDF6 /* Supporting Files */,
 			);
 			path = TankAttack;
@@ -134,8 +171,6 @@
 			children = (
 				442D361E1A6840CE0017DDF6 /* GameViewController.h */,
 				442D361F1A6840CE0017DDF6 /* GameViewController.m */,
-				442D35F81A683F7B0017DDF6 /* GameScene.h */,
-				442D35F91A683F7B0017DDF6 /* GameScene.m */,
 				442D36231A6849680017DDF6 /* SplashScreen.h */,
 				442D36241A6849680017DDF6 /* SplashScreen.m */,
 			);
@@ -145,6 +180,16 @@
 		442D36201A6840CE0017DDF6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				441451E51A68B16100D481C0 /* World.h */,
+				441451E61A68B16100D481C0 /* World.m */,
+				441451E81A68C2E900D481C0 /* FirstWorld.h */,
+				441451E91A68C2E900D481C0 /* FirstWorld.m */,
+				441451EB1A68C35A00D481C0 /* SecondWorld.h */,
+				441451EC1A68C35A00D481C0 /* SecondWorld.m */,
+				441451EE1A68C36000D481C0 /* ThirdWorld.h */,
+				441451EF1A68C36000D481C0 /* ThirdWorld.m */,
+				441451F11A68C36700D481C0 /* FourthWorld.h */,
+				441451F21A68C36700D481C0 /* FourthWorld.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -152,6 +197,9 @@
 		442D36211A6840CE0017DDF6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				442D35FB1A683F7B0017DDF6 /* GameScene.sks */,
+				442D36001A683F7B0017DDF6 /* Main.storyboard */,
+				442D36051A683F7C0017DDF6 /* LaunchScreen.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -237,10 +285,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				441451DF1A68858200D481C0 /* .gitignore in Resources */,
 				442D36071A683F7C0017DDF6 /* LaunchScreen.xib in Resources */,
+				441451E01A68858200D481C0 /* dpad.png in Resources */,
 				442D36041A683F7C0017DDF6 /* Images.xcassets in Resources */,
 				442D35FC1A683F7B0017DDF6 /* GameScene.sks in Resources */,
 				442D36021A683F7B0017DDF6 /* Main.storyboard in Resources */,
+				441451E31A68858200D481C0 /* pic.png in Resources */,
+				441451E21A68858200D481C0 /* joystick.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,11 +310,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				441451F31A68C36700D481C0 /* FourthWorld.m in Sources */,
 				442D36221A6840CE0017DDF6 /* GameViewController.m in Sources */,
+				441451E71A68B16100D481C0 /* World.m in Sources */,
+				441451ED1A68C35A00D481C0 /* SecondWorld.m in Sources */,
+				441451E11A68858200D481C0 /* Joystick.m in Sources */,
+				441451F01A68C36000D481C0 /* ThirdWorld.m in Sources */,
 				442D35F71A683F7B0017DDF6 /* AppDelegate.m in Sources */,
-				442D35FA1A683F7B0017DDF6 /* GameScene.m in Sources */,
+				441451E41A68858200D481C0 /* README.md in Sources */,
 				442D35F41A683F7B0017DDF6 /* main.m in Sources */,
 				442D36251A6849680017DDF6 /* SplashScreen.m in Sources */,
+				441451EA1A68C2E900D481C0 /* FirstWorld.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +349,7 @@
 				442D36011A683F7B0017DDF6 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		442D36051A683F7C0017DDF6 /* LaunchScreen.xib */ = {
@@ -299,6 +358,7 @@
 				442D36061A683F7C0017DDF6 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -384,9 +444,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TankAttack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -394,9 +457,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TankAttack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

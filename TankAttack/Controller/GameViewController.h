@@ -9,12 +9,24 @@
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 
+@interface UIColor (HexColor)
+
++ (UIColor *)UIColorFromHexString:(NSString *)string;
+
+@end
+
 @interface GameViewController : UIViewController
 
 // Game Parameters
 + (CGFloat)width;
-+ (void)setWidth:(CGFloat)width;
 + (CGFloat)height;
-+ (void)setHeight:(CGFloat)height;
++ (CGSize)size;
++ (void)setSize:(CGSize)size;
+
+// Class Methods
++ (GameViewController *)sharedInstance;
+
+// Instance Methods
+- (void)startGame;
 
 @end
