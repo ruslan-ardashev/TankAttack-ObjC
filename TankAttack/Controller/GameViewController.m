@@ -10,7 +10,9 @@
 #import "SplashScreen.h"
 #import "World.h"
 #import "FirstWorld.h"
-#import "
+#import "SecondWorld.h"
+#import "ThirdWorld.h"
+#import "FourthWorld.h"
 
 
 @implementation UIColor (HexColor)
@@ -53,9 +55,10 @@
 @implementation GameViewController {
     
     SKView *_view;
-    SKScene *_currWorld;
+    SKScene *_scene;
+    World *_currWorld;
     SKScene *_splashScreen;
-    NSMutableArray *_worlds;
+    NSArray *_worlds;
     
 }
 
@@ -130,7 +133,7 @@ static CGFloat gameHeight;
     
     if (_worlds == nil) {
         
-        _worlds = [[NSMutableArray alloc] init];
+        _worlds = [[NSArray alloc] initWithObjects:w1, w2, w3, w4, nil];
         
     }
     
@@ -192,8 +195,25 @@ static CGFloat gameHeight;
 
 - (void)startGame {
     
-    NSLog(@"successfuly received signal to start game");
+    if (_worlds == nil) {
+        NSLog(@"Resources not loaded yet.");
+        return;
+    }
     
+    else {
+        
+        _currWorld = [_worlds objectAtIndex:0];
+        [self initCurrWorld];
+        
+    }
+    
+}
+
+- (void)initCurrWorld {
+    
+    _scene = [_currWorld createScene];
+    [_view presentScene:_scene];
+    [_currWorld initAnimation];
     
 }
 
