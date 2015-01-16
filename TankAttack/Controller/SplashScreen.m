@@ -69,15 +69,13 @@
 
     SKSpriteNode *tank = [SKSpriteNode spriteNodeWithImageNamed:@"tank"];
 
-    tank.xScale = 0.5;
-    tank.yScale = 0.5;
-    tank.position = CGPointMake(-50, 75);
-
+    [tank setScale:0.25];
+    [tank setPosition:CGPointMake(-50, 75)];
+    
     SKAction *actionRight = [SKAction moveToX:([GameViewController width]+50.0) duration:5.00];
-    SKAction *actionLeft  = [SKAction moveToX:(-50.0) duration:5.00];
+    SKAction *actionLeft  = [actionRight reversedAction];
     
     SKAction *cycle = [SKAction sequence:@[actionRight, actionLeft]];
-    
     SKAction *loop = [SKAction repeatActionForever:cycle];
 
     [tank runAction:loop];
@@ -140,7 +138,25 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     
+    CGPoint location = [[touches anyObject] locationInNode:self];
+    
     _pressedLabel.fontColor = [UIColor whiteColor];
+    
+    if ([_pressedLabel containsPoint:location]) {
+        
+        [self handleSameLabelReleasedAsPressed];
+        
+    }
+    
+    else {
+        
+        // Released outside of button. Not interested in pressing the button.
+        
+    }
+    
+}
+
+- (void)handleSameLabelReleasedAsPressed {
     
     if ([_pressedLabel.text isEqualToString:@"START"]) {
         
