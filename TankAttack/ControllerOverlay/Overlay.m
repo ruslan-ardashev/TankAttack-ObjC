@@ -11,6 +11,7 @@
 @implementation Overlay {
     
     Joystick *_joystick;
+    SKLabelNode *_bulletButton;
     
 }
 
