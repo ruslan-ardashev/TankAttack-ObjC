@@ -62,6 +62,19 @@
     
 }
 
+- (void)createBulletButton {
+    
+    _bulletButton = [[SKLabelNode alloc] initWithFontNamed:DEFAULT_FONT];
+    
+    [_bulletButton setFontColor:[UIColor whiteColor]];
+    [_bulletButton setFontSize:45];
+    [_bulletButton setText:@"FIRE"];
+    [_bulletButton setPosition:CGPointMake([self size].width/4, 0)];
+    
+    [self addChild:_bulletButton];
+    
+}
+
 - (double)getXVelocity {
     
     if (_joystick) {
