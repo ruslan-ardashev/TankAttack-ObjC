@@ -20,7 +20,7 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>02FB32A7A3E2EB7AD9DDB23ADBEA3ACEE9028AFF</key>
-		<string>../../TankAttack/Joystick/</string>
+		<string>../../TankAttack/Joystick</string>
 		<key>097E6A8CB2A047E911E0D1C3E817C16644718729</key>
 		<string>../..</string>
 	</dict>

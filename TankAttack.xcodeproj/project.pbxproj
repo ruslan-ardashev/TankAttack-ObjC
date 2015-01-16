@@ -19,6 +19,7 @@
 		441451F01A68C36000D481C0 /* ThirdWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 441451EF1A68C36000D481C0 /* ThirdWorld.m */; };
 		441451F31A68C36700D481C0 /* FourthWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 441451F21A68C36700D481C0 /* FourthWorld.m */; };
 		441451F71A68D08B00D481C0 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 441451F61A68D08B00D481C0 /* Player.m */; };
+		441451FB1A697D3400D481C0 /* Overlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 441451FA1A697D3400D481C0 /* Overlay.m */; };
 		442D35F41A683F7B0017DDF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D35F31A683F7B0017DDF6 /* main.m */; };
 		442D35F71A683F7B0017DDF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D35F61A683F7B0017DDF6 /* AppDelegate.m */; };
 		442D35FC1A683F7B0017DDF6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 442D35FB1A683F7B0017DDF6 /* GameScene.sks */; };
@@ -60,6 +61,8 @@
 		441451F21A68C36700D481C0 /* FourthWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthWorld.m; sourceTree = "<group>"; };
 		441451F51A68D08B00D481C0 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = Sprites/Player.h; sourceTree = "<group>"; };
 		441451F61A68D08B00D481C0 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = Sprites/Player.m; sourceTree = "<group>"; };
+		441451F91A697D3400D481C0 /* Overlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Overlay.h; path = ControllerOverlay/Overlay.h; sourceTree = "<group>"; };
+		441451FA1A697D3400D481C0 /* Overlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Overlay.m; path = ControllerOverlay/Overlay.m; sourceTree = "<group>"; };
 		442D35EE1A683F7B0017DDF6 /* TankAttack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TankAttack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		442D35F21A683F7B0017DDF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		442D35F31A683F7B0017DDF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -119,6 +122,15 @@
 			name = Sprites;
 			sourceTree = "<group>";
 		};
+		441451F81A697D1200D481C0 /* ControllerOverlay */ = {
+			isa = PBXGroup;
+			children = (
+				441451F91A697D3400D481C0 /* Overlay.h */,
+				441451FA1A697D3400D481C0 /* Overlay.m */,
+			);
+			name = ControllerOverlay;
+			sourceTree = "<group>";
+		};
 		442D35E51A683F7B0017DDF6 = {
 			isa = PBXGroup;
 			children = (
@@ -140,10 +152,11 @@
 		442D35F01A683F7B0017DDF6 /* TankAttack */ = {
 			isa = PBXGroup;
 			children = (
+				441451F81A697D1200D481C0 /* ControllerOverlay */,
 				441451F41A68D07000D481C0 /* Sprites */,
 				441451D71A68858200D481C0 /* Joystick */,
-				442D361D1A6840CE0017DDF6 /* Controller */,
-				442D36201A6840CE0017DDF6 /* Model */,
+				442D361D1A6840CE0017DDF6 /* GameStart */,
+				442D36201A6840CE0017DDF6 /* Worlds */,
 				442D36211A6840CE0017DDF6 /* View */,
 				442D35F51A683F7B0017DDF6 /* AppDelegate.h */,
 				442D35F61A683F7B0017DDF6 /* AppDelegate.m */,
@@ -179,7 +192,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		442D361D1A6840CE0017DDF6 /* Controller */ = {
+		442D361D1A6840CE0017DDF6 /* GameStart */ = {
 			isa = PBXGroup;
 			children = (
 				442D361E1A6840CE0017DDF6 /* GameViewController.h */,
@@ -187,10 +200,11 @@
 				442D36231A6849680017DDF6 /* SplashScreen.h */,
 				442D36241A6849680017DDF6 /* SplashScreen.m */,
 			);
+			name = GameStart;
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		442D36201A6840CE0017DDF6 /* Model */ = {
+		442D36201A6840CE0017DDF6 /* Worlds */ = {
 			isa = PBXGroup;
 			children = (
 				441451E51A68B16100D481C0 /* World.h */,
@@ -204,6 +218,7 @@
 				441451F11A68C36700D481C0 /* FourthWorld.h */,
 				441451F21A68C36700D481C0 /* FourthWorld.m */,
 			);
+			name = Worlds;
 			path = Model;
 			sourceTree = "<group>";
 		};
@@ -324,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				441451F31A68C36700D481C0 /* FourthWorld.m in Sources */,
+				441451FB1A697D3400D481C0 /* Overlay.m in Sources */,
 				442D36221A6840CE0017DDF6 /* GameViewController.m in Sources */,
 				441451E71A68B16100D481C0 /* World.m in Sources */,
 				441451ED1A68C35A00D481C0 /* SecondWorld.m in Sources */,
