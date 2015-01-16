@@ -21,7 +21,8 @@
     
     self = [super initWithSize:size];
     self.scaleMode = SKSceneScaleModeAspectFill;
-    self.backgroundColor = [UIColor UIColorFromHexString:@"#003f00"];
+//    self.backgroundColor = [UIColor UIColorFromHexString:@"#003f00"];
+    self.backgroundColor = [UIColor lightGrayColor];
     return self;
     
 }
@@ -30,7 +31,8 @@
     
     /* Setup your scene here */
     CGFloat distance = [self createStartButton];
-    [self createDifficultyButtonWithDistance:distance];
+    [self createDifficultyButtonWithOffsetFromStart:distance];
+    [self animateTankInBackground];
     
 }
 
@@ -43,7 +45,6 @@
     myLabel.text = @"START";
     myLabel.fontSize = 65;
     myLabel.position = CGPointMake([GameViewController width]/2, [GameViewController height]/2);
-    NSLog(@"height: %f", [GameViewController height]/2);
     returnFloat = myLabel.frame.size.height*1.5;
     
     [self addChild:myLabel];
@@ -52,7 +53,7 @@
     
 }
 
-- (void)createDifficultyButtonWithDistance:(CGFloat)distance {
+- (void)createDifficultyButtonWithOffsetFromStart:(CGFloat)distance {
     
     SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"DamascusBold"];
     
@@ -60,22 +61,28 @@
     myLabel.fontSize = 65;
     myLabel.position = CGPointMake([GameViewController width]/2, [GameViewController height]/2-distance);
     
-    NSLog(@"height: %f", [GameViewController height]/2+distance);
-    
     [self addChild:myLabel];
     
-//    
-//    SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"tank"];
-//    
-//    sprite.xScale = 0.5;
-//    sprite.yScale = 0.5;
-//    sprite.position = CGPointMake(50, 50);
-//    
-//    SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-//    
-//    [sprite runAction:[SKAction repeatActionForever:action]];
-//
-//    [self addChild:sprite];
+}
+
+- (void)animateTankInBackground {
+
+    SKSpriteNode *tank = [SKSpriteNode spriteNodeWithImageNamed:@"tank"];
+
+    tank.xScale = 0.5;
+    tank.yScale = 0.5;
+    tank.position = CGPointMake(-50, 75);
+
+    SKAction *actionRight = [SKAction moveToX:([GameViewController width]+50.0) duration:5.00];
+    SKAction *actionLeft  = [SKAction moveToX:(-50.0) duration:5.00];
+    
+    SKAction *cycle = [SKAction sequence:@[actionRight, actionLeft]];
+    
+    SKAction *loop = [SKAction repeatActionForever:cycle];
+
+    [tank runAction:loop];
+    
+    [self addChild:tank];
     
 }
 
