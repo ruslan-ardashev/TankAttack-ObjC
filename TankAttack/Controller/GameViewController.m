@@ -98,6 +98,12 @@ static CGFloat gameHeight;
     
 }
 
++ (CGPoint)playerInitLocation {
+    
+    return CGPointMake(gameWidth/2, gameHeight/8);
+    
+}
+
 + (GameViewController *)sharedInstance {
     
     return sharedInstance;
@@ -126,10 +132,10 @@ static CGFloat gameHeight;
 
 - (void)allocateAndInitiateWorldsInBackground {
     
-    FirstWorld *w1 = [[FirstWorld alloc] init];
-    SecondWorld *w2 = [[SecondWorld alloc] init];
-    ThirdWorld *w3 = [[ThirdWorld alloc] init];
-    FourthWorld *w4 = [[FourthWorld alloc] init];
+    FirstWorld *w1 = [[FirstWorld alloc] initWithSize:gameSize];
+    SecondWorld *w2 = [[SecondWorld alloc] initWithSize:gameSize];
+    ThirdWorld *w3 = [[ThirdWorld alloc] initWithSize:gameSize];
+    FourthWorld *w4 = [[FourthWorld alloc] initWithSize:gameSize];
     
     if (_worlds == nil) {
         
