@@ -40,7 +40,7 @@
     
     CGFloat returnFloat;
     
-    SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"DamascusBold"];
+    SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:DEFAULT_FONT];
     
     myLabel.text = @"START";
     myLabel.fontSize = 65;
@@ -55,7 +55,7 @@
 
 - (void)createDifficultyButtonWithOffsetFromStart:(CGFloat)distance {
     
-    SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"DamascusBold"];
+    SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:DEFAULT_FONT];
     
     myLabel.text = @"DIFFICULTY";
     myLabel.fontSize = 65;
