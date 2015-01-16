@@ -104,10 +104,35 @@
 
 - (void)handlePlayerFiring {
     
+    if ([_overlay isOverlayFiring]) {
+        
+        NSLog(@"PEW PEW");
+        NSLog(@"TO DO IMPLEMENT");
+        
+    }
+    
     
     
 }
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    /* Called when a touch begins */
+    
+    for (UITouch *touch in touches) {
+        
+        CGPoint touchLocation = [touch locationInNode:_overlay];
+        
+        [_overlay notifyOfTouchAtLocation:touchLocation];
+        
+    }
+    
+}
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    [_overlay notifyOfRelease];
+    
+}
 
 
 @end
