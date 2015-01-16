@@ -14,9 +14,12 @@
 
 @interface Overlay : SKSpriteNode
 
+@property (readonly, nonatomic) Boolean isOverlayFiring;
+
 - (id)initIntoWorld:(World *)world;
 - (double)getXVelocity;
 - (double)getYVelocity;
-
+- (void)notifyOfTouchAtLocation:(CGPoint)location;
+- (void)notifyOfRelease;
 
 @end
