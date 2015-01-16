@@ -7,10 +7,15 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "GameViewController.h"
+#import "Player.h"
 
 @interface World : SKScene
 
 - (SKScene *)createScene;
 - (void)initAnimation;
+- (void)createPlayerSprite;
+
+@property (readonly, nonatomic) Player *playerSprite;
 
 @end

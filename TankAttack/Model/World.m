@@ -8,11 +8,14 @@
 
 #import "World.h"
 
-@implementation World
+@implementation World {
+    
+}
 
 - (id)initWithSize:(CGSize)size {
     
     self = [super initWithSize:size];
+    NSLog(@"initWithSize on world: x: %f, y: %f", size.width, size.height);
     self.scaleMode = SKSceneScaleModeAspectFill;
     self.backgroundColor = [UIColor lightGrayColor];
     return self;
@@ -21,6 +24,7 @@
 
 - (SKScene *)createScene {
     
+    [self createInitialSprites];
     return self;
     
 }
@@ -31,6 +35,15 @@
     
     [NSException raise:NSInternalInconsistencyException
                 format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)];
+    
+}
+
+- (void)createPlayerSprite {
+    
+    
+    _playerSprite = [[Player alloc] initWithLocation:[GameViewController playerInitLocation]];
+    NSLog(@"called create player sprite: %@", _playerSprite);
+    [self addChild:_playerSprite];
     
 }
 

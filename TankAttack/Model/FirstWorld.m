@@ -10,4 +10,10 @@
 
 @implementation FirstWorld
 
+- (void)createInitialSprites {
+    
+    [self createPlayerSprite];
+
+}
+
 @end
