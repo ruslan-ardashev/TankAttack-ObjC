@@ -22,9 +22,10 @@
     if (self) {
         
         [self setPosition:CGPointMake(world.size.width/2, world.size.height/10)];
-        [self setZPosition:2.0];        // Controller is 2, Player is 1, all else 0
+        [self setZPosition:2.0];        // Controller is 1, Fire is 2, all else 0
         
         [self createJoystickAtLocation:CGPointMake(-[self size].width/4, 0)];
+        [self createBulletButton];
         
         [world addChild:self];
 
