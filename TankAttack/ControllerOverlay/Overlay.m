@@ -107,7 +107,24 @@
     
 }
 
+- (void)notifyOfTouchAtLocation:(CGPoint)location {
+    
+    if ([_bulletButton containsPoint:location]) {
+        
+        NSLog(@"FIRING");
+        _isOverlayFiring = true;
+        [_bulletButton setFontColor:[UIColor redColor]];
+        
+    }
+    
+}
 
+- (void)notifyOfRelease {
+    
+    _isOverlayFiring = false;
+    [_bulletButton setFontColor:[UIColor whiteColor]];
+    
+}
 
 @end
 
