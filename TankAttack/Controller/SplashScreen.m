@@ -73,7 +73,7 @@
     [tank setPosition:CGPointMake(-50, 75)];
     
     SKAction *actionRight = [SKAction moveToX:([GameViewController width]+50.0) duration:5.00];
-    SKAction *actionLeft  = [actionRight reversedAction];
+    SKAction *actionLeft  = [SKAction moveToX:(-50.0) duration:5.00 ];
     
     SKAction *cycle = [SKAction sequence:@[actionRight, actionLeft]];
     SKAction *loop = [SKAction repeatActionForever:cycle];
