@@ -10,6 +10,7 @@
 		440351A11A6A53D200031138 /* BulletSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 440351A01A6A53D200031138 /* BulletSprite.m */; };
 		440351A41A6ACEC200031138 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 440351A31A6ACEC200031138 /* Enemy.m */; };
 		440351A71A6ACECF00031138 /* Minion.m in Sources */ = {isa = PBXBuildFile; fileRef = 440351A61A6ACECF00031138 /* Minion.m */; };
+		440351AA1A6AD7B200031138 /* HealthBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 440351A91A6AD7B200031138 /* HealthBar.m */; };
 		441451DF1A68858200D481C0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 441451D81A68858200D481C0 /* .gitignore */; };
 		441451E01A68858200D481C0 /* dpad.png in Resources */ = {isa = PBXBuildFile; fileRef = 441451D91A68858200D481C0 /* dpad.png */; };
 		441451E11A68858200D481C0 /* Joystick.m in Sources */ = {isa = PBXBuildFile; fileRef = 441451DB1A68858200D481C0 /* Joystick.m */; };
@@ -51,6 +52,8 @@
 		440351A31A6ACEC200031138 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Enemy.m; path = Sprites/Enemy.m; sourceTree = "<group>"; };
 		440351A51A6ACECF00031138 /* Minion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Minion.h; path = Sprites/Minion.h; sourceTree = "<group>"; };
 		440351A61A6ACECF00031138 /* Minion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Minion.m; path = Sprites/Minion.m; sourceTree = "<group>"; };
+		440351A81A6AD7B200031138 /* HealthBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HealthBar.h; path = Sprites/HealthBar.h; sourceTree = "<group>"; };
+		440351A91A6AD7B200031138 /* HealthBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HealthBar.m; path = Sprites/HealthBar.m; sourceTree = "<group>"; };
 		441451D81A68858200D481C0 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		441451D91A68858200D481C0 /* dpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dpad.png; sourceTree = "<group>"; };
 		441451DA1A68858200D481C0 /* Joystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Joystick.h; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				440351A31A6ACEC200031138 /* Enemy.m */,
 				440351A51A6ACECF00031138 /* Minion.h */,
 				440351A61A6ACECF00031138 /* Minion.m */,
+				440351A81A6AD7B200031138 /* HealthBar.h */,
+				440351A91A6AD7B200031138 /* HealthBar.m */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 			files = (
 				441451F31A68C36700D481C0 /* FourthWorld.m in Sources */,
 				441451FB1A697D3400D481C0 /* Overlay.m in Sources */,
+				440351AA1A6AD7B200031138 /* HealthBar.m in Sources */,
 				442D36221A6840CE0017DDF6 /* GameViewController.m in Sources */,
 				441451E71A68B16100D481C0 /* World.m in Sources */,
 				441451ED1A68C35A00D481C0 /* SecondWorld.m in Sources */,
