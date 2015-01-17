@@ -96,10 +96,10 @@
 //    updateAllSpritesToCheckForDeath();
     
     // Clean up bullets & completed-animating sprites
-//    [self cleanUp];
+    [self cleanUp];               // TODO: implement the rest of this!
     
 //    checkForWin();              // Check for win
-    
+        
 }
 
 - (void)handlePlayerSprite {
@@ -157,7 +157,31 @@
 
 - (void)cleanUp {
     
-    NSLog(@"Implement cleanup!");
+    // Enemy sprites already remove themselves after displaying fire.
+    // All that remains is bullet cleanup.
+    
+    NSMutableArray *removeArray = [[NSMutableArray alloc] init];
+    
+    for (SKSpriteNode *s in [self children]) {
+        
+        if ([s isKindOfClass:[BulletSprite class]]) {
+            
+            if ([s position].y > [self size].height) {
+                
+                [removeArray addObject:s];
+                
+            }
+            
+        }
+        
+    }
+    
+    // Done not to concurrently modify above array as we iterate
+    for (BulletSprite *b in removeArray) {
+        
+        [b removeFromParent];
+        
+    }
     
 }
 
