@@ -8,6 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "Sprite.h"
+#import "Boss.h"
 
 @interface Enemy : Sprite
 
