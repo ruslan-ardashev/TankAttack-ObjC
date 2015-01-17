@@ -12,8 +12,11 @@
 
 #define DEFAULT_FONT @"DamascusBold"
 
-#define PLAYER_SPEED 0.025       // Compensates for a crazy Joystick velocity
-#define MINION_SPEED 5
+#define PLAYER_SPEED 0.025          // Compensates for a crazy Joystick velocity
+#define MINION_SPEED 2
+
+#define BULLET_SPEED 4
+#define DELAY_BETWEEN_BULLETS 0.100   // seconds
 
 
 @interface UIColor (HexColor)
