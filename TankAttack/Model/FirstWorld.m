@@ -13,7 +13,16 @@
 - (void)createInitialSprites {
     
     [self createPlayerSprite];
+    [self createMinionSprites];
 
+}
+
+- (void)createMinionSprites {
+    
+    
+    
+    [];
+    
 }
 
 @end
