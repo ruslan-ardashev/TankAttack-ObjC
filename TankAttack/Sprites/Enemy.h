@@ -18,5 +18,6 @@
 - (Boolean)isFiring;
 - (double)getBulletOffsetX;
 - (double)getBulletOffsetY;
+- (void)checkForDeathAndReactAppropriately;
 
 @end

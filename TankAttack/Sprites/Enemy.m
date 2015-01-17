@@ -57,8 +57,49 @@
     
 }
 
+- (void)checkForDeathAndReactAppropriately {
+    
+    if ([[self healthBar] health] <= 0.0) {
+        
+        SKAction *showFireAndDisappear = [self fireDisplayAndDisappearAction];
+        
+    }
+    
+}
+                              
+- (SKAction *)fireDisplayAndDisappearAction {
 
+    [SKAction performSelector:@selector(replaceImageWithFire) onTarget:self];
 
+    
+    
+    return nil;
+    
+}
+
+- (void)replaceImageWithFire {
+    
+    if (self isKindOfClass:[Boss class]) {
+        
+        [self setTexture:[SKTexture textureWithImageNamed:@"bossDeath"]];
+        
+    }
+    
+    else {
+        
+        [self setTexture:[SKTexture textureWithImageNamed:@"normalDeath"]];
+        
+    }
+    
+    
+    
+}
+
+void (^blockToDisplayFireThenDisappear)(SKNode *node, CGFloat elapsedTime) = ^(SKNode *node, CGFloat elapsedTime){
+    
+    
+    
+};
 
 @end
 
