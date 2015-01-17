@@ -7,7 +7,10 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "HealthBar.h"
 
 @interface Sprite : SKSpriteNode
+
+@property (readonly, nonatomic) HealthBar *healthBar;
 
 @end
