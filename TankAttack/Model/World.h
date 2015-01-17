@@ -6,10 +6,14 @@
 //  Copyright (c) 2015 Ruslan Ardashev. All rights reserved.
 //
 
+@class BulletSprite;
+
 #import <SpriteKit/SpriteKit.h>
 #import "GameViewController.h"
 #import "Player.h"
 #import "Overlay.h"
+#import "BulletSprite.h"
+
 
 @interface World : SKScene
 
