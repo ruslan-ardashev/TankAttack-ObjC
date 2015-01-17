@@ -111,7 +111,6 @@
     
     if ([_bulletButton containsPoint:location]) {
         
-        NSLog(@"FIRING");
         _isOverlayFiring = true;
         [_bulletButton setFontColor:[UIColor redColor]];
         
