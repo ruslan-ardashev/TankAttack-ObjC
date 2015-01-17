@@ -13,14 +13,22 @@
     
     Overlay *_overlay;
     
+    NSMutableArray *_bodiesToRemove;
+    
+    NSDate *_lastFired;
+    
 }
 
 - (id)initWithSize:(CGSize)size {
     
     self = [super initWithSize:size];
-    NSLog(@"initWithSize on world: x: %f, y: %f", size.width, size.height);
+    
     self.backgroundColor = [UIColor lightGrayColor];
     self.scaleMode = SKSceneScaleModeResizeFill;
+    
+    // Bullet Firing Interval Calculation
+    _lastFired = [NSDate date];
+    
     return self;
     
 }
@@ -78,10 +86,18 @@
     
 //    handleFiring();             // Handle Player Firing
 //    updateEnemySprites();       // also handles enemy fire
-//    updateBulletMovements();    // Bullet Movement
+
 //    handleCollision();          // Register Collisions With Tanks
 //    handleCollisionBullets();   // Register Collisions Between Sprites & Bullets
+    
+//    updateBulletMovements();    // Bullet Movement
+    [self updateBulletMovements];
+    
 //    updateAllSpritesToCheckForDeath();
+    
+    // Clean up bullets & completed-animating sprites
+//    [self cleanUp];
+    
 //    checkForWin();              // Check for win
     
 }
@@ -104,14 +120,44 @@
 
 - (void)handlePlayerFiring {
     
+    // Fire button pressed?
+    
     if ([_overlay isOverlayFiring]) {
         
-        NSLog(@"PEW PEW");
-        NSLog(@"TO DO IMPLEMENT");
+        // Delay between firing
+        
+        if (-[_lastFired timeIntervalSinceNow] > DELAY_BETWEEN_BULLETS) {
+            
+            _lastFired = [NSDate date];
+            
+            CGFloat initXPosition = [_playerSprite position].x;
+            CGFloat initYPosition = [_playerSprite position].y + [_playerSprite size].height/2;
+            
+            [[BulletSprite alloc] initAtX:initXPosition AtY:initYPosition IntoWorld:self];
+            
+        }
+
+    }
+    
+}
+
+- (void)updateBulletMovements {
+    
+    for (id sprite in [self children]) {
+        
+        if ([sprite isKindOfClass:[BulletSprite class]]) {
+            
+            [sprite updateXY];
+            
+        }
         
     }
     
+}
+
+- (void)cleanUp {
     
+    NSLog(@"Implement cleanup!");
     
 }
 
@@ -128,6 +174,7 @@
     }
     
 }
+
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     
     [_overlay notifyOfRelease];

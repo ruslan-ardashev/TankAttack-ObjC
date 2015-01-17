@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440351A11A6A53D200031138 /* BulletSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 440351A01A6A53D200031138 /* BulletSprite.m */; };
+		440351A41A6ACEC200031138 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 440351A31A6ACEC200031138 /* Enemy.m */; };
+		440351A71A6ACECF00031138 /* Minion.m in Sources */ = {isa = PBXBuildFile; fileRef = 440351A61A6ACECF00031138 /* Minion.m */; };
 		441451DF1A68858200D481C0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 441451D81A68858200D481C0 /* .gitignore */; };
 		441451E01A68858200D481C0 /* dpad.png in Resources */ = {isa = PBXBuildFile; fileRef = 441451D91A68858200D481C0 /* dpad.png */; };
 		441451E11A68858200D481C0 /* Joystick.m in Sources */ = {isa = PBXBuildFile; fileRef = 441451DB1A68858200D481C0 /* Joystick.m */; };
@@ -42,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4403519F1A6A53D200031138 /* BulletSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BulletSprite.h; path = Sprites/BulletSprite.h; sourceTree = "<group>"; };
+		440351A01A6A53D200031138 /* BulletSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BulletSprite.m; path = Sprites/BulletSprite.m; sourceTree = "<group>"; };
+		440351A21A6ACEC200031138 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Enemy.h; path = Sprites/Enemy.h; sourceTree = "<group>"; };
+		440351A31A6ACEC200031138 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Enemy.m; path = Sprites/Enemy.m; sourceTree = "<group>"; };
+		440351A51A6ACECF00031138 /* Minion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Minion.h; path = Sprites/Minion.h; sourceTree = "<group>"; };
+		440351A61A6ACECF00031138 /* Minion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Minion.m; path = Sprites/Minion.m; sourceTree = "<group>"; };
 		441451D81A68858200D481C0 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		441451D91A68858200D481C0 /* dpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dpad.png; sourceTree = "<group>"; };
 		441451DA1A68858200D481C0 /* Joystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Joystick.h; sourceTree = "<group>"; };
@@ -118,6 +127,12 @@
 			children = (
 				441451F51A68D08B00D481C0 /* Player.h */,
 				441451F61A68D08B00D481C0 /* Player.m */,
+				4403519F1A6A53D200031138 /* BulletSprite.h */,
+				440351A01A6A53D200031138 /* BulletSprite.m */,
+				440351A21A6ACEC200031138 /* Enemy.h */,
+				440351A31A6ACEC200031138 /* Enemy.m */,
+				440351A51A6ACECF00031138 /* Minion.h */,
+				440351A61A6ACECF00031138 /* Minion.m */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -344,11 +359,14 @@
 				441451E71A68B16100D481C0 /* World.m in Sources */,
 				441451ED1A68C35A00D481C0 /* SecondWorld.m in Sources */,
 				441451F71A68D08B00D481C0 /* Player.m in Sources */,
+				440351A41A6ACEC200031138 /* Enemy.m in Sources */,
 				441451E11A68858200D481C0 /* Joystick.m in Sources */,
 				441451F01A68C36000D481C0 /* ThirdWorld.m in Sources */,
+				440351A11A6A53D200031138 /* BulletSprite.m in Sources */,
 				442D35F71A683F7B0017DDF6 /* AppDelegate.m in Sources */,
 				441451E41A68858200D481C0 /* README.md in Sources */,
 				442D35F41A683F7B0017DDF6 /* main.m in Sources */,
+				440351A71A6ACECF00031138 /* Minion.m in Sources */,
 				442D36251A6849680017DDF6 /* SplashScreen.m in Sources */,
 				441451EA1A68C2E900D481C0 /* FirstWorld.m in Sources */,
 			);
