@@ -12,6 +12,7 @@
 		440351A71A6ACECF00031138 /* Minion.m in Sources */ = {isa = PBXBuildFile; fileRef = 440351A61A6ACECF00031138 /* Minion.m */; };
 		440351AA1A6AD7B200031138 /* HealthBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 440351A91A6AD7B200031138 /* HealthBar.m */; };
 		440351AD1A6AE03300031138 /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 440351AC1A6AE03300031138 /* Sprite.m */; };
+		440351B01A6AE66E00031138 /* Boss.m in Sources */ = {isa = PBXBuildFile; fileRef = 440351AF1A6AE66E00031138 /* Boss.m */; };
 		441451DF1A68858200D481C0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 441451D81A68858200D481C0 /* .gitignore */; };
 		441451E01A68858200D481C0 /* dpad.png in Resources */ = {isa = PBXBuildFile; fileRef = 441451D91A68858200D481C0 /* dpad.png */; };
 		441451E11A68858200D481C0 /* Joystick.m in Sources */ = {isa = PBXBuildFile; fileRef = 441451DB1A68858200D481C0 /* Joystick.m */; };
@@ -57,6 +58,8 @@
 		440351A91A6AD7B200031138 /* HealthBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HealthBar.m; path = Sprites/HealthBar.m; sourceTree = "<group>"; };
 		440351AB1A6AE03300031138 /* Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sprite.h; path = Sprites/Sprite.h; sourceTree = "<group>"; };
 		440351AC1A6AE03300031138 /* Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Sprite.m; path = Sprites/Sprite.m; sourceTree = "<group>"; };
+		440351AE1A6AE66E00031138 /* Boss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Boss.h; path = Sprites/Boss.h; sourceTree = "<group>"; };
+		440351AF1A6AE66E00031138 /* Boss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Boss.m; path = Sprites/Boss.m; sourceTree = "<group>"; };
 		441451D81A68858200D481C0 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		441451D91A68858200D481C0 /* dpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dpad.png; sourceTree = "<group>"; };
 		441451DA1A68858200D481C0 /* Joystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Joystick.h; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 				440351A91A6AD7B200031138 /* HealthBar.m */,
 				440351AB1A6AE03300031138 /* Sprite.h */,
 				440351AC1A6AE03300031138 /* Sprite.m */,
+				440351AE1A6AE66E00031138 /* Boss.h */,
+				440351AF1A6AE66E00031138 /* Boss.m */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 				440351A41A6ACEC200031138 /* Enemy.m in Sources */,
 				440351AD1A6AE03300031138 /* Sprite.m in Sources */,
 				441451E11A68858200D481C0 /* Joystick.m in Sources */,
+				440351B01A6AE66E00031138 /* Boss.m in Sources */,
 				441451F01A68C36000D481C0 /* ThirdWorld.m in Sources */,
 				440351A11A6A53D200031138 /* BulletSprite.m in Sources */,
 				442D35F71A683F7B0017DDF6 /* AppDelegate.m in Sources */,
