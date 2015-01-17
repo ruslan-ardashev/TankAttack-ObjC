@@ -16,7 +16,7 @@
     
     if (self) {
         
-        _isAlive = true;
+        [self setIsAlive:true];
         return self;
         
     }

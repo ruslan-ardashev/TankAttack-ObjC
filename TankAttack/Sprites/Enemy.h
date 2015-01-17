@@ -10,7 +10,8 @@
 
 @interface Enemy : SKSpriteNode
 
-@property (readonly, nonatomic) Boolean isAlive;
+@property (nonatomic) Boolean isAlive;
+
 - (id)initWithImageNamed:(NSString *)name;
 - (void)updateEnemyXY;
 - (Boolean)isFiring;
