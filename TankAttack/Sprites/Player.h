@@ -7,9 +7,10 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-#include "GameViewController.h"
+#import "GameViewController.h"
+#import "Sprite.h"
 
-@interface Player : SKSpriteNode
+@interface Player : Sprite
 
 - (id)initWithLocation:(CGPoint)location WithBottomBoundary:(CGFloat)bottomBoundary WithTopBoundary:(CGFloat)topBoundary WithLeftBoundary:(CGFloat)leftBoundary WithRightBoundary:(CGFloat)rightBoundary;
 - (void)updateLocationWithX:(double)xIncrement WithY:(double)yIncrement;

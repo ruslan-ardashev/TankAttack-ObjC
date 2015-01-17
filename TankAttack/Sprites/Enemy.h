@@ -7,8 +7,9 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "Sprite.h"
 
-@interface Enemy : SKSpriteNode
+@interface Enemy : Sprite
 
 @property (nonatomic) Boolean isAlive;
 
