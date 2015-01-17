@@ -7,7 +7,12 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "GameViewController.h"
+#import "World.h"
 
 @interface BulletSprite : SKSpriteNode
+
+- (id)initAtX:(CGFloat)xPosition AtY:(CGFloat)yPosition IntoWorld:(World *)world;
+- (void)updateXY;
 
 @end
