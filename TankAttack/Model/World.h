@@ -17,7 +17,6 @@
 @interface World : SKScene
 
 - (SKScene *)createScene;
-- (void)initAnimation;
 - (void)createPlayerSprite;
 
 @property (readonly, nonatomic) Player *playerSprite;
