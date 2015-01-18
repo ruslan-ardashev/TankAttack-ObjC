@@ -290,19 +290,26 @@ static int difficulty;
             break;
     }
     
+}
+
+- (void)displayLevelTwo {
     
+    _currWorld = [_worlds objectAtIndex:1];
+    [self initCurrWorld];
     
 }
 
 - (void)displayLevelThree {
     
-    
+    _currWorld = [_worlds objectAtIndex:2];
+    [self initCurrWorld];
     
 }
 
 - (void)displayLevelFour {
     
-    
+    _currWorld = [_worlds objectAtIndex:3];
+    [self initCurrWorld];
     
 }
 
