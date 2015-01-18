@@ -48,5 +48,6 @@
 
 // Instance Methods
 - (void)startGame;
+- (void)displayMainMenu;
 
 @end
