@@ -7,13 +7,14 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-#import "Sprite.h"
 #import "GameViewController.h"
+#import "Enemy.h"
 #import "World.h"
 
 
-@interface Boss : Sprite
+@interface Boss : Enemy
 
 - (id)initWithX:(double)x WithY:(double)y IntoWorld:(World *)world;
 
 @end
+
