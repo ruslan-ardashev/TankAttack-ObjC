@@ -24,6 +24,7 @@
         _rightXLimit = rightXLimit;
         _leftXLimit = leftXLimit;
         
+        [self setFollowsPlayer:false];
         [self initHealthBar];
         [self setPosition:CGPointMake(x, y)];
         [self setScale:SMALL_TANK_SCALE_FACTOR];
