@@ -35,7 +35,7 @@
 
 - (SKScene *)createScene {
     
-    [self createControllerOverlay];
+    [self createControllerOverlayAndPlayerSprite];
     [self createInitialSprites];
     
     return self;
@@ -51,23 +51,17 @@
     
 }
 
-- (void)createControllerOverlay {
+- (void)createControllerOverlayAndPlayerSprite {
     
     _overlay = [[Overlay alloc] initIntoWorld:self];
-    
-}
 
-- (void)createPlayerSprite {
+    CGFloat bottomBoundaryWorld = [_overlay size].height;
+    CGFloat rightBoundaryWorld = [self size].width;
+    CGFloat leftBoundaryWorld = 0;
+    CGFloat topBoundaryWorld = [self size].height;
     
-    NSLog(@"TODO: modify player init to reflect boundaries");
-    _playerSprite = [[Player alloc] initWithLocation:[GameViewController playerInitLocation] WithBottomBoundary:0 WithTopBoundary:1000 WithLeftBoundary:0 WithRightBoundary:1000];
+    _playerSprite = [[Player alloc] initWithLocation:[GameViewController playerInitLocation] WithBottomBoundary:bottomBoundaryWorld WithTopBoundary:topBoundaryWorld WithLeftBoundary:leftBoundaryWorld WithRightBoundary:rightBoundaryWorld];
     [self addChild:_playerSprite];
-    
-}
-
-- (void)initAnimation {
-    
-    
     
 }
 

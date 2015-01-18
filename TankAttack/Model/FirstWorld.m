@@ -12,15 +12,14 @@
 
 - (void)createInitialSprites {
     
-    [self createPlayerSprite];
     [self createMinionSprites];
 
 }
 
 - (void)createMinionSprites {
     
-    
-    
+    Minion *minion = [[Minion alloc] initWithX:300 WithY:300 WithLeftXLimit:50 WithRightXLimit:200 WithIsGoingRight:true IntoWorld:self];
+
 }
 
 @end

@@ -69,6 +69,7 @@ static GameViewController *sharedInstance;
 static CGSize gameSize;
 static CGFloat gameWidth;
 static CGFloat gameHeight;
+static int difficulty;
 
 
 
@@ -101,13 +102,25 @@ static CGFloat gameHeight;
 
 + (CGPoint)playerInitLocation {
     
-    return CGPointMake(gameWidth/2, gameHeight/8);
+    return CGPointMake(gameWidth/2, gameHeight/4);
     
 }
 
 + (GameViewController *)sharedInstance {
     
     return sharedInstance;
+    
+}
+
++ (int)difficulty {
+    
+    return difficulty;
+    
+}
+
++ (void)setDifficulty:(int)newDifficulty {
+    
+    difficulty = newDifficulty;
     
 }
 
@@ -118,17 +131,27 @@ static CGFloat gameHeight;
     [super viewDidLoad];
     
     sharedInstance = self;
-
     
-    [GameViewController setSize:self.view.frame.size];
-    
-    [self configureAndShowSKView];                          // The JavaFX equivalent of SKView is Stage
+    [self configureGameParameters];
+    [self configureAndShowSKView];                  // The JavaFX equivalent of SKView is Stage
     [self configureSplashScreen];
     
     // Present the scene.
     [_view presentScene:_splashScreen];
     
     [self allocateAndInitiateWorldsInBackground];
+    
+}
+
+- (void)configureGameParameters {
+    
+    // TODO: Remember last difficulty. Maybe.
+    
+    NSLog(@"Remember last difficulty, maybe. TODO");
+    [GameViewController setDifficulty:2];
+    
+    // Size
+    [GameViewController setSize:self.view.frame.size];
     
 }
 
@@ -221,7 +244,6 @@ static CGFloat gameHeight;
     
     _scene = [_currWorld createScene];
     [_view presentScene:_scene];
-    [_currWorld initAnimation];
     
 }
 

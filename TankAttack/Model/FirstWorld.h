@@ -7,6 +7,7 @@
 //
 
 #import "World.h"
+#import "Minion.h"
 
 @interface FirstWorld : World
 - (void)createInitialSprites;

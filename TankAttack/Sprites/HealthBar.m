@@ -24,6 +24,7 @@
     
     if (self) {
         
+        [self setZPosition:2.0];
         [self setInternalParametersWithHealth:health WithWidth:width];
         [self initRectanglesWithWidth:width WithHeight:height WithParent:parent];
         [parent addChild:self];

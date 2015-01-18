@@ -69,7 +69,8 @@
     [_bulletButton setFontColor:[UIColor whiteColor]];
     [_bulletButton setFontSize:45];
     [_bulletButton setText:@"FIRE"];
-    [_bulletButton setPosition:CGPointMake([self size].width/4, 0)];
+    [_bulletButton setPosition:CGPointMake([self size].width/4, 0.0)];
+    [_bulletButton setVerticalAlignmentMode:SKLabelVerticalAlignmentModeCenter];
     
     [self addChild:_bulletButton];
     

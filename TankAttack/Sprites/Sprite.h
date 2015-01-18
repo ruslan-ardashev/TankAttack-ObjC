@@ -11,6 +11,6 @@
 
 @interface Sprite : SKSpriteNode
 
-@property (readonly, nonatomic) HealthBar *healthBar;
+@property (nonatomic) HealthBar *healthBar;
 
 @end
