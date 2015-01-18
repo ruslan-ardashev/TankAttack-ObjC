@@ -59,7 +59,7 @@
     SKScene *_scene;
     World *_currWorld;
     SKScene *_splashScreen;
-    NSArray *_worlds;
+    NSMutableArray *_worlds;
     
 }
 
