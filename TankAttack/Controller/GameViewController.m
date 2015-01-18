@@ -76,6 +76,12 @@ static int difficulty;
 
 
 // Class Methods
++ (UIColor *)tankColor {
+    
+    return [UIColor UIColorFromHexString:@"#003f00"];
+    
+}
+
 + (CGFloat)width {
     
     return gameWidth;
