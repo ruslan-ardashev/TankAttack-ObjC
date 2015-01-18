@@ -143,6 +143,15 @@ static int difficulty;
     
 }
 
+- (void)displayMainMenu {
+    
+    [self configureSplashScreen];
+    // Present the scene.
+    [_view presentScene:_splashScreen];
+    [self allocateAndInitiateWorldsInBackground];
+    
+}
+
 - (void)configureGameParameters {
     
     // TODO: Remember last difficulty. Maybe.
