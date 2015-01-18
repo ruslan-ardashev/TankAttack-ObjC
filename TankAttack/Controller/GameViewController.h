@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 
+#define BACKGROUND_GREEN_COLOR @"#629632"
 
 #define DEFAULT_FONT @"DamascusBold"
 
