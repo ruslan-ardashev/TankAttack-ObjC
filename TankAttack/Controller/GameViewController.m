@@ -61,6 +61,8 @@
     SKScene *_splashScreen;
     NSMutableArray *_worlds;
     
+    int _currentWorldIndex;
+    
 }
 
 
@@ -166,6 +168,8 @@ static int difficulty;
 
 - (void)allocateAndInitiateWorldsInBackground {
     
+    _currentWorldIndex = 0;
+    
     FirstWorld *w1 = [[FirstWorld alloc] initWithSize:gameSize];
     SecondWorld *w2 = [[SecondWorld alloc] initWithSize:gameSize];
     ThirdWorld *w3 = [[ThirdWorld alloc] initWithSize:gameSize];
@@ -264,7 +268,27 @@ static int difficulty;
     
 }
 
-- (void)displayLevelTwo {
+- (void)progressToNextLevel {
+    
+    _currentWorldIndex++;
+    
+    switch (_currentWorldIndex) {
+        case 1:
+            NSLog(@"Level 2");
+            [self displayLevelTwo];
+            break;
+        case 2:
+            NSLog(@"Level 3");
+            [self displayLevelThree];
+            break;
+        case 3:
+            NSLog(@"Level 4");
+            [self displayLevelFour];
+            break;
+        default:
+            [self displayMainMenu];
+            break;
+    }
     
     
     
