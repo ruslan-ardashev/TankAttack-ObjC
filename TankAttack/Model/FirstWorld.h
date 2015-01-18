@@ -10,5 +10,5 @@
 #import "Minion.h"
 
 @interface FirstWorld : World
-- (void)createInitialSprites;
+
 @end
