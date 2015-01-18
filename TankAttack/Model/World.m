@@ -54,6 +54,8 @@
 - (void)createControllerOverlayAndPlayerSprite {
     
     _overlay = [[Overlay alloc] initIntoWorld:self];
+    
+    NSLog(@"overlay fraction: %f", [_overlay size].height / [self size].height);
 
     CGFloat bottomBoundaryWorld = [_overlay size].height;
     CGFloat rightBoundaryWorld = [self size].width;
@@ -82,7 +84,12 @@
 //    updateEnemySprites();       // also handles enemy fire
 
 //    handleCollision();          // Register Collisions With Tanks
+    
+    
+    
 //    handleCollisionBullets();   // Register Collisions Between Sprites & Bullets
+    [self handleBulletCollisions];
+    
     
 //    updateBulletMovements();    // Bullet Movement
     [self updateBulletMovements];
@@ -100,6 +107,42 @@
     
     [self updatePlayerLocation];
     [self handlePlayerFiring];
+    
+}
+
+- (void)handleBulletCollisions {
+    
+    // Let's see how this works... the idea is to use one array to detect all bullet collisions with objects
+    
+    // Non-bullet for-loop
+    for (SKSpriteNode *s in [self children]) {
+        
+        if ([s isKindOfClass:[BulletSprite class]]) {
+            
+            continue;
+            
+        }
+        
+        // Bullet for-loop
+        for (SKSpriteNode *b in [self children]) {
+            
+            if (![b isKindOfClass:[BulletSprite class]]) {
+                
+                continue;
+                
+            }
+            
+            if ([s intersectsNode:b]) {
+                
+                NSLog(@"BULLET COLLISION, 1: %@, 2: %@", s, b);
+                
+            }
+            
+        }
+        
+    }
+    
+    
     
 }
 

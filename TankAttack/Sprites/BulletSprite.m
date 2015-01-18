@@ -16,7 +16,7 @@
     
     if (self) {
         
-        [self setPosition:CGPointMake(xPosition, yPosition)];
+        [self setPosition:CGPointMake(xPosition, yPosition + self.size.height/2)];
         [world addChild:self];
         return self;
         
