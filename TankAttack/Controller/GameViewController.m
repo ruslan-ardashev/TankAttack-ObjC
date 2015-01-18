@@ -247,6 +247,23 @@ static int difficulty;
     
 }
 
+- (void)displayLevelTwo {
+    
+    
+    
+}
+
+- (void)displayLevelThree {
+    
+    
+    
+}
+
+- (void)displayLevelFour {
+    
+    
+    
+}
 
 
 @end
