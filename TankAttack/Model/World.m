@@ -18,6 +18,9 @@
     
     NSDate *_lastFired;
     
+    SKLabelNode *_failureLabel;
+    SKLabelNode *_successLabel;
+    
 }
 
 - (id)initWithSize:(CGSize)size {
@@ -323,7 +326,7 @@
     
     if (enemyCount == 0) {
         
-        NSLog(@"WIN");
+        [self signalVictory];
         
     }
     
@@ -331,7 +334,54 @@
 
 - (void)signalFailure {
     
-    NSLog(@"LOSS");
+    if (!_failureLabel) {
+        
+        _failureLabel = [[SKLabelNode alloc] initWithFontNamed:DEFAULT_FONT];
+        _failureLabel.text = @"FAILURE";
+        _failureLabel.fontColor = [UIColor redColor];
+        _failureLabel.fontSize = 65;
+        _failureLabel.position = CGPointMake([GameViewController width]/2, [GameViewController height]/2);
+        
+        [self addChild:_failureLabel];
+        
+        [self backToMainMenu];
+        
+    }
+
+}
+
+- (void)signalVictory {
+    
+    if (!_successLabel) {
+        
+        _successLabel = [[SKLabelNode alloc] initWithFontNamed:DEFAULT_FONT];
+        _successLabel.text = @"SUCCESS";
+        _successLabel.fontColor = [UIColor greenColor];
+        _successLabel.fontSize = 65;
+        _successLabel.position = CGPointMake([GameViewController width]/2, [GameViewController height]/2);
+        
+        [self addChild:_successLabel];
+        
+        [self progressToNextLevel];
+        
+    }
+    
+}
+
+- (void)backToMainMenu {
+    
+    SKAction *wait = [SKAction waitForDuration:3.00];
+    SKAction *replace = [SKAction performSelector:@selector(displayMainMenu) onTarget:[GameViewController sharedInstance]];
+    
+    SKAction *sequence = [SKAction sequence:@[wait, replace]];
+    
+    [self runAction:sequence];
+    
+}
+
+- (void)progressToNextLevel {
+    
+    NSLog(@"TODO: Progress to next level.");
     
 }
 
