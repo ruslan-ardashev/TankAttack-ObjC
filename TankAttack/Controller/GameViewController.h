@@ -34,6 +34,9 @@
 
 @interface GameViewController : UIViewController
 
+// Tank Color
++ (UIColor *)tankColor;
+
 // Game Parameters
 + (CGFloat)width;
 + (CGFloat)height;
