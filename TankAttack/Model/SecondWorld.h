@@ -8,6 +8,7 @@
 
 #import "World.h"
 #import "Minion.h"
+#import "Boss.h"
 
 @interface SecondWorld : World
 

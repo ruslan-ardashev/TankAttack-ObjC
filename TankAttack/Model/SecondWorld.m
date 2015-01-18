@@ -40,7 +40,7 @@
     CGFloat oneTenthWidth = self.size.width/10;
     CGFloat oneTenthHeight = self.size.height/10;
     
-    [[Boss alloc] initWithX:5*oneTenthWidth WithY:7*oneTenthHeight IntoWorld:self];
+    [[Boss alloc] initWithX:5*oneTenthWidth WithY:8.25*oneTenthHeight IntoWorld:self];
     
 }
 
