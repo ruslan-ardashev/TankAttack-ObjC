@@ -12,7 +12,7 @@
 
 @property (readonly, nonatomic) double health;
 
-- (id)initWithHealth:(double)health WithWidth:(double)width WithHeight:(double)height WithParent:(SKSpriteNode *)parent;
+- (id)initWithHealth:(double)health WithParentWidth:(double)width WithParentHeight:(double)height WithParent:(SKSpriteNode *)parent;
 - (void)decrementHealthByAmount:(double)amount;
 - (void)instantDeath;
 - (void)infiniteHealth;
