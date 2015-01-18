@@ -14,6 +14,7 @@
 #import "Overlay.h"
 #import "BulletSprite.h"
 #import "Enemy.h"
+#import "Boss.h"
 
 @interface World : SKScene
 
