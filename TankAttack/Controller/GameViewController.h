@@ -15,6 +15,7 @@
 
 #define PLAYER_SPEED 0.025          // Compensates for a crazy Joystick velocity
 #define MINION_SPEED 1
+#define BOSS_SPEED 0.85
 
 #define BULLET_SPEED 3.5
 #define DELAY_BETWEEN_BULLETS 0.100   // seconds
@@ -22,9 +23,10 @@
 #define BULLET_HEIGHT_COMPENSATION 5
 
 #define SMALL_TANK_SCALE_FACTOR 0.25
-#define BOSS_TANK_SCALE_FACTOR 0.25
+#define BOSS_TANK_SCALE_FACTOR 0.50
 #define PLAYER_IMAGE_NAME @"tank"
 #define MINION_IMAGE_NAME @"minion"
+#define BOSS_IMAGE_NAME @"boss"
 
 
 @interface UIColor (HexColor)
