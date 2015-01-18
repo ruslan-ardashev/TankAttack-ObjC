@@ -18,15 +18,15 @@
     
 }
 
-- (id)initWithHealth:(double)health WithWidth:(double)width WithHeight:(double)height WithParent:(SKSpriteNode *)parent{
+- (id)initWithHealth:(double)health WithParentWidth:(double)width WithParentHeight:(double)height WithParent:(SKSpriteNode *)parent{
     
     self = [super init];
     
     if (self) {
         
         [self setZPosition:2.0];
-        [self setInternalParametersWithHealth:health WithWidth:width];
-        [self initRectanglesWithWidth:width WithHeight:height WithParent:parent];
+        [self setInternalParametersWithHealth:health WithWidth:(.8 * width)];
+        [self initRectanglesWithWidth:(.8 * width) WithHeight:(.1*height) WithParent:parent];
         [parent addChild:self];
         
         return self;
@@ -56,13 +56,13 @@
     
     if ([[parent name] isEqualToString:@"playerSprite"]) {                  // Player
         
-        [_redBar setPosition:CGPointMake(0, -[parent size].height*2/6)];    // -2/3's up the bottom half of the parent
+        [_redBar setPosition:CGPointMake(0, -[parent size].height*3/8)];    // -3/4's up the bottom half of the parent
         
     }
     
     else {                                                                  // Enemy
         
-        [_redBar setPosition:CGPointMake(0, [parent size].height*2/6)];     // 2/3's up the top half of the parent
+        [_redBar setPosition:CGPointMake(0, [parent size].height*3/8)];     // 3/4's up the top half of the parent
         
     }
     
@@ -70,13 +70,13 @@
     
     if ([[parent name] isEqualToString:@"playerSprite"]) {                  // Player
         
-        [_greenBar setPosition:CGPointMake(0, -[parent size].height*2/6)];    // -2/3's up the bottom half of the parent
+        [_greenBar setPosition:CGPointMake(0, -[parent size].height*3/8)];    // -3/4's up the bottom half of the parent
         
     }
     
     else {                                                                  // Enemy
         
-        [_greenBar setPosition:CGPointMake(0, [parent size].height*2/6)];     // 2/3's up the top half of the parent
+        [_greenBar setPosition:CGPointMake(0, [parent size].height*3/8)];     // 3/4's up the top half of the parent
         
     }
     
