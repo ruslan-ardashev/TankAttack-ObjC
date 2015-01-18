@@ -21,6 +21,9 @@
     
     if (self) {
         
+        _rightXLimit = rightXLimit;
+        _leftXLimit = leftXLimit;
+        
         [self initHealthBar];
         [self setPosition:CGPointMake(x, y)];
         [self setScale:SMALL_TANK_SCALE_FACTOR];
@@ -61,6 +64,86 @@
     }
     
     [self setHealthBar:hb];
+    
+}
+
+- (void)updateEnemyXY {
+    
+    if (![self isAlive]) {
+        
+        return;
+        
+    }
+    
+    if (_isGoingRight) {
+        
+        CGFloat rightDestination = [self position].x + [self size].width/2 + MINION_SPEED;
+        
+        if (rightDestination >= _rightXLimit) {
+            
+            _isGoingRight = false;
+            [self goLeft];
+            
+        }
+        // Update x ++
+        
+        else {
+            
+            [self goRight];
+            
+        }
+        
+    }
+    
+    else {
+        
+        // Update x --
+        CGFloat leftDestination = [self position].x - [self size].width/2 - MINION_SPEED;
+        
+        if (leftDestination <= _leftXLimit) {
+            
+            _isGoingRight = true;
+            [self goRight];
+            
+        }
+        
+        else {
+            
+            [self goLeft];
+            
+        }
+        
+    }
+    
+}
+
+- (void)goRight {
+    
+    CGPoint newPosition = CGPointMake([self position].x + MINION_SPEED, [self position].y);
+    [self setPosition:newPosition];
+    
+}
+
+- (void)goLeft {
+    
+    CGPoint newPosition = CGPointMake([self position].x - MINION_SPEED, [self position].y);
+    [self setPosition:newPosition];
+    
+}
+
+- (Boolean)isFiring {
+    
+    if ([self isAlive]) {
+        
+        return ((arc4random() % 100)/100.0f < 0.13);
+        
+    }
+    
+    else {
+        
+        return false;
+        
+    }
     
 }
 

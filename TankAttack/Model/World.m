@@ -14,6 +14,7 @@
     Overlay *_overlay;
     
     NSMutableArray *_bodiesToRemove;
+    NSMutableArray *_spritesToAdd;
     
     NSDate *_lastFired;
     
@@ -23,13 +24,23 @@
     
     self = [super initWithSize:size];
     
-    self.backgroundColor = [UIColor lightGrayColor];
-    self.scaleMode = SKSceneScaleModeResizeFill;
+    if (self) {
+        
+        self.backgroundColor = [UIColor lightGrayColor];
+        self.scaleMode = SKSceneScaleModeResizeFill;
+        
+        // Bullet Firing Interval Calculation
+        _lastFired = [NSDate date];
+        
+        return self;
+        
+    }
     
-    // Bullet Firing Interval Calculation
-    _lastFired = [NSDate date];
+    else {
     
-    return self;
+        return nil;
+        
+    }
     
 }
 
@@ -76,46 +87,59 @@
 
 - (void)updateSprites {
     
-    // From my own TankAttack-Java done for CS308 (once the course is over, will open-source)
-//    playerSprite.updateLocation();
-    [self handlePlayerSprite];
-    
-//    handleFiring();             // Handle Player Firing
-//    updateEnemySprites();       // also handles enemy fire
-
-//    handleCollision();          // Register Collisions With Tanks
-    
-    
-    
-//    handleCollisionBullets();   // Register Collisions Between Sprites & Bullets
-    [self handleBulletCollisions];
-    
-    
-//    updateBulletMovements();    // Bullet Movement
-    [self updateBulletMovements];
-    
-//    updateAllSpritesToCheckForDeath();
-    
-    // Clean up bullets & completed-animating sprites
-    [self cleanUp];               // TODO: implement the rest of this!
-    
-//    checkForWin();              // Check for win
+    [self handlePlayerSprite];          // Movement & Firing
+    [self handleCollision];             // Register Collisions With Tanks
+    [self handleBulletCollisions];      // Register Collisions Between Sprites & Bullets
+    [self updateBulletMovements];       // Bullet movement
+    [self updateEnemyFiringMoveDeath];  // Enemy Firing, Enemy Movement, Enemy Death
+    [self cleanUp];
+    [self checkForWinOrLoss];                 // Check for win
         
+}
+
+- (void)handleCollision {
+    
+    for (SKSpriteNode *s in self.children) {
+        
+        if ([_playerSprite intersectsNode:s]) {
+            
+            if ([_playerSprite isEqual:s]) {
+                continue;
+            }
+            
+            if ([s isKindOfClass:[Sprite class]]) {
+                
+                [_playerSprite death];
+                [(Enemy *)s death];
+                
+            }
+            
+        }
+        
+    }
+    
 }
 
 - (void)handlePlayerSprite {
     
-    [self updatePlayerLocation];
-    [self handlePlayerFiring];
+    [_playerSprite checkIfAlive];
+    
+    if ([_playerSprite isAlive]) {
+        
+        [self updatePlayerLocation];
+        [self handlePlayerFiring];
+        
+    }
     
 }
 
 - (void)handleBulletCollisions {
     
     // Let's see how this works... the idea is to use one array to detect all bullet collisions with objects
+    NSMutableArray *bulletsThatCollided = [[NSMutableArray alloc] init];
     
     // Non-bullet for-loop
-    for (SKSpriteNode *s in [self children]) {
+    for (Sprite *s in [self children]) {
         
         if ([s isKindOfClass:[BulletSprite class]]) {
             
@@ -134,11 +158,22 @@
             
             if ([s intersectsNode:b]) {
                 
-                NSLog(@"BULLET COLLISION, 1: %@, 2: %@", s, b);
+                if ([s isKindOfClass:[Sprite class]]) {
+                    
+                    [bulletsThatCollided addObject:b];
+                    [[s healthBar] decrementHealthByAmount:BULLET_DAMAGE];
+                    
+                }
                 
             }
             
         }
+        
+    }
+    
+    for (SKSpriteNode *sprite in bulletsThatCollided) {
+     
+        [sprite removeFromParent];
         
     }
     
@@ -167,14 +202,33 @@
             
             _lastFired = [NSDate date];
             
-            CGFloat initXPosition = [_playerSprite position].x;
-            CGFloat initYPosition = [_playerSprite position].y + [_playerSprite size].height/2;
-            
-            [[BulletSprite alloc] initAtX:initXPosition AtY:initYPosition IntoWorld:self];
+            [self fireBulletForSprite:_playerSprite IsGoingUp:true];
             
         }
 
     }
+    
+}
+
+- (void)fireBulletForSprite:(Sprite *)s IsGoingUp:(Boolean)isGoingUp {
+    
+    CGFloat initYPosition;
+    
+    CGFloat initXPosition = [s position].x;
+    
+    if (isGoingUp) {
+        
+        initYPosition = [s position].y + [s size].height/2 + BULLET_HEIGHT_COMPENSATION;
+        
+    }
+
+    else {
+        
+        initYPosition = [s position].y - [s size].height/2 - BULLET_HEIGHT_COMPENSATION;
+        
+    }
+    
+    [[BulletSprite alloc] initAtX:initXPosition AtY:initYPosition IntoWorld:self IsGoingUp:isGoingUp];
     
 }
 
@@ -185,6 +239,27 @@
         if ([sprite isKindOfClass:[BulletSprite class]]) {
             
             [sprite updateXY];
+            
+        }
+        
+    }
+    
+}
+
+- (void)updateEnemyFiringMoveDeath {
+    
+    for (SKSpriteNode *s in [self children]) {
+        
+        if ([s isKindOfClass:[Enemy class]]) {
+            
+            [(Enemy *)s checkForDeathAndReactAppropriately];
+            [(Enemy *)s updateEnemyXY];
+            
+            if ([(Enemy *)s isFiring]) {
+                
+                [self fireBulletForSprite:s IsGoingUp:false];
+                
+            }
             
         }
         
@@ -203,7 +278,9 @@
         
         if ([s isKindOfClass:[BulletSprite class]]) {
             
-            if ([s position].y > [self size].height) {
+            if ([s position].y > [self size].height
+                ||
+                [s position].y < 0.0) {
                 
                 [removeArray addObject:s];
                 
@@ -219,6 +296,42 @@
         [b removeFromParent];
         
     }
+    
+}
+
+- (void)checkForWinOrLoss {
+    
+    // Loss Check
+    if (![_playerSprite isAlive]) {
+        
+        [self signalFailure];
+        return;
+        
+    }
+    
+    // Win Check
+    int enemyCount = 0;
+    for (SKSpriteNode *s in self.children) {
+        
+        if ([s isKindOfClass:[Enemy class]]) {
+            
+            enemyCount++;
+            
+        }
+        
+    }
+    
+    if (enemyCount == 0) {
+        
+        NSLog(@"WIN");
+        
+    }
+    
+}
+
+- (void)signalFailure {
+    
+    NSLog(@"LOSS");
     
 }
 

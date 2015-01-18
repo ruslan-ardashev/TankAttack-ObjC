@@ -10,4 +10,10 @@
 
 @implementation Boss
 
+- (void)replaceImageWithFire {
+    
+    [self setTexture:[SKTexture textureWithImageNamed:@"bossDeath"]];
+    
+}
+
 @end

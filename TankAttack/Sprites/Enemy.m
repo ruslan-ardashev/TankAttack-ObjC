@@ -61,34 +61,7 @@
     
     if ([[self healthBar] health] <= 0.0) {
         
-        SKAction *showFireAndDisappear = [self fireDisplayAndDisappearAction];
-        [self runAction:showFireAndDisappear];
-        
-    }
-    
-}
-                              
-- (SKAction *)fireDisplayAndDisappearAction {
-
-    SKAction *replace = [SKAction performSelector:@selector(replaceImageWithFire) onTarget:self];
-    SKAction *wait = [SKAction waitForDuration:2.00];
-    SKAction *remove = [SKAction removeFromParent];
-    
-    return [SKAction sequence:@[replace, wait, remove]];
-    
-}
-
-- (void)replaceImageWithFire {
-    
-    if ([self isKindOfClass:[Boss class]]) {
-        
-        [self setTexture:[SKTexture textureWithImageNamed:@"bossDeath"]];
-        
-    }
-    
-    else {
-        
-        [self setTexture:[SKTexture textureWithImageNamed:@"normalDeath"]];
+        [self death];
         
     }
     

@@ -8,15 +8,21 @@
 
 #import "BulletSprite.h"
 
-@implementation BulletSprite
+@implementation BulletSprite {
+    
+    Boolean _isGoingUp;
+    
+}
 
-- (id)initAtX:(CGFloat)xPosition AtY:(CGFloat)yPosition IntoWorld:(World *)world {
+- (id)initAtX:(CGFloat)xPosition AtY:(CGFloat)yPosition IntoWorld:(World *)world IsGoingUp:(Boolean)isGoingUp {
     
     self = [super initWithImageNamed:@"bullet"];
     
     if (self) {
         
-        [self setPosition:CGPointMake(xPosition, yPosition + self.size.height/2)];
+        _isGoingUp = isGoingUp;
+        
+        [self setPosition:CGPointMake(xPosition, yPosition)];
         [world addChild:self];
         return self;
         
@@ -32,7 +38,20 @@
 
 - (void)updateXY {
     
-    CGPoint newPosition = CGPointMake([self position].x, ([self position].y + BULLET_SPEED));
+    CGPoint newPosition;
+    
+    if (_isGoingUp) {
+        
+        newPosition = CGPointMake([self position].x, ([self position].y + BULLET_SPEED));
+        
+    }
+    
+    else {
+        
+        newPosition = CGPointMake([self position].x, ([self position].y - BULLET_SPEED));
+        
+    }
+    
     [self setPosition:newPosition];
     
 }

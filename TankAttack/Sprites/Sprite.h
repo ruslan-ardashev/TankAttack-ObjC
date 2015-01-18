@@ -12,5 +12,8 @@
 @interface Sprite : SKSpriteNode
 
 @property (nonatomic) HealthBar *healthBar;
+@property (nonatomic) Boolean isAlive;
+
+- (void)death;
 
 @end

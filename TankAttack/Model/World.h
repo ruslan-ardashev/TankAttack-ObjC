@@ -13,11 +13,11 @@
 #import "Player.h"
 #import "Overlay.h"
 #import "BulletSprite.h"
+#import "Enemy.h"
 
 @interface World : SKScene
 
 - (SKScene *)createScene;
-- (void)createPlayerSprite;
 
 @property (readonly, nonatomic) Player *playerSprite;
 

@@ -12,8 +12,6 @@
 
 @interface Enemy : Sprite
 
-@property (nonatomic) Boolean isAlive;
-
 - (id)initWithImageNamed:(NSString *)name;
 - (void)updateEnemyXY;
 - (Boolean)isFiring;

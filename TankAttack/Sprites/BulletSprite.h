@@ -11,8 +11,7 @@
 #import "World.h"
 
 @interface BulletSprite : SKSpriteNode
-
-- (id)initAtX:(CGFloat)xPosition AtY:(CGFloat)yPosition IntoWorld:(World *)world;
+- (id)initAtX:(CGFloat)xPosition AtY:(CGFloat)yPosition IntoWorld:(World *)world IsGoingUp:(Boolean)isGoingUp;
 - (void)updateXY;
 
 @end

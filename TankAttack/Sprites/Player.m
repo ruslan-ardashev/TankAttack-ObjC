@@ -21,6 +21,8 @@
     
     if (self != nil) {
         
+        [self setIsAlive:true];
+        
         _topBoundary = topBoundary;
         _bottomBoundary = bottomBoundary;
         _leftBoundary = leftBoundary;
@@ -136,12 +138,16 @@
     
 }
 
-
-
-
-
-
-
+- (void)checkIfAlive {
+    
+    if ([[self healthBar] health] == 0.0) {
+        
+        [self setIsAlive:false];
+        [self death];
+        
+    }
+    
+}
 
 
 

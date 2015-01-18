@@ -77,7 +77,7 @@
     else {                                                                  // Enemy
         
         [_greenBar setPosition:CGPointMake(0, [parent size].height*3/8)];     // 3/4's up the top half of the parent
-        
+
     }
     
     [self addChild:_redBar];
@@ -98,9 +98,10 @@
         
         double percent;
         
-        if (amount == -1.0) {
+        if (amount == -1.0 || _health <= 0.0) {
             
-            percent = 0.0;          // Instant death case
+            percent = 0.0;          // Instant Death || Regular Death case
+            _health = 0.0;
             
         }
         
