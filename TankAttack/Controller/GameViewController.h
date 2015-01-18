@@ -49,5 +49,18 @@
 // Instance Methods
 - (void)startGame;
 - (void)displayMainMenu;
+- (void)progressToNextLevel;
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
