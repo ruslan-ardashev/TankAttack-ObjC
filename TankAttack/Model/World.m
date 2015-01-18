@@ -256,7 +256,18 @@
         if ([s isKindOfClass:[Enemy class]]) {
             
             [(Enemy *)s checkForDeathAndReactAppropriately];
-            [(Enemy *)s updateEnemyXY];
+            
+            if ([s isKindOfClass:[Boss class]]) {
+                
+                [(Enemy *)s updateEnemyXYWithPlayerX:[_playerSprite position].x];
+                
+            }
+            
+            else {
+                
+                [(Enemy *)s updateEnemyXY];
+                
+            }
             
             if ([(Enemy *)s isFiring]) {
                 
