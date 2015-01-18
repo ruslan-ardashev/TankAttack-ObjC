@@ -8,9 +8,12 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "Sprite.h"
+#import "GameViewController.h"
+#import "World.h"
 
 
 @interface Boss : Sprite
 
+- (id)initWithX:(double)x WithY:(double)y IntoWorld:(World *)world;
 
 @end
