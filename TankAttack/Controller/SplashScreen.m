@@ -109,10 +109,10 @@
     
     tank.text = @"TANKATTACK";
     tank.fontSize = 55;
-    tank.position = CGPointMake([GameViewController width]/2, [GameViewController height]+100);
+    tank.position = CGPointMake([GameViewController width]/2, [GameViewController height]+20);
     tank.zPosition = 5.00;
     
-    SKAction *slide = [SKAction moveTo:CGPointMake([GameViewController width]/2, [GameViewController height]*3/4) duration:4.00];
+    SKAction *slide = [SKAction moveTo:CGPointMake([GameViewController width]/2, [GameViewController height]*3/4) duration:2.00];
     [tank runAction:slide];
     
     [self addChild:tank];
