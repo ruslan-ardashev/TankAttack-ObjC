@@ -8,12 +8,14 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "Sprite.h"
-#import "Boss.h"
 
 @interface Enemy : Sprite
 
+@property (nonatomic) Boolean followsPlayer;
+
 - (id)initWithImageNamed:(NSString *)name;
 - (void)updateEnemyXY;
+- (void)updateEnemyXYWithPlayerX:(CGFloat)playerX;
 - (Boolean)isFiring;
 - (double)getBulletOffsetX;
 - (double)getBulletOffsetY;
