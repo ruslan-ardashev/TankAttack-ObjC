@@ -13,9 +13,6 @@
     
     Overlay *_overlay;
     
-    NSMutableArray *_bodiesToRemove;
-    NSMutableArray *_spritesToAdd;
-    
     NSDate *_lastFired;
     
     SKLabelNode *_failureLabel;
@@ -263,6 +260,12 @@
                 
             }
             
+            else if ([s isKindOfClass:[KamikazeeMinion class]]) {
+                
+                [(KamikazeeMinion *)s updateEnemyXYWithPlayerX:[_playerSprite position].x WithPlayerY:[_playerSprite position].y];
+                
+            }
+            
             else {
                 
                 [(Enemy *)s updateEnemyXY];
@@ -271,7 +274,7 @@
             
             if ([(Enemy *)s isFiring]) {
                 
-                [self fireBulletForSprite:s IsGoingUp:false];
+                [self fireBulletForSprite:(Enemy *)s IsGoingUp:false];
                 
             }
             
@@ -406,11 +409,35 @@
 - (void)progressNextLevel {
     
     SKAction *wait = [SKAction waitForDuration:4.00];
-    SKAction *replace = [SKAction performSelector:@selector(progressToNextLevel) onTarget:[GameViewController sharedInstance]];
+    SKAction *nextLevel = [SKAction performSelector:@selector(progressToNextLevel) onTarget:[GameViewController sharedInstance]];
     
-    SKAction *sequence = [SKAction sequence:@[wait, replace]];
+    SKAction *replaceSuccessWithEnd = [SKAction performSelector:@selector(displayEndOfGame) onTarget:self];
     
-    [self runAction:sequence];
+    SKAction *sequence = [SKAction sequence:@[wait, nextLevel]];
+    SKAction *sequenceEndGame = [SKAction sequence:@[wait, replaceSuccessWithEnd, wait, nextLevel]];
+    
+    if ([[GameViewController sharedInstance] isAtEndOfGame]) {
+        
+        [self runAction:sequenceEndGame];
+        
+    }
+    
+    else {
+        
+        [self runAction:sequence];
+        
+    }
+    
+}
+
+- (void)displayEndOfGame {
+    
+    [_successLabel removeFromParent];
+    
+    SKLabelNode *endGameLabel = [self createLabelAtCenter];
+    endGameLabel.text = @"GAME DEFEATED!";
+    endGameLabel.fontSize = 40;
+    endGameLabel.fontColor = [UIColor greenColor];
     
 }
 

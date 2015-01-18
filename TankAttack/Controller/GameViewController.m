@@ -253,6 +253,8 @@ static int difficulty;
 
 - (void)startGame {
     
+    _isAtEndOfGame = false;
+    
     if (_worlds == nil) {
         NSLog(@"Resources not loaded yet.");
         return;
@@ -289,6 +291,7 @@ static int difficulty;
             break;
         case 3:
             NSLog(@"Level 4");
+            _isAtEndOfGame = true;
             [self displayLevelFour];
             break;
         default:

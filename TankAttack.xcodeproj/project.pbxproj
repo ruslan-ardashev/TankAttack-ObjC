@@ -13,6 +13,7 @@
 		440351AA1A6AD7B200031138 /* HealthBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 440351A91A6AD7B200031138 /* HealthBar.m */; };
 		440351AD1A6AE03300031138 /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 440351AC1A6AE03300031138 /* Sprite.m */; };
 		440351B01A6AE66E00031138 /* Boss.m in Sources */ = {isa = PBXBuildFile; fileRef = 440351AF1A6AE66E00031138 /* Boss.m */; };
+		440351B31A6C47C300031138 /* KamikazeeMinion.m in Sources */ = {isa = PBXBuildFile; fileRef = 440351B11A6C47C300031138 /* KamikazeeMinion.m */; };
 		441451DF1A68858200D481C0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 441451D81A68858200D481C0 /* .gitignore */; };
 		441451E01A68858200D481C0 /* dpad.png in Resources */ = {isa = PBXBuildFile; fileRef = 441451D91A68858200D481C0 /* dpad.png */; };
 		441451E11A68858200D481C0 /* Joystick.m in Sources */ = {isa = PBXBuildFile; fileRef = 441451DB1A68858200D481C0 /* Joystick.m */; };
@@ -60,6 +61,8 @@
 		440351AC1A6AE03300031138 /* Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Sprite.m; path = Sprites/Sprite.m; sourceTree = "<group>"; };
 		440351AE1A6AE66E00031138 /* Boss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Boss.h; path = Sprites/Boss.h; sourceTree = "<group>"; };
 		440351AF1A6AE66E00031138 /* Boss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Boss.m; path = Sprites/Boss.m; sourceTree = "<group>"; };
+		440351B11A6C47C300031138 /* KamikazeeMinion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KamikazeeMinion.m; path = Sprites/KamikazeeMinion.m; sourceTree = "<group>"; };
+		440351B21A6C47C300031138 /* KamikazeeMinion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KamikazeeMinion.h; path = Sprites/KamikazeeMinion.h; sourceTree = "<group>"; };
 		441451D81A68858200D481C0 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		441451D91A68858200D481C0 /* dpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dpad.png; sourceTree = "<group>"; };
 		441451DA1A68858200D481C0 /* Joystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Joystick.h; sourceTree = "<group>"; };
@@ -117,6 +120,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		440351B41A6C631F00031138 /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				440351B11A6C47C300031138 /* KamikazeeMinion.m */,
+				440351B21A6C47C300031138 /* KamikazeeMinion.h */,
+				441451F51A68D08B00D481C0 /* Player.h */,
+				441451F61A68D08B00D481C0 /* Player.m */,
+				4403519F1A6A53D200031138 /* BulletSprite.h */,
+				440351A01A6A53D200031138 /* BulletSprite.m */,
+				440351A51A6ACECF00031138 /* Minion.h */,
+				440351A61A6ACECF00031138 /* Minion.m */,
+				440351AE1A6AE66E00031138 /* Boss.h */,
+				440351AF1A6AE66E00031138 /* Boss.m */,
+			);
+			name = Subclasses;
+			sourceTree = "<group>";
+		};
+		440351B51A6C633E00031138 /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				441451E81A68C2E900D481C0 /* FirstWorld.h */,
+				441451E91A68C2E900D481C0 /* FirstWorld.m */,
+				441451EB1A68C35A00D481C0 /* SecondWorld.h */,
+				441451EC1A68C35A00D481C0 /* SecondWorld.m */,
+				441451EE1A68C36000D481C0 /* ThirdWorld.h */,
+				441451EF1A68C36000D481C0 /* ThirdWorld.m */,
+				441451F11A68C36700D481C0 /* FourthWorld.h */,
+				441451F21A68C36700D481C0 /* FourthWorld.m */,
+			);
+			name = Levels;
+			sourceTree = "<group>";
+		};
 		441451D71A68858200D481C0 /* Joystick */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,20 +169,13 @@
 		441451F41A68D07000D481C0 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
-				441451F51A68D08B00D481C0 /* Player.h */,
-				441451F61A68D08B00D481C0 /* Player.m */,
-				4403519F1A6A53D200031138 /* BulletSprite.h */,
-				440351A01A6A53D200031138 /* BulletSprite.m */,
+				440351B41A6C631F00031138 /* Subclasses */,
 				440351A21A6ACEC200031138 /* Enemy.h */,
 				440351A31A6ACEC200031138 /* Enemy.m */,
-				440351A51A6ACECF00031138 /* Minion.h */,
-				440351A61A6ACECF00031138 /* Minion.m */,
 				440351A81A6AD7B200031138 /* HealthBar.h */,
 				440351A91A6AD7B200031138 /* HealthBar.m */,
 				440351AB1A6AE03300031138 /* Sprite.h */,
 				440351AC1A6AE03300031138 /* Sprite.m */,
-				440351AE1A6AE66E00031138 /* Boss.h */,
-				440351AF1A6AE66E00031138 /* Boss.m */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -239,14 +267,7 @@
 			children = (
 				441451E51A68B16100D481C0 /* World.h */,
 				441451E61A68B16100D481C0 /* World.m */,
-				441451E81A68C2E900D481C0 /* FirstWorld.h */,
-				441451E91A68C2E900D481C0 /* FirstWorld.m */,
-				441451EB1A68C35A00D481C0 /* SecondWorld.h */,
-				441451EC1A68C35A00D481C0 /* SecondWorld.m */,
-				441451EE1A68C36000D481C0 /* ThirdWorld.h */,
-				441451EF1A68C36000D481C0 /* ThirdWorld.m */,
-				441451F11A68C36700D481C0 /* FourthWorld.h */,
-				441451F21A68C36700D481C0 /* FourthWorld.m */,
+				440351B51A6C633E00031138 /* Levels */,
 			);
 			name = Worlds;
 			path = Model;
@@ -368,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				440351B31A6C47C300031138 /* KamikazeeMinion.m in Sources */,
 				441451F31A68C36700D481C0 /* FourthWorld.m in Sources */,
 				441451FB1A697D3400D481C0 /* Overlay.m in Sources */,
 				440351AA1A6AD7B200031138 /* HealthBar.m in Sources */,
@@ -512,6 +534,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
 				INFOPLIST_FILE = TankAttack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -525,6 +549,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
 				INFOPLIST_FILE = TankAttack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

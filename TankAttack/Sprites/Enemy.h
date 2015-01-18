@@ -16,6 +16,7 @@
 - (id)initWithImageNamed:(NSString *)name;
 - (void)updateEnemyXY;
 - (void)updateEnemyXYWithPlayerX:(CGFloat)playerX;
+- (void)updateEnemyXYWithPlayerX:(CGFloat)playerX WithPlayerY:(CGFloat)playerY;
 - (Boolean)isFiring;
 - (double)getBulletOffsetX;
 - (double)getBulletOffsetY;

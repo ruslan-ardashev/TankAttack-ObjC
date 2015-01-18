@@ -206,7 +206,6 @@
     
     /* Called before each frame is rendered */
     
-    
     _previousTime = currentTime;
     
 }

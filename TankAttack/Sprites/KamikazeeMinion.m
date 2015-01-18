@@ -1,30 +1,22 @@
 //
-//  Minion.m
+//  KamikazeeMinion.m
 //  TankAttack
 //
 //  Created by Ruslan Ardashev on 1/17/15.
 //  Copyright (c) 2015 Ruslan Ardashev. All rights reserved.
 //
 
-#import "Minion.h"
+#import "KamikazeeMinion.h"
 
-@implementation Minion {
-    
-    double _leftXLimit, _rightXLimit;
-    Boolean _isGoingRight;
-    
-}
+@implementation KamikazeeMinion
 
-- (id)initWithX:(double)x WithY:(double)y WithLeftXLimit:(double)leftXLimit WithRightXLimit:(double)rightXLimit WithIsGoingRight:(Boolean)isGoingRight IntoWorld:(id)world {
+- (id)initWithX:(double)x WithY:(double)y IntoWorld:(World *)world {
     
     self = [super initWithImageNamed:MINION_IMAGE_NAME];
     
     if (self) {
         
-        _rightXLimit = rightXLimit;
-        _leftXLimit = leftXLimit;
         
-        [self setFollowsPlayer:false];
         [self initHealthBar];
         [self setPosition:CGPointMake(x, y)];
         [self setScale:SMALL_TANK_SCALE_FACTOR];
@@ -37,8 +29,14 @@
     else {
         
         return nil;
-    
+        
     }
+    
+}
+
+- (void)replaceImageWithFire {
+    
+    [self setTexture:[SKTexture textureWithImageNamed:@"bossDeath"]];
     
 }
 
@@ -68,7 +66,7 @@
     
 }
 
-- (void)updateEnemyXY {
+- (void)updateEnemyXYWithPlayerX:(CGFloat)playerX WithPlayerY:(CGFloat)playerY {
     
     if (![self isAlive]) {
         
@@ -76,75 +74,88 @@
         
     }
     
-    if (_isGoingRight) {
+    [self updateX:playerX];
+    [self updateY:playerY];
+    
+}
+
+- (void)updateX:(CGFloat)playerX {
+    
+    // Eliminate jitter
+    if (ABS(playerX - [self position].x) < 1) {
         
-        CGFloat rightDestination = [self position].x + [self size].width/2 + MINION_SPEED;
+        return;
         
-        if (rightDestination >= _rightXLimit) {
-            
-            _isGoingRight = false;
-            [self goLeft];
-            
-        }
-        // Update x ++
+    }
+    
+    else if (playerX > [self position].x) {
         
-        else {
-            
-            [self goRight];
-            
-        }
+        [self goRight];
         
     }
     
     else {
         
-        // Update x --
-        CGFloat leftDestination = [self position].x - [self size].width/2 - MINION_SPEED;
-        
-        if (leftDestination <= _leftXLimit) {
-            
-            _isGoingRight = true;
-            [self goRight];
-            
-        }
-        
-        else {
-            
-            [self goLeft];
-            
-        }
+        [self goLeft];
         
     }
     
 }
 
-- (void)goRight {
+- (void)updateY:(CGFloat)playerY {
     
-    CGPoint newPosition = CGPointMake([self position].x + MINION_SPEED, [self position].y);
+    // Eliminate jitter
+    if (ABS(playerY - [self position].y) < 1) {
+        
+        return;
+        
+    }
+    
+    else if (playerY > [self position].y) {
+        
+        [self goUp];
+        
+    }
+    
+    else {
+        
+        [self goDown];
+        
+    }
+    
+}
+
+- (void)goUp {
+    
+    CGPoint newPosition = CGPointMake([self position].x, [self position].y+ KAMIKAZEE_MINION_SPEED);
     [self setPosition:newPosition];
     
 }
 
-- (void)goLeft {
+- (void)goDown {
     
-    CGPoint newPosition = CGPointMake([self position].x - MINION_SPEED, [self position].y);
+    CGPoint newPosition = CGPointMake([self position].x, [self position].y- KAMIKAZEE_MINION_SPEED);
     [self setPosition:newPosition];
     
 }
 
 - (Boolean)isFiring {
     
-    if ([self isAlive]) {
-        
-        return ((arc4random() % 100)/100.0f < 0.13);
-        
-    }
+    return false;
     
-    else {
-        
-        return false;
-        
-    }
+}
+
+- (void)goRight {
+    
+    CGPoint newPosition = CGPointMake([self position].x + BOSS_SPEED, [self position].y);
+    [self setPosition:newPosition];
+    
+}
+
+- (void)goLeft {
+    
+    CGPoint newPosition = CGPointMake([self position].x - BOSS_SPEED, [self position].y);
+    [self setPosition:newPosition];
     
 }
 

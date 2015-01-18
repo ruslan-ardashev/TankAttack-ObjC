@@ -1,5 +1,5 @@
 //
-//  Minion.h
+//  KamikazeeMinion.h
 //  TankAttack
 //
 //  Created by Ruslan Ardashev on 1/17/15.
@@ -11,9 +11,10 @@
 #import "World.h"
 
 
-@interface Minion : Enemy
+@interface KamikazeeMinion : Enemy
 
-- (id)initWithX:(double)x WithY:(double)y WithLeftXLimit:(double)leftXLimit WithRightXLimit:(double)rightXLimit WithIsGoingRight:(Boolean)isGoingRight IntoWorld:(World *)world;
+- (id)initWithX:(double)x WithY:(double)y IntoWorld:(World *)world;
+
 
 @end
 
