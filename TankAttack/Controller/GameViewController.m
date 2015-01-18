@@ -173,7 +173,15 @@ static int difficulty;
     
     if (_worlds == nil) {
         
-        _worlds = [[NSArray alloc] initWithObjects:w1, w2, w3, w4, nil];
+        _worlds = [[NSMutableArray alloc] initWithObjects:w1, w2, w3, w4, nil];
+        
+    }
+    
+    // Just lost a level. Get rid of what's already there.
+    else  {
+        
+        [_worlds removeAllObjects];
+        _worlds = [NSMutableArray arrayWithObjects:w1, w2, w3, w4, nil];
         
     }
     
