@@ -36,6 +36,13 @@
     
 }
 
+- (void)updateEnemyXYWithPlayerX:(CGFloat)playerX {
+    
+    [NSException raise:NSInternalInconsistencyException
+                format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)];
+    
+}
+
 - (Boolean)isFiring {
     
     [NSException raise:NSInternalInconsistencyException
