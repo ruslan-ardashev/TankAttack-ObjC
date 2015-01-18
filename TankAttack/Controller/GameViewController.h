@@ -18,6 +18,11 @@
 #define BULLET_SPEED 4
 #define DELAY_BETWEEN_BULLETS 0.100   // seconds
 
+#define SMALL_TANK_SCALE_FACTOR 0.25
+#define BOSS_TANK_SCALE_FACTOR 0.25
+#define PLAYER_IMAGE_NAME @"tank"
+#define MINION_IMAGE_NAME @"minion"
+
 
 @interface UIColor (HexColor)
 
@@ -33,6 +38,8 @@
 + (CGSize)size;
 + (CGPoint)playerInitLocation;
 + (void)setSize:(CGSize)size;
++ (int)difficulty;
++ (void)setDifficulty:(int)difficulty;
 
 // Class Methods
 + (GameViewController *)sharedInstance;
