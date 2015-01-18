@@ -10,6 +10,7 @@
 #import "GameViewController.h"
 #import "World.h"
 
+
 @interface Minion : Enemy
 
 - (id)initWithX:(double)x WithY:(double)y WithLeftXLimit:(double)leftXLimit WithRightXLimit:(double)rightXLimit WithIsGoingRight:(Boolean)isGoingRight IntoWorld:(World *)world;

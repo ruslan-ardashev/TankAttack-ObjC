@@ -9,6 +9,8 @@
 #import <SpriteKit/SpriteKit.h>
 #import "Sprite.h"
 
+
 @interface Boss : Sprite
+
 
 @end
