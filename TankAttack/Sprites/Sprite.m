@@ -14,6 +14,12 @@
 
 - (void)death {
     
+    if ([self healthBar]) {
+       
+        [[self healthBar] instantDeath];
+        
+    }
+    
     [self setIsAlive:false];
     SKAction *showFireAndDisappear = [self fireDisplayAndDisappearAction];
     [self runAction:showFireAndDisappear];
