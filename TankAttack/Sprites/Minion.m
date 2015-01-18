@@ -19,8 +19,6 @@
     
     self = [super initWithImageNamed:MINION_IMAGE_NAME];
     
-    
-    
     if (self) {
         
         [self initHealthBar];
@@ -46,19 +44,19 @@
     
     if ([GameViewController difficulty] == 1) {
         
-        hb = [[HealthBar alloc] initWithHealth:50.0 WithWidth:(.8 * self.size.width) WithHeight:(.15*self.size.height) WithParent:self];
+        hb = [[HealthBar alloc] initWithHealth:50.0 WithParentWidth:self.size.width WithParentHeight:self.size.height WithParent:self];
         
     }
     
     else if ([GameViewController difficulty] == 2) {
         
-        hb = [[HealthBar alloc] initWithHealth:100.0 WithWidth:(.8 * self.size.width) WithHeight:(.15*self.size.height) WithParent:self];
+        hb = [[HealthBar alloc] initWithHealth:100.0 WithParentWidth:self.size.width WithParentHeight:self.size.height WithParent:self];
         
     }
     
     else if ([GameViewController difficulty] == 3) {
         
-        hb = [[HealthBar alloc] initWithHealth:200.0 WithWidth:(.8 * self.size.width) WithHeight:(.15*self.size.height) WithParent:self];
+        hb = [[HealthBar alloc] initWithHealth:200.0 WithParentWidth:self.size.width WithParentHeight:self.size.height WithParent:self];
         
     }
     
