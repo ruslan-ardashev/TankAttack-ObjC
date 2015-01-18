@@ -334,16 +334,16 @@
 
 - (void)signalFailure {
     
+    if (_successLabel) {
+        return;
+    }
+    
     if (!_failureLabel) {
         
-        _failureLabel = [[SKLabelNode alloc] initWithFontNamed:DEFAULT_FONT];
+        _failureLabel = [self createLabelAtCenter];
         _failureLabel.text = @"FAILURE";
         _failureLabel.fontColor = [UIColor redColor];
-        _failureLabel.fontSize = 65;
-        _failureLabel.position = CGPointMake([GameViewController width]/2, [GameViewController height]/2);
-        
-        [self addChild:_failureLabel];
-        
+
         [self backToMainMenu];
         
     }
@@ -352,25 +352,38 @@
 
 - (void)signalVictory {
     
+    if (_failureLabel) {
+        return;
+    }
+    
     if (!_successLabel) {
         
-        _successLabel = [[SKLabelNode alloc] initWithFontNamed:DEFAULT_FONT];
+        _successLabel = [self createLabelAtCenter];
         _successLabel.text = @"SUCCESS";
         _successLabel.fontColor = [UIColor greenColor];
-        _successLabel.fontSize = 65;
-        _successLabel.position = CGPointMake([GameViewController width]/2, [GameViewController height]/2);
-        
-        [self addChild:_successLabel];
-        
-        [self progressToNextLevel];
+     
+        [self progressNextLevel];
         
     }
     
 }
 
+- (SKLabelNode *)createLabelAtCenter {
+    
+    SKLabelNode *returnLabel = [[SKLabelNode alloc] initWithFontNamed:DEFAULT_FONT];
+    
+    [returnLabel setFontSize:65];
+    [returnLabel setPosition:CGPointMake([GameViewController width]/2, [GameViewController height]/2)];
+    [returnLabel setZPosition:5.0];
+    [self addChild:returnLabel];
+    
+    return returnLabel;
+    
+}
+
 - (void)backToMainMenu {
     
-    SKAction *wait = [SKAction waitForDuration:3.00];
+    SKAction *wait = [SKAction waitForDuration:4.00];
     SKAction *replace = [SKAction performSelector:@selector(displayMainMenu) onTarget:[GameViewController sharedInstance]];
     
     SKAction *sequence = [SKAction sequence:@[wait, replace]];
@@ -379,9 +392,14 @@
     
 }
 
-- (void)progressToNextLevel {
+- (void)progressNextLevel {
     
-    NSLog(@"TODO: Progress to next level.");
+    SKAction *wait = [SKAction waitForDuration:4.00];
+    SKAction *replace = [SKAction performSelector:@selector(progressToNextLevel) onTarget:[GameViewController sharedInstance]];
+    
+    SKAction *sequence = [SKAction sequence:@[wait, replace]];
+    
+    [self runAction:sequence];
     
 }
 
