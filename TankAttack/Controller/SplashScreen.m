@@ -33,7 +33,7 @@
     [self createDifficultyButtonWithOffsetFromStart:distance];
     [self createControlsButtonWithOffsetFromStart:distance];
     [self animateTankInBackground];
-    [self animateSlildingInTitle];
+    [self animateSlildingInTitleTop];
     
 }
 
@@ -44,11 +44,11 @@
     SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:DEFAULT_FONT];
     
     myLabel.text = @"START";
-    myLabel.fontSize = 45;
+    myLabel.fontSize = BUTTON_FONT;
     myLabel.position = CGPointMake([GameViewController width]/2, [GameViewController height]/2);
     myLabel.zPosition = 5.00;
 
-    returnFloat = myLabel.frame.size.height*1.5;
+    returnFloat = myLabel.frame.size.height*1.7;
     
     [self addChild:myLabel];
     
@@ -61,7 +61,7 @@
     SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:DEFAULT_FONT];
     
     myLabel.text = @"DIFFICULTY";
-    myLabel.fontSize = 45;
+    myLabel.fontSize = BUTTON_FONT;
     myLabel.position = CGPointMake([GameViewController width]/2, [GameViewController height]/2-distance);
     myLabel.zPosition = 5.00;
     
@@ -74,7 +74,7 @@
     SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:DEFAULT_FONT];
     
     myLabel.text = @"CONTROLS";
-    myLabel.fontSize = 45;
+    myLabel.fontSize = BUTTON_FONT;
     myLabel.position = CGPointMake([GameViewController width]/2, [GameViewController height]/2-2*distance);
     myLabel.zPosition = 5.00;
 
@@ -87,7 +87,7 @@
     SKSpriteNode *tank = [SKSpriteNode spriteNodeWithImageNamed:@"tank"];
 
     [tank setScale:0.5];
-    [tank setPosition:CGPointMake(-50, [GameViewController height]/6)];
+    [tank setPosition:CGPointMake(-50, [GameViewController height]/7)];
     
     SKAction *actionRight = [SKAction moveToX:([GameViewController width]+50.0) duration:5.00];
     SKAction *actionLeft  = [SKAction moveToX:(-50.0) duration:5.00 ];
@@ -101,18 +101,38 @@
     
 }
 
-- (void)animateSlildingInTitle {
+- (void)animateSlildingInTitleTop {
     
     SKLabelNode *tank = [SKLabelNode labelNodeWithFontNamed:DEFAULT_FONT];
     
     [tank setFontColor:[GameViewController tankColor]];
     
-    tank.text = @"TANKATTACK";
-    tank.fontSize = 55;
-    tank.position = CGPointMake([GameViewController width]/2, [GameViewController height]+20);
+    tank.text = @"TANK";
+    tank.fontSize = TITLE_FONT;
+    tank.position = CGPointMake([GameViewController width]/2, [GameViewController height]+40);
     tank.zPosition = 5.00;
     
-    SKAction *slide = [SKAction moveTo:CGPointMake([GameViewController width]/2, [GameViewController height]*3/4) duration:2.00];
+    SKAction *slide = [SKAction moveTo:CGPointMake([GameViewController width]/2, [GameViewController height]*8/10) duration:2.00];
+    [tank runAction:slide];
+    
+    [self addChild:tank];
+    
+    [self animateSlildingInTitleBottom];
+    
+}
+
+- (void)animateSlildingInTitleBottom {
+    
+    SKLabelNode *tank = [SKLabelNode labelNodeWithFontNamed:DEFAULT_FONT];
+    
+    [tank setFontColor:[GameViewController tankColor]];
+    
+    tank.text = @"ATTACK";
+    tank.fontSize = TITLE_FONT;
+    tank.position = CGPointMake([GameViewController width]/2, [GameViewController height]+10);
+    tank.zPosition = 5.00;
+    
+    SKAction *slide = [SKAction moveTo:CGPointMake([GameViewController width]/2, [GameViewController height]*7/10) duration:2.00];
     [tank runAction:slide];
     
     [self addChild:tank];
@@ -155,6 +175,12 @@
 
 - (void)handleLabelPressed:(SKLabelNode *)l {
 
+    if ([l.text isEqualToString:@"TANK"] || [l.text isEqualToString:@"ATTACK"]) {
+        
+        return;
+    
+    }
+    
     _pressedLabel = l;
     _pressedLabel.fontColor = [GameViewController tankColor];
     
