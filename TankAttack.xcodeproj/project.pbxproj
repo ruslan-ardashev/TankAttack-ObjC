@@ -32,7 +32,6 @@
 		442D35FC1A683F7B0017DDF6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 442D35FB1A683F7B0017DDF6 /* GameScene.sks */; };
 		442D36021A683F7B0017DDF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442D36001A683F7B0017DDF6 /* Main.storyboard */; };
 		442D36041A683F7C0017DDF6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 442D36031A683F7C0017DDF6 /* Images.xcassets */; };
-		442D36071A683F7C0017DDF6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 442D36051A683F7C0017DDF6 /* LaunchScreen.xib */; };
 		442D36131A683F7C0017DDF6 /* TankAttackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D36121A683F7C0017DDF6 /* TankAttackTests.m */; };
 		442D36221A6840CE0017DDF6 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D361F1A6840CE0017DDF6 /* GameViewController.m */; };
 		442D36251A6849680017DDF6 /* SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D36241A6849680017DDF6 /* SplashScreen.m */; };
@@ -92,7 +91,6 @@
 		442D35FB1A683F7B0017DDF6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = GameScene.sks; path = ../GameScene.sks; sourceTree = "<group>"; };
 		442D36011A683F7B0017DDF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		442D36031A683F7C0017DDF6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		442D36061A683F7C0017DDF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		442D360C1A683F7C0017DDF6 /* TankAttackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TankAttackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		442D36111A683F7C0017DDF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		442D36121A683F7C0017DDF6 /* TankAttackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TankAttackTests.m; sourceTree = "<group>"; };
@@ -278,7 +276,6 @@
 			children = (
 				442D35FB1A683F7B0017DDF6 /* GameScene.sks */,
 				442D36001A683F7B0017DDF6 /* Main.storyboard */,
-				442D36051A683F7C0017DDF6 /* LaunchScreen.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -365,7 +362,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				441451DF1A68858200D481C0 /* .gitignore in Resources */,
-				442D36071A683F7C0017DDF6 /* LaunchScreen.xib in Resources */,
 				441451E01A68858200D481C0 /* dpad.png in Resources */,
 				442D36041A683F7C0017DDF6 /* Images.xcassets in Resources */,
 				442D35FC1A683F7B0017DDF6 /* GameScene.sks in Resources */,
@@ -437,15 +433,6 @@
 				442D36011A683F7B0017DDF6 /* Base */,
 			);
 			name = Main.storyboard;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		442D36051A683F7C0017DDF6 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				442D36061A683F7C0017DDF6 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -532,6 +519,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_WARN_UNUSED_VALUE = NO;
@@ -547,6 +535,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_WARN_UNUSED_VALUE = NO;
