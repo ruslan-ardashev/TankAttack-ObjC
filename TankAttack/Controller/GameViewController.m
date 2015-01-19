@@ -201,8 +201,6 @@ static int difficulty;
     
     // The JavaFX equivalent of SKView is Stage
     _view = (SKView *)self.view;
-    _view.showsFPS = YES;
-    _view.showsNodeCount = YES;
     
     /* Sprite Kit applies additional optimizations to improve rendering performance */
     _view.ignoresSiblingOrder = YES;
@@ -282,15 +280,12 @@ static int difficulty;
     
     switch (_currentWorldIndex) {
         case 1:
-            NSLog(@"Level 2");
             [self displayLevelTwo];
             break;
         case 2:
-            NSLog(@"Level 3");
             [self displayLevelThree];
             break;
         case 3:
-            NSLog(@"Level 4");
             _isAtEndOfGame = true;
             [self displayLevelFour];
             break;

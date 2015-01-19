@@ -12,6 +12,8 @@
 #define BACKGROUND_GREEN_COLOR @"#629632"
 
 #define DEFAULT_FONT @"DamascusBold"
+#define TITLE_FONT 85
+#define BUTTON_FONT 55
 
 #define PLAYER_SPEED 0.025          // Compensates for a crazy Joystick velocity
 #define MINION_SPEED 1
