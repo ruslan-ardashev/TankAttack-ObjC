@@ -66,8 +66,6 @@
     
     _overlay = [[Overlay alloc] initIntoWorld:self];
     
-    NSLog(@"overlay fraction: %f", [_overlay size].height / [self size].height);
-
     CGFloat bottomBoundaryWorld = [_overlay size].height;
     CGFloat rightBoundaryWorld = [self size].width;
     CGFloat leftBoundaryWorld = 0;

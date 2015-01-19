@@ -39,8 +39,9 @@
     
     CGFloat oneTenthWidth = self.size.width/10;
     CGFloat oneTenthHeight = self.size.height/10;
-    
-//    [[KamikazeeMinion alloc] initWithX:oneTenthWidth*5 WithY:oneTenthHeight*7 IntoWorld:self];
+        
+    [[Boss alloc] initWithX:5*oneTenthWidth WithY:8.25*oneTenthHeight IntoWorld:self];
+
     
 }
 
