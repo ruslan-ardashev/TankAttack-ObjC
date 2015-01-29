@@ -7,8 +7,6 @@
 //
 
 #import "World.h"
-#import "Minion.h"
-#import "KamikazeeMinion.h"
 
 @interface ThirdWorld : World
 

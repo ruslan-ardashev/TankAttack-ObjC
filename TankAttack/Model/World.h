@@ -15,6 +15,7 @@
 #import "BulletSprite.h"
 #import "Enemy.h"
 #import "Boss.h"
+#import "Minion.h"
 #import "KamikazeeMinion.h"
 
 @interface World : SKScene
