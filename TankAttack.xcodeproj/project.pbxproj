@@ -35,6 +35,9 @@
 		442D36131A683F7C0017DDF6 /* TankAttackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D36121A683F7C0017DDF6 /* TankAttackTests.m */; };
 		442D36221A6840CE0017DDF6 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D361F1A6840CE0017DDF6 /* GameViewController.m */; };
 		442D36251A6849680017DDF6 /* SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D36241A6849680017DDF6 /* SplashScreen.m */; };
+		44795DFE1A7AF98F00A48E1B /* FifthWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 44795DFD1A7AF98F00A48E1B /* FifthWorld.m */; };
+		44795E011A7AF9BF00A48E1B /* SixthWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 44795E001A7AF9BF00A48E1B /* SixthWorld.m */; };
+		44795E041A7AF9C800A48E1B /* SeventhWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 44795E031A7AF9C800A48E1B /* SeventhWorld.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +101,12 @@
 		442D361F1A6840CE0017DDF6 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		442D36231A6849680017DDF6 /* SplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreen.h; sourceTree = "<group>"; };
 		442D36241A6849680017DDF6 /* SplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreen.m; sourceTree = "<group>"; };
+		44795DFC1A7AF98F00A48E1B /* FifthWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FifthWorld.h; sourceTree = "<group>"; };
+		44795DFD1A7AF98F00A48E1B /* FifthWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FifthWorld.m; sourceTree = "<group>"; };
+		44795DFF1A7AF9BF00A48E1B /* SixthWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SixthWorld.h; sourceTree = "<group>"; };
+		44795E001A7AF9BF00A48E1B /* SixthWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SixthWorld.m; sourceTree = "<group>"; };
+		44795E021A7AF9C800A48E1B /* SeventhWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeventhWorld.h; sourceTree = "<group>"; };
+		44795E031A7AF9C800A48E1B /* SeventhWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeventhWorld.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +155,12 @@
 				441451EF1A68C36000D481C0 /* ThirdWorld.m */,
 				441451F11A68C36700D481C0 /* FourthWorld.h */,
 				441451F21A68C36700D481C0 /* FourthWorld.m */,
+				44795DFC1A7AF98F00A48E1B /* FifthWorld.h */,
+				44795DFD1A7AF98F00A48E1B /* FifthWorld.m */,
+				44795DFF1A7AF9BF00A48E1B /* SixthWorld.h */,
+				44795E001A7AF9BF00A48E1B /* SixthWorld.m */,
+				44795E021A7AF9C800A48E1B /* SeventhWorld.h */,
+				44795E031A7AF9C800A48E1B /* SeventhWorld.m */,
 			);
 			name = Levels;
 			sourceTree = "<group>";
@@ -395,11 +410,14 @@
 				441451F71A68D08B00D481C0 /* Player.m in Sources */,
 				440351A41A6ACEC200031138 /* Enemy.m in Sources */,
 				440351AD1A6AE03300031138 /* Sprite.m in Sources */,
+				44795E041A7AF9C800A48E1B /* SeventhWorld.m in Sources */,
 				441451E11A68858200D481C0 /* Joystick.m in Sources */,
 				440351B01A6AE66E00031138 /* Boss.m in Sources */,
 				441451F01A68C36000D481C0 /* ThirdWorld.m in Sources */,
 				440351A11A6A53D200031138 /* BulletSprite.m in Sources */,
 				442D35F71A683F7B0017DDF6 /* AppDelegate.m in Sources */,
+				44795E011A7AF9BF00A48E1B /* SixthWorld.m in Sources */,
+				44795DFE1A7AF98F00A48E1B /* FifthWorld.m in Sources */,
 				441451E41A68858200D481C0 /* README.md in Sources */,
 				442D35F41A683F7B0017DDF6 /* main.m in Sources */,
 				440351A71A6ACECF00031138 /* Minion.m in Sources */,
