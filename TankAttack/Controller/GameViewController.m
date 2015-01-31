@@ -13,6 +13,9 @@
 #import "SecondWorld.h"
 #import "ThirdWorld.h"
 #import "FourthWorld.h"
+#import "FifthWorld.h"
+#import "SixthWorld.h"
+#import "SeventhWorld.h"
 
 
 @implementation UIColor (HexColor)
@@ -46,7 +49,7 @@
     [arch setClass:self forClassName:@"SKScene"];
     SKScene *scene = [arch decodeObjectForKey:NSKeyedArchiveRootObjectKey];
     [arch finishDecoding];
-    
+     
     return scene;
 }
 
@@ -180,10 +183,13 @@ static int difficulty;
     SecondWorld *w2 = [[SecondWorld alloc] initWithSize:gameSize];
     ThirdWorld *w3 = [[ThirdWorld alloc] initWithSize:gameSize];
     FourthWorld *w4 = [[FourthWorld alloc] initWithSize:gameSize];
+    FifthWorld *w5 = [[FifthWorld alloc] initWithSize:gameSize];
+    SixthWorld *w6 = [[SixthWorld alloc] initWithSize:gameSize];
+    SeventhWorld *w7 = [[SeventhWorld alloc] initWithSize:gameSize];
     
     if (_worlds == nil) {
         
-        _worlds = [[NSMutableArray alloc] initWithObjects:w1, w2, w3, w4, nil];
+        _worlds = [[NSMutableArray alloc] initWithObjects:w1, w2, w3, w4, w5, w6, w7, nil];
         
     }
     
@@ -191,7 +197,7 @@ static int difficulty;
     else  {
         
         [_worlds removeAllObjects];
-        _worlds = [NSMutableArray arrayWithObjects:w1, w2, w3, w4, nil];
+        _worlds = [NSMutableArray arrayWithObjects:w1, w2, w3, w4, w5, w6, w7, nil];
         
     }
     
@@ -260,7 +266,7 @@ static int difficulty;
     
     else {
         
-        _currWorld = [_worlds objectAtIndex:0];
+        _currWorld = [_worlds objectAtIndex:START_LEVEL];
         [self initCurrWorld];
         
     }
