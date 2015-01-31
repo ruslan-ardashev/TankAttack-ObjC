@@ -16,7 +16,7 @@
     
     if (self) {
         
-        [self setBackgroundColor:[UIColor brownColor]];
+        [self setBackgroundColor:[UIColor UIColorFromHexString:@"#CCFFCC"]];
         return self;
         
     }

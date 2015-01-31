@@ -276,8 +276,20 @@ static CGFloat gameHeight;
             [self displayLevelThree];
             break;
         case 3:
-            _isAtEndOfGame = true;
             [self displayLevelFour];
+            break;
+        case 4:
+            [self displayLevelFive];
+            break;
+        case 5:
+            [self displayLevelSix];
+            break;
+        case 6:
+            [self displayLevelSeven];
+            break;
+        case 7:
+            _isAtEndOfGame = true;
+            [self displayLevelEight];
             break;
         default:
             [self displayMainMenu];
@@ -303,6 +315,34 @@ static CGFloat gameHeight;
 - (void)displayLevelFour {
     
     _currWorld = [_worlds objectAtIndex:3];
+    [self initCurrWorld];
+    
+}
+
+- (void)displayLevelFive {
+    
+    _currWorld = [_worlds objectAtIndex:4];
+    [self initCurrWorld];
+    
+}
+
+- (void)displayLevelSix {
+    
+    _currWorld = [_worlds objectAtIndex:5];
+    [self initCurrWorld];
+    
+}
+
+- (void)displayLevelSeven {
+    
+    _currWorld = [_worlds objectAtIndex:6];
+    [self initCurrWorld];
+    
+}
+
+- (void)displayLevelEight {
+    
+    _currWorld = [_worlds objectAtIndex:7];
     [self initCurrWorld];
     
 }

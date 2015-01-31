@@ -16,7 +16,7 @@
     
     if (self) {
         
-        [self setBackgroundColor:[UIColor brownColor]];
+        [self setBackgroundColor:[UIColor UIColorFromHexString:@"#33CCFF"]];
         return self;
         
     }
@@ -40,10 +40,8 @@
     CGFloat oneTenthWidth = self.size.width/10;
     CGFloat oneTenthHeight = self.size.height/10;
     
-    [[Boss alloc] initWithX:5*oneTenthWidth WithY:8.25*oneTenthHeight IntoWorld:self];
-    
     [[Minion alloc] initWithX:oneTenthWidth*2 WithY:oneTenthHeight*7.5 WithLeftXLimit:oneTenthWidth*0.2 WithRightXLimit:oneTenthWidth*3.5 WithIsGoingRight:true IntoWorld:self];
-    [[Minion alloc] initWithX:oneTenthWidth*8.8 WithY:oneTenthHeight*7.5 WithLeftXLimit:oneTenthWidth*6.5 WithRightXLimit:oneTenthWidth*9.8 WithIsGoingRight:false IntoWorld:self];
+    [[Minion alloc] initWithX:oneTenthWidth*8.8 WithY:oneTenthHeight*7.5 WithLeftXLimit:oneTenthWidth*4.5 WithRightXLimit:oneTenthWidth*9.8 WithIsGoingRight:false IntoWorld:self];
     
     
 }
