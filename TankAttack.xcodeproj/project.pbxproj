@@ -38,6 +38,7 @@
 		44795DFE1A7AF98F00A48E1B /* FifthWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 44795DFD1A7AF98F00A48E1B /* FifthWorld.m */; };
 		44795E011A7AF9BF00A48E1B /* SixthWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 44795E001A7AF9BF00A48E1B /* SixthWorld.m */; };
 		44795E041A7AF9C800A48E1B /* SeventhWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 44795E031A7AF9C800A48E1B /* SeventhWorld.m */; };
+		44795E071A7C098E00A48E1B /* SillyBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = 44795E061A7C098E00A48E1B /* SillyBoss.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,8 @@
 		44795E001A7AF9BF00A48E1B /* SixthWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SixthWorld.m; sourceTree = "<group>"; };
 		44795E021A7AF9C800A48E1B /* SeventhWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeventhWorld.h; sourceTree = "<group>"; };
 		44795E031A7AF9C800A48E1B /* SeventhWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeventhWorld.m; sourceTree = "<group>"; };
+		44795E051A7C098E00A48E1B /* SillyBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SillyBoss.h; path = Sprites/SillyBoss.h; sourceTree = "<group>"; };
+		44795E061A7C098E00A48E1B /* SillyBoss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SillyBoss.m; path = Sprites/SillyBoss.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,8 @@
 				440351A61A6ACECF00031138 /* Minion.m */,
 				440351AE1A6AE66E00031138 /* Boss.h */,
 				440351AF1A6AE66E00031138 /* Boss.m */,
+				44795E051A7C098E00A48E1B /* SillyBoss.h */,
+				44795E061A7C098E00A48E1B /* SillyBoss.m */,
 			);
 			name = Subclasses;
 			sourceTree = "<group>";
@@ -410,6 +415,7 @@
 				441451F71A68D08B00D481C0 /* Player.m in Sources */,
 				440351A41A6ACEC200031138 /* Enemy.m in Sources */,
 				440351AD1A6AE03300031138 /* Sprite.m in Sources */,
+				44795E071A7C098E00A48E1B /* SillyBoss.m in Sources */,
 				44795E041A7AF9C800A48E1B /* SeventhWorld.m in Sources */,
 				441451E11A68858200D481C0 /* Joystick.m in Sources */,
 				440351B01A6AE66E00031138 /* Boss.m in Sources */,
