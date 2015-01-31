@@ -75,7 +75,6 @@ static GameViewController *sharedInstance;
 static CGSize gameSize;
 static CGFloat gameWidth;
 static CGFloat gameHeight;
-static int difficulty;
 
 
 
@@ -124,18 +123,6 @@ static int difficulty;
     
 }
 
-+ (int)difficulty {
-    
-    return difficulty;
-    
-}
-
-+ (void)setDifficulty:(int)newDifficulty {
-    
-    difficulty = newDifficulty;
-    
-}
-
 
 // Instance Methods
 - (void)viewDidLoad {
@@ -165,12 +152,7 @@ static int difficulty;
 }
 
 - (void)configureGameParameters {
-    
-    // TODO: Remember last difficulty. Maybe.
-    
-    NSLog(@"Remember last difficulty, maybe. TODO");
-    [GameViewController setDifficulty:2];
-    
+        
     // Size
     [GameViewController setSize:self.view.frame.size];
     

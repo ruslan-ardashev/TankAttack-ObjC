@@ -51,8 +51,6 @@
 + (CGSize)size;
 + (CGPoint)playerInitLocation;
 + (void)setSize:(CGSize)size;
-+ (int)difficulty;
-+ (void)setDifficulty:(int)difficulty;
 
 // Class Methods
 + (GameViewController *)sharedInstance;

@@ -45,26 +45,8 @@
 
 - (void)initHealthBar {
     
-    HealthBar *hb;
-    
-    if ([GameViewController difficulty] == 1) {
-        
-        hb = [[HealthBar alloc] initWithHealth:300.0 WithParentWidth:self.size.width WithParentHeight:self.size.height WithParent:self];
-        
-    }
-    
-    else if ([GameViewController difficulty] == 2) {
-        
-        hb = [[HealthBar alloc] initWithHealth:600.0 WithParentWidth:self.size.width WithParentHeight:self.size.height WithParent:self];
-        
-    }
-    
-    else if ([GameViewController difficulty] == 3) {
-        
-        hb = [[HealthBar alloc] initWithHealth:800.0 WithParentWidth:self.size.width WithParentHeight:self.size.height WithParent:self];
-        
-    }
-    
+    HealthBar *hb = [[HealthBar alloc] initWithHealth:600.0 WithParentWidth:self.size.width WithParentHeight:self.size.height WithParent:self];
+
     [self setHealthBar:hb];
     
 }

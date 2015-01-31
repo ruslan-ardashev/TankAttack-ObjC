@@ -30,7 +30,6 @@
     
     /* Setup your scene here */
     CGFloat distance = [self createStartButton];
-    [self createDifficultyButtonWithOffsetFromStart:distance];
     [self createControlsButtonWithOffsetFromStart:distance];
     [self animateTankInBackground];
     [self animateSlildingInTitleTop];
@@ -56,26 +55,13 @@
     
 }
 
-- (void)createDifficultyButtonWithOffsetFromStart:(CGFloat)distance {
-    
-    SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:DEFAULT_FONT];
-    
-    myLabel.text = @"DIFFICULTY";
-    myLabel.fontSize = BUTTON_FONT;
-    myLabel.position = CGPointMake([GameViewController width]/2, [GameViewController height]/2-distance);
-    myLabel.zPosition = 5.00;
-    
-    [self addChild:myLabel];
-    
-}
-
 - (void)createControlsButtonWithOffsetFromStart:(CGFloat)distance {
     
     SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:DEFAULT_FONT];
     
     myLabel.text = @"CONTROLS";
     myLabel.fontSize = BUTTON_FONT;
-    myLabel.position = CGPointMake([GameViewController width]/2, [GameViewController height]/2-2*distance);
+    myLabel.position = CGPointMake([GameViewController width]/2, [GameViewController height]/2-distance);
     myLabel.zPosition = 5.00;
 
     [self addChild:myLabel];
@@ -211,12 +197,6 @@
     if ([_pressedLabel.text isEqualToString:@"START"]) {
         
         [[GameViewController sharedInstance] startGame];
-        
-    }
-    
-    else if ([_pressedLabel.text isEqualToString:@"DIFFICULTY"]) {
-        
-        NSLog(@"difficulty pressed!");
         
     }
     
