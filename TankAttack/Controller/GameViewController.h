@@ -31,7 +31,7 @@
 #define MINION_IMAGE_NAME @"minion"
 #define BOSS_IMAGE_NAME @"boss"
 
-#define START_LEVEL 4
+#define START_LEVEL 0
 
 
 @interface UIColor (HexColor)
