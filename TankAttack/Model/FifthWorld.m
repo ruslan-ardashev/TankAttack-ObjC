@@ -40,10 +40,9 @@
     CGFloat oneTenthWidth = self.size.width/10;
     CGFloat oneTenthHeight = self.size.height/10;
     
-    [[Boss alloc] initWithX:5*oneTenthWidth WithY:8.25*oneTenthHeight IntoWorld:self];
-    [[Minion alloc] initWithX:oneTenthWidth*2 WithY:oneTenthHeight*9 WithLeftXLimit:oneTenthWidth*0.2 WithRightXLimit:oneTenthWidth*4.2 WithIsGoingRight:true IntoWorld:self];
+    [[SillyBoss alloc] initWithX:2*oneTenthWidth WithY:8.75*oneTenthHeight IntoWorld:self WithLeftLimit:1*oneTenthWidth WithRightLimit:5.25*oneTenthWidth];
     
-    [[Minion alloc] initWithX:oneTenthWidth*6.1 WithY:oneTenthHeight*8.5 WithLeftXLimit:oneTenthWidth*6.1 WithRightXLimit:oneTenthWidth*9.9 WithIsGoingRight:true IntoWorld:self];
+    [[Minion alloc] initWithX:oneTenthWidth*7.25 WithY:oneTenthHeight*9 WithLeftXLimit:oneTenthWidth*7 WithRightXLimit:oneTenthWidth*9.5 WithIsGoingRight:true IntoWorld:self];
     
     
 }
