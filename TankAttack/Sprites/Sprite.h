@@ -7,6 +7,7 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "GameViewController.h"
 #import "HealthBar.h"
 
 @interface Sprite : SKSpriteNode

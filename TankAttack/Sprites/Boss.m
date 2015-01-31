@@ -7,6 +7,7 @@
 //
 
 #import "Boss.h"
+#import "World.h"
 
 @implementation Boss
 
@@ -21,7 +22,9 @@
         [self setPosition:CGPointMake(x, y)];
         [self setScale:BOSS_TANK_SCALE_FACTOR];
         
-        [world addChild:self];
+//        [world addChild:self];
+        
+        [world performSelector:@selector(addChild:) withObject: self];
         return self;
         
     }

@@ -6,10 +6,9 @@
 //  Copyright (c) 2015 Ruslan Ardashev. All rights reserved.
 //
 
-#import "Enemy.h"
-#import "GameViewController.h"
-#import "World.h"
+@class World;
 
+#import "Enemy.h"
 
 @interface Minion : Enemy
 

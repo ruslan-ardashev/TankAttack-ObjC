@@ -7,6 +7,7 @@
 //
 
 #import "Minion.h"
+#import "World.h"
 
 @implementation Minion {
     
