@@ -16,6 +16,7 @@
 #import "FifthWorld.h"
 #import "SixthWorld.h"
 #import "SeventhWorld.h"
+#import "EighthWorld.h"
 
 
 @implementation UIColor (HexColor)
@@ -186,10 +187,11 @@ static int difficulty;
     FifthWorld *w5 = [[FifthWorld alloc] initWithSize:gameSize];
     SixthWorld *w6 = [[SixthWorld alloc] initWithSize:gameSize];
     SeventhWorld *w7 = [[SeventhWorld alloc] initWithSize:gameSize];
+    EighthWorld *w8 = [[EighthWorld alloc] initWithSize:gameSize];
     
     if (_worlds == nil) {
         
-        _worlds = [[NSMutableArray alloc] initWithObjects:w1, w2, w3, w4, w5, w6, w7, nil];
+        _worlds = [[NSMutableArray alloc] initWithObjects:w1, w2, w3, w4, w5, w6, w7, w8, nil];
         
     }
     
@@ -197,7 +199,7 @@ static int difficulty;
     else  {
         
         [_worlds removeAllObjects];
-        _worlds = [NSMutableArray arrayWithObjects:w1, w2, w3, w4, w5, w6, w7, nil];
+        _worlds = [NSMutableArray arrayWithObjects:w1, w2, w3, w4, w5, w6, w7, w8, nil];
         
     }
     

@@ -39,6 +39,7 @@
 		44795E011A7AF9BF00A48E1B /* SixthWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 44795E001A7AF9BF00A48E1B /* SixthWorld.m */; };
 		44795E041A7AF9C800A48E1B /* SeventhWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 44795E031A7AF9C800A48E1B /* SeventhWorld.m */; };
 		44795E071A7C098E00A48E1B /* SillyBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = 44795E061A7C098E00A48E1B /* SillyBoss.m */; };
+		44C2C59E1A7D6A1C00FECD92 /* EighthWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2C59D1A7D6A1C00FECD92 /* EighthWorld.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,8 @@
 		44795E031A7AF9C800A48E1B /* SeventhWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeventhWorld.m; sourceTree = "<group>"; };
 		44795E051A7C098E00A48E1B /* SillyBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SillyBoss.h; path = Sprites/SillyBoss.h; sourceTree = "<group>"; };
 		44795E061A7C098E00A48E1B /* SillyBoss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SillyBoss.m; path = Sprites/SillyBoss.m; sourceTree = "<group>"; };
+		44C2C59C1A7D6A1C00FECD92 /* EighthWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EighthWorld.h; sourceTree = "<group>"; };
+		44C2C59D1A7D6A1C00FECD92 /* EighthWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EighthWorld.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,8 @@
 				44795E001A7AF9BF00A48E1B /* SixthWorld.m */,
 				44795E021A7AF9C800A48E1B /* SeventhWorld.h */,
 				44795E031A7AF9C800A48E1B /* SeventhWorld.m */,
+				44C2C59C1A7D6A1C00FECD92 /* EighthWorld.h */,
+				44C2C59D1A7D6A1C00FECD92 /* EighthWorld.m */,
 			);
 			name = Levels;
 			sourceTree = "<group>";
@@ -425,6 +430,7 @@
 				44795E011A7AF9BF00A48E1B /* SixthWorld.m in Sources */,
 				44795DFE1A7AF98F00A48E1B /* FifthWorld.m in Sources */,
 				441451E41A68858200D481C0 /* README.md in Sources */,
+				44C2C59E1A7D6A1C00FECD92 /* EighthWorld.m in Sources */,
 				442D35F41A683F7B0017DDF6 /* main.m in Sources */,
 				440351A71A6ACECF00031138 /* Minion.m in Sources */,
 				442D36251A6849680017DDF6 /* SplashScreen.m in Sources */,
