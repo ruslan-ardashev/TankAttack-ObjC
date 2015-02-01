@@ -108,14 +108,14 @@
 
 - (void)goUp {
     
-    CGPoint newPosition = CGPointMake([self position].x, [self position].y+ KAMIKAZEE_MINION_SPEED);
+    CGPoint newPosition = CGPointMake([self position].x, [self position].y+ [GameViewController kamikazeeMinionSpeed]);
     [self setPosition:newPosition];
     
 }
 
 - (void)goDown {
     
-    CGPoint newPosition = CGPointMake([self position].x, [self position].y- KAMIKAZEE_MINION_SPEED);
+    CGPoint newPosition = CGPointMake([self position].x, [self position].y- [GameViewController kamikazeeMinionSpeed]);
     [self setPosition:newPosition];
     
 }
@@ -128,14 +128,14 @@
 
 - (void)goRight {
     
-    CGPoint newPosition = CGPointMake([self position].x + BOSS_SPEED, [self position].y);
+    CGPoint newPosition = CGPointMake([self position].x + [GameViewController kamikazeeMinionSpeed], [self position].y);
     [self setPosition:newPosition];
     
 }
 
 - (void)goLeft {
     
-    CGPoint newPosition = CGPointMake([self position].x - BOSS_SPEED, [self position].y);
+    CGPoint newPosition = CGPointMake([self position].x - [GameViewController kamikazeeMinionSpeed], [self position].y);
     [self setPosition:newPosition];
     
 }

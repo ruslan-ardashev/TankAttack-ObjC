@@ -60,7 +60,7 @@
     
     if (_isGoingRight) {
         
-        CGFloat rightDestination = [self position].x + [self size].width/2 + MINION_SPEED;
+        CGFloat rightDestination = [self position].x + [self size].width/2 + [GameViewController minionSpeed];
         
         if (rightDestination >= _rightXLimit) {
             
@@ -81,7 +81,7 @@
     else {
         
         // Update x --
-        CGFloat leftDestination = [self position].x - [self size].width/2 - MINION_SPEED;
+        CGFloat leftDestination = [self position].x - [self size].width/2 - [GameViewController minionSpeed];
         
         if (leftDestination <= _leftXLimit) {
             
@@ -102,14 +102,14 @@
 
 - (void)goRight {
     
-    CGPoint newPosition = CGPointMake([self position].x + MINION_SPEED, [self position].y);
+    CGPoint newPosition = CGPointMake([self position].x + [GameViewController minionSpeed], [self position].y);
     [self setPosition:newPosition];
     
 }
 
 - (void)goLeft {
     
-    CGPoint newPosition = CGPointMake([self position].x - MINION_SPEED, [self position].y);
+    CGPoint newPosition = CGPointMake([self position].x - [GameViewController minionSpeed], [self position].y);
     [self setPosition:newPosition];
     
 }

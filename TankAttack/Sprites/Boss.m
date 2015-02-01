@@ -98,14 +98,14 @@
 
 - (void)goRight {
     
-    CGPoint newPosition = CGPointMake([self position].x + BOSS_SPEED, [self position].y);
+    CGPoint newPosition = CGPointMake([self position].x + [GameViewController bossSpeed], [self position].y);
     [self setPosition:newPosition];
     
 }
 
 - (void)goLeft {
     
-    CGPoint newPosition = CGPointMake([self position].x - BOSS_SPEED, [self position].y);
+    CGPoint newPosition = CGPointMake([self position].x - [GameViewController bossSpeed], [self position].y);
     [self setPosition:newPosition];
     
 }

@@ -40,6 +40,8 @@
 		44795E041A7AF9C800A48E1B /* SeventhWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 44795E031A7AF9C800A48E1B /* SeventhWorld.m */; };
 		44795E071A7C098E00A48E1B /* SillyBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = 44795E061A7C098E00A48E1B /* SillyBoss.m */; };
 		44C2C59E1A7D6A1C00FECD92 /* EighthWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2C59D1A7D6A1C00FECD92 /* EighthWorld.m */; };
+		44C2C5A11A7DA95B00FECD92 /* WorldArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2C5A01A7DA95B00FECD92 /* WorldArray.m */; };
+		44C2C5A41A7DACB800FECD92 /* WorldManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2C5A31A7DACB800FECD92 /* WorldManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,10 @@
 		44795E061A7C098E00A48E1B /* SillyBoss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SillyBoss.m; path = Sprites/SillyBoss.m; sourceTree = "<group>"; };
 		44C2C59C1A7D6A1C00FECD92 /* EighthWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EighthWorld.h; sourceTree = "<group>"; };
 		44C2C59D1A7D6A1C00FECD92 /* EighthWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EighthWorld.m; sourceTree = "<group>"; };
+		44C2C59F1A7DA95B00FECD92 /* WorldArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldArray.h; sourceTree = "<group>"; };
+		44C2C5A01A7DA95B00FECD92 /* WorldArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldArray.m; sourceTree = "<group>"; };
+		44C2C5A21A7DACB800FECD92 /* WorldManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldManager.h; sourceTree = "<group>"; };
+		44C2C5A31A7DACB800FECD92 /* WorldManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,7 +242,7 @@
 				441451F81A697D1200D481C0 /* ControllerOverlay */,
 				441451F41A68D07000D481C0 /* Sprites */,
 				441451D71A68858200D481C0 /* Joystick */,
-				442D361D1A6840CE0017DDF6 /* GameStart */,
+				442D361D1A6840CE0017DDF6 /* Game */,
 				442D36201A6840CE0017DDF6 /* Worlds */,
 				442D36211A6840CE0017DDF6 /* View */,
 				442D35F51A683F7B0017DDF6 /* AppDelegate.h */,
@@ -273,15 +279,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		442D361D1A6840CE0017DDF6 /* GameStart */ = {
+		442D361D1A6840CE0017DDF6 /* Game */ = {
 			isa = PBXGroup;
 			children = (
 				442D361E1A6840CE0017DDF6 /* GameViewController.h */,
 				442D361F1A6840CE0017DDF6 /* GameViewController.m */,
 				442D36231A6849680017DDF6 /* SplashScreen.h */,
 				442D36241A6849680017DDF6 /* SplashScreen.m */,
+				44C2C59F1A7DA95B00FECD92 /* WorldArray.h */,
+				44C2C5A01A7DA95B00FECD92 /* WorldArray.m */,
+				44C2C5A21A7DACB800FECD92 /* WorldManager.h */,
+				44C2C5A31A7DACB800FECD92 /* WorldManager.m */,
 			);
-			name = GameStart;
+			name = Game;
 			path = Controller;
 			sourceTree = "<group>";
 		};
@@ -413,6 +423,7 @@
 				440351B31A6C47C300031138 /* KamikazeeMinion.m in Sources */,
 				441451F31A68C36700D481C0 /* FourthWorld.m in Sources */,
 				441451FB1A697D3400D481C0 /* Overlay.m in Sources */,
+				44C2C5A41A7DACB800FECD92 /* WorldManager.m in Sources */,
 				440351AA1A6AD7B200031138 /* HealthBar.m in Sources */,
 				442D36221A6840CE0017DDF6 /* GameViewController.m in Sources */,
 				441451E71A68B16100D481C0 /* World.m in Sources */,
@@ -424,6 +435,7 @@
 				44795E041A7AF9C800A48E1B /* SeventhWorld.m in Sources */,
 				441451E11A68858200D481C0 /* Joystick.m in Sources */,
 				440351B01A6AE66E00031138 /* Boss.m in Sources */,
+				44C2C5A11A7DA95B00FECD92 /* WorldArray.m in Sources */,
 				441451F01A68C36000D481C0 /* ThirdWorld.m in Sources */,
 				440351A11A6A53D200031138 /* BulletSprite.m in Sources */,
 				442D35F71A683F7B0017DDF6 /* AppDelegate.m in Sources */,

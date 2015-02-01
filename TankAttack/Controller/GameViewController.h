@@ -16,9 +16,6 @@
 #define BUTTON_FONT 55
 
 #define PLAYER_SPEED 0.025          // Compensates for a crazy Joystick velocity
-#define MINION_SPEED 1
-#define BOSS_SPEED 0.85
-#define KAMIKAZEE_MINION_SPEED 1.5
 
 #define BULLET_SPEED 3.5
 #define DELAY_BETWEEN_BULLETS 0.100   // seconds
@@ -52,9 +49,13 @@
 + (CGSize)size;
 + (CGPoint)playerInitLocation;
 + (void)setSize:(CGSize)size;
++ (CGFloat)minionSpeed;
++ (CGFloat)bossSpeed;
++ (CGFloat)kamikazeeMinionSpeed;
 
 // Class Methods
 + (GameViewController *)sharedInstance;
++ (void)increaseDifficulty;
 
 @property (nonatomic, readonly) Boolean isAtEndOfGame;
 

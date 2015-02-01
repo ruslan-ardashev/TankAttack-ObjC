@@ -73,9 +73,8 @@
 // Class Variables
 static GameViewController *sharedInstance;
 static CGSize gameSize;
-static CGFloat gameWidth;
-static CGFloat gameHeight;
-
+static CGFloat gameWidth, gameHeight;
+static CGFloat minionSpeed, bossSpeed, kamikazeeMinionSpeed;
 
 
 // Class Methods
@@ -111,6 +110,32 @@ static CGFloat gameHeight;
     
 }
 
++ (CGFloat)minionSpeed {
+    
+    return minionSpeed;
+    
+}
+
++ (CGFloat)bossSpeed {
+    
+    return bossSpeed;
+    
+}
+
++ (CGFloat)kamikazeeMinionSpeed {
+    
+    return kamikazeeMinionSpeed;
+    
+}
+
++ (void)setInitialDifficulty {
+    
+    minionSpeed = 1;
+    bossSpeed = 0.85;
+    kamikazeeMinionSpeed = 1.5;
+    
+}
+
 + (CGPoint)playerInitLocation {
     
     return CGPointMake(gameWidth/2, gameHeight/4);
@@ -120,6 +145,13 @@ static CGFloat gameHeight;
 + (GameViewController *)sharedInstance {
     
     return sharedInstance;
+    
+}
+
++ (void)increaseDifficulty {
+    
+    // Set game params to more difficult.
+    NSLog(@"IMPLEMENT [GameViewController increaseDifficulty]");
     
 }
 
