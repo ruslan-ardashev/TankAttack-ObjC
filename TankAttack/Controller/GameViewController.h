@@ -29,6 +29,7 @@
 #define BOSS_TANK_SCALE_FACTOR 0.50
 #define PLAYER_IMAGE_NAME @"tank"
 #define MINION_IMAGE_NAME @"minion"
+#define KAMIKAZEE_MINION_IMAGE_NAME @"kamikazeeminion"
 #define BOSS_IMAGE_NAME @"boss"
 
 #define START_LEVEL 0

@@ -12,7 +12,7 @@
 
 - (id)initWithX:(double)x WithY:(double)y IntoWorld:(World *)world {
     
-    self = [super initWithImageNamed:MINION_IMAGE_NAME];
+    self = [super initWithImageNamed:KAMIKAZEE_MINION_IMAGE_NAME];
     
     if (self) {
         
