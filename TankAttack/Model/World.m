@@ -69,7 +69,7 @@
     
     _maximumLevelsDefeated = [[SKLabelNode alloc] initWithFontNamed:DEFAULT_FONT];
     [_maximumLevelsDefeated setFontSize:20];
-    [_maximumLevelsDefeated setPosition:CGPointMake(self.size.width*.22, self.size.height*9.7/10)];
+    [_maximumLevelsDefeated setPosition:CGPointMake(self.size.width*.24, self.size.height*9.7/10)];
     [_maximumLevelsDefeated setZPosition:5.0];
     
     NSString *levelsDefeated = [NSString stringWithFormat:@"Levels Defeated: %ld", (long)[[GameViewController sharedInstance] maximumLevelsDefeated]];
