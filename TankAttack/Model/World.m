@@ -18,6 +18,8 @@
     SKLabelNode *_failureLabel;
     SKLabelNode *_successLabel;
     
+    SKLabelNode *_maximumLevelsDefeated;
+    
 }
 
 - (id)initWithSize:(CGSize)size {
@@ -47,6 +49,7 @@
 - (SKScene *)createScene {
     
     [self createControllerOverlayAndPlayerSprite];
+    [self createMaximumLevelsDefeated];
     [self createInitialSprites];
     
     return self;
@@ -59,6 +62,22 @@
     
     [NSException raise:NSInternalInconsistencyException
                 format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)];
+    
+}
+
+- (void)createMaximumLevelsDefeated {
+    
+    _maximumLevelsDefeated = [[SKLabelNode alloc] initWithFontNamed:DEFAULT_FONT];
+    [_maximumLevelsDefeated setFontSize:20];
+    [_maximumLevelsDefeated setPosition:CGPointMake(self.size.width*.22, self.size.height*9.7/10)];
+    [_maximumLevelsDefeated setZPosition:5.0];
+    
+    NSString *levelsDefeated = [NSString stringWithFormat:@"Levels Defeated: %ld", (long)[[GameViewController sharedInstance] maximumLevelsDefeated]];
+    
+    _maximumLevelsDefeated.text = levelsDefeated;
+    _maximumLevelsDefeated.fontColor = [UIColor blackColor];
+    
+    [self addChild:_maximumLevelsDefeated];
     
 }
 
@@ -395,7 +414,7 @@
 
 - (void)backToMainMenu {
     
-    SKAction *wait = [SKAction waitForDuration:4.00];
+    SKAction *wait = [SKAction waitForDuration:3.00];
     SKAction *replace = [SKAction performSelector:@selector(displayMainMenu) onTarget:[GameViewController sharedInstance]];
     
     SKAction *sequence = [SKAction sequence:@[wait, replace]];
@@ -406,36 +425,12 @@
 
 - (void)progressNextLevel {
     
-    SKAction *wait = [SKAction waitForDuration:4.00];
-    SKAction *nextLevel = [SKAction performSelector:@selector(progressToNextLevel) onTarget:[GameViewController sharedInstance]];
-    
-    SKAction *replaceSuccessWithEnd = [SKAction performSelector:@selector(displayEndOfGame) onTarget:self];
+    SKAction *wait = [SKAction waitForDuration:3.00];
+    SKAction *nextLevel = [SKAction performSelector:@selector(stepWorld) onTarget:[GameViewController sharedInstance]];
     
     SKAction *sequence = [SKAction sequence:@[wait, nextLevel]];
-    SKAction *sequenceEndGame = [SKAction sequence:@[wait, replaceSuccessWithEnd, wait, nextLevel]];
-    
-    if ([[GameViewController sharedInstance] isAtEndOfGame]) {
-        
-        [self runAction:sequenceEndGame];
-        
-    }
-    
-    else {
-        
-        [self runAction:sequence];
-        
-    }
-    
-}
 
-- (void)displayEndOfGame {
-    
-    [_successLabel removeFromParent];
-    
-    SKLabelNode *endGameLabel = [self createLabelAtCenter];
-    endGameLabel.text = @"GAME DEFEATED!";
-    endGameLabel.fontSize = 40;
-    endGameLabel.fontColor = [UIColor greenColor];
+    [self runAction:sequence];
     
 }
 
