@@ -41,6 +41,8 @@
         // Create more worlds based
         [self setWorldArray:[[WorldArray alloc] init]];
         
+        currentWorld = [self.worldArray currentWorld];
+        
     }
     
     
