@@ -18,11 +18,17 @@
 #import "SeventhWorld.h"
 #import "EighthWorld.h"
 
-@implementation WorldArray
+@implementation WorldArray {
+    
+    NSMutableArray *_supportingArray;
+    
+}
 
 - (id)init {
     
     if (self = [super init]) {
+        
+        _supportingArray = [[NSMutableArray alloc] init];
         
         [self allocateAndInitiateWorldsInBackground];
         return self;
@@ -52,7 +58,7 @@
     SeventhWorld *w7 = [[SeventhWorld alloc] initWithSize:gameSize];
     EighthWorld *w8 = [[EighthWorld alloc] initWithSize:gameSize];
     
-    [self addObjectsFromArray:@[w1, w2, w3, w4, w5, w6, w7, w8]];
+    [_supportingArray addObjectsFromArray:@[w1, w2, w3, w4, w5, w6, w7, w8]];
     
 }
 
@@ -60,7 +66,7 @@
     
     _currentWorldIndex++;
     
-    if (_currentWorldIndex > self.count) {
+    if (_currentWorldIndex > _supportingArray.count) {
         
         return nil;
         
@@ -68,7 +74,7 @@
     
     else {
         
-        return [self objectAtIndex:_currentWorldIndex];
+        return [_supportingArray objectAtIndex:_currentWorldIndex];
         
     }
     

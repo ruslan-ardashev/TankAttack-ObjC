@@ -6,12 +6,11 @@
 //  Copyright (c) 2015 Ruslan Ardashev. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
 
 @class World;
 
-@interface WorldArray : NSMutableArray
+@interface WorldArray : NSObject
 
 @property (readonly, nonatomic) int currentWorldIndex;
 
