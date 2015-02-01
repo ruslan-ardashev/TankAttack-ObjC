@@ -307,49 +307,42 @@ static CGFloat minionSpeed, bossSpeed, kamikazeeMinionSpeed;
 
 - (void)displayLevelTwo {
     
-    _currWorld = [_worlds objectAtIndex:1];
     [self initCurrWorld];
     
 }
 
 - (void)displayLevelThree {
     
-    _currWorld = [_worlds objectAtIndex:2];
     [self initCurrWorld];
     
 }
 
 - (void)displayLevelFour {
     
-    _currWorld = [_worlds objectAtIndex:3];
     [self initCurrWorld];
     
 }
 
 - (void)displayLevelFive {
     
-    _currWorld = [_worlds objectAtIndex:4];
     [self initCurrWorld];
     
 }
 
 - (void)displayLevelSix {
     
-    _currWorld = [_worlds objectAtIndex:5];
     [self initCurrWorld];
     
 }
 
 - (void)displayLevelSeven {
     
-    _currWorld = [_worlds objectAtIndex:6];
     [self initCurrWorld];
     
 }
 
 - (void)displayLevelEight {
     
-    _currWorld = [_worlds objectAtIndex:7];
     [self initCurrWorld];
     
 }
