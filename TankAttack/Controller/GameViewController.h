@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
+#import "UIColor_HexColor.h"
 
 #define BACKGROUND_GREEN_COLOR @"#629632"
 
@@ -31,12 +32,6 @@
 
 #define START_LEVEL 0
 
-
-@interface UIColor (HexColor)
-
-+ (UIColor *)UIColorFromHexString:(NSString *)string;
-
-@end
 
 @interface GameViewController : UIViewController
 
