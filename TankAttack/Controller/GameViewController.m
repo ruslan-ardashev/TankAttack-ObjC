@@ -124,8 +124,9 @@ static CGFloat minionSpeed, bossSpeed, kamikazeeMinionSpeed;
 
 + (void)increaseDifficulty {
     
-    // Set game params to more difficult.
-    NSLog(@"IMPLEMENT [GameViewController increaseDifficulty]");
+    minionSpeed *= 1.2;
+    bossSpeed *= 1.2;
+    kamikazeeMinionSpeed *= 1.2;
     
 }
 
@@ -162,6 +163,7 @@ static CGFloat minionSpeed, bossSpeed, kamikazeeMinionSpeed;
 
 - (void)allocateAndInitiateWorldsInBackground {
     
+    _maximumLevelsDefeated = -1;                    // NOT 0, it's incremented on every world scene call.
     _worldManager = [[WorldManager alloc] init];
     
 }
