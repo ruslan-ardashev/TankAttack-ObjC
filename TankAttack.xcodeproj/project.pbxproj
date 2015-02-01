@@ -42,6 +42,7 @@
 		44C2C59E1A7D6A1C00FECD92 /* EighthWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2C59D1A7D6A1C00FECD92 /* EighthWorld.m */; };
 		44C2C5A11A7DA95B00FECD92 /* WorldArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2C5A01A7DA95B00FECD92 /* WorldArray.m */; };
 		44C2C5A41A7DACB800FECD92 /* WorldManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2C5A31A7DACB800FECD92 /* WorldManager.m */; };
+		44C2C5A81A7DC49100FECD92 /* UIColor_HexColor.m.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2C5A71A7DC49100FECD92 /* UIColor_HexColor.m.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,8 @@
 		44C2C5A01A7DA95B00FECD92 /* WorldArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldArray.m; sourceTree = "<group>"; };
 		44C2C5A21A7DACB800FECD92 /* WorldManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldManager.h; sourceTree = "<group>"; };
 		44C2C5A31A7DACB800FECD92 /* WorldManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldManager.m; sourceTree = "<group>"; };
+		44C2C5A61A7DC49100FECD92 /* UIColor_HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColor_HexColor.h; sourceTree = "<group>"; };
+		44C2C5A71A7DC49100FECD92 /* UIColor_HexColor.m.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColor_HexColor.m.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,14 +285,13 @@
 		442D361D1A6840CE0017DDF6 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				44C2C5A61A7DC49100FECD92 /* UIColor_HexColor.h */,
+				44C2C5A71A7DC49100FECD92 /* UIColor_HexColor.m.m */,
 				442D361E1A6840CE0017DDF6 /* GameViewController.h */,
 				442D361F1A6840CE0017DDF6 /* GameViewController.m */,
 				442D36231A6849680017DDF6 /* SplashScreen.h */,
 				442D36241A6849680017DDF6 /* SplashScreen.m */,
-				44C2C59F1A7DA95B00FECD92 /* WorldArray.h */,
-				44C2C5A01A7DA95B00FECD92 /* WorldArray.m */,
-				44C2C5A21A7DACB800FECD92 /* WorldManager.h */,
-				44C2C5A31A7DACB800FECD92 /* WorldManager.m */,
+				44C2C5A51A7DC41000FECD92 /* Data Structures */,
 			);
 			name = Game;
 			path = Controller;
@@ -313,6 +315,17 @@
 				442D36001A683F7B0017DDF6 /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		44C2C5A51A7DC41000FECD92 /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				44C2C59F1A7DA95B00FECD92 /* WorldArray.h */,
+				44C2C5A01A7DA95B00FECD92 /* WorldArray.m */,
+				44C2C5A21A7DACB800FECD92 /* WorldManager.h */,
+				44C2C5A31A7DACB800FECD92 /* WorldManager.m */,
+			);
+			name = "Data Structures";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,6 +446,7 @@
 				440351AD1A6AE03300031138 /* Sprite.m in Sources */,
 				44795E071A7C098E00A48E1B /* SillyBoss.m in Sources */,
 				44795E041A7AF9C800A48E1B /* SeventhWorld.m in Sources */,
+				44C2C5A81A7DC49100FECD92 /* UIColor_HexColor.m.m in Sources */,
 				441451E11A68858200D481C0 /* Joystick.m in Sources */,
 				440351B01A6AE66E00031138 /* Boss.m in Sources */,
 				44C2C5A11A7DA95B00FECD92 /* WorldArray.m in Sources */,
