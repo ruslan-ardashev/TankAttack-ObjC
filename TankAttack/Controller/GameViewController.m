@@ -104,9 +104,9 @@ static CGFloat minionSpeed, bossSpeed, kamikazeeMinionSpeed;
 
 + (void)setInitialDifficulty {
     
-    minionSpeed = 1;
-    bossSpeed = 0.85;
-    kamikazeeMinionSpeed = 1.5;
+    minionSpeed = .7;
+    bossSpeed = 0.6;
+    kamikazeeMinionSpeed = .8;
     
 }
 
@@ -124,9 +124,9 @@ static CGFloat minionSpeed, bossSpeed, kamikazeeMinionSpeed;
 
 + (void)increaseDifficulty {
     
-    minionSpeed *= 1.2;
-    bossSpeed *= 1.2;
-    kamikazeeMinionSpeed *= 1.2;
+    minionSpeed += .15;
+    bossSpeed += .15;
+    kamikazeeMinionSpeed += .15;
     
 }
 
