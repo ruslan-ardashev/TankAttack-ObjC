@@ -38,9 +38,8 @@
     SKScene *_scene;
     World *_currWorld;
     SKScene *_splashScreen;
-    NSMutableArray *_worlds;
     
-    int _currentWorldIndex;
+    WorldManager *_worldManager;
     
 }
 
@@ -138,7 +137,9 @@ static CGFloat minionSpeed, bossSpeed, kamikazeeMinionSpeed;
     
     sharedInstance = self;
     
-    [self configureGameParameters];
+    [GameViewController setSize:self.view.frame.size];
+    [GameViewController setInitialDifficulty];
+    
     [self configureAndShowSKView];                  // The JavaFX equivalent of SKView is Stage
     [self configureSplashScreen];
     
@@ -155,42 +156,19 @@ static CGFloat minionSpeed, bossSpeed, kamikazeeMinionSpeed;
     // Present the scene.
     [_view presentScene:_splashScreen];
     [self allocateAndInitiateWorldsInBackground];
-    
-}
-
-- (void)configureGameParameters {
-        
-    // Size
-    [GameViewController setSize:self.view.frame.size];
+    [self resetLevelsTracking];
     
 }
 
 - (void)allocateAndInitiateWorldsInBackground {
     
-    _currentWorldIndex = 0;
+    _worldManager = [[WorldManager alloc] init];
     
-    FirstWorld *w1 = [[FirstWorld alloc] initWithSize:gameSize];
-    SecondWorld *w2 = [[SecondWorld alloc] initWithSize:gameSize];
-    ThirdWorld *w3 = [[ThirdWorld alloc] initWithSize:gameSize];
-    FourthWorld *w4 = [[FourthWorld alloc] initWithSize:gameSize];
-    FifthWorld *w5 = [[FifthWorld alloc] initWithSize:gameSize];
-    SixthWorld *w6 = [[SixthWorld alloc] initWithSize:gameSize];
-    SeventhWorld *w7 = [[SeventhWorld alloc] initWithSize:gameSize];
-    EighthWorld *w8 = [[EighthWorld alloc] initWithSize:gameSize];
+}
+
+- (void)resetLevelsTracking {
     
-    if (_worlds == nil) {
-        
-        _worlds = [[NSMutableArray alloc] initWithObjects:w1, w2, w3, w4, w5, w6, w7, w8, nil];
-        
-    }
-    
-    // Just lost a level. Get rid of what's already there.
-    else  {
-        
-        [_worlds removeAllObjects];
-        _worlds = [NSMutableArray arrayWithObjects:w1, w2, w3, w4, w5, w6, w7, w8, nil];
-        
-    }
+    [self setMaximumLevelsDefeated:0];
     
 }
 
@@ -246,104 +224,12 @@ static CGFloat minionSpeed, bossSpeed, kamikazeeMinionSpeed;
     
 }
 
-- (void)startGame {
+- (void)stepWorld {
     
-    _isAtEndOfGame = false;
+    _maximumLevelsDefeated++;
     
-    if (_worlds == nil) {
-        NSLog(@"Resources not loaded yet.");
-        return;
-    }
-    
-    else {
-        
-        _currWorld = [_worlds objectAtIndex:START_LEVEL];
-        [self initCurrWorld];
-        
-    }
-    
-}
-
-- (void)initCurrWorld {
-    
-    _scene = [_currWorld createScene];
+    _scene = [_worldManager getSceneToDisplay];
     [_view presentScene:_scene];
-    
-}
-
-- (void)progressToNextLevel {
-    
-    _currentWorldIndex++;
-    
-    switch (_currentWorldIndex) {
-        case 1:
-            [self displayLevelTwo];
-            break;
-        case 2:
-            [self displayLevelThree];
-            break;
-        case 3:
-            [self displayLevelFour];
-            break;
-        case 4:
-            [self displayLevelFive];
-            break;
-        case 5:
-            [self displayLevelSix];
-            break;
-        case 6:
-            [self displayLevelSeven];
-            break;
-        case 7:
-            _isAtEndOfGame = true;
-            [self displayLevelEight];
-            break;
-        default:
-            [self displayMainMenu];
-            break;
-    }
-    
-}
-
-- (void)displayLevelTwo {
-    
-    [self initCurrWorld];
-    
-}
-
-- (void)displayLevelThree {
-    
-    [self initCurrWorld];
-    
-}
-
-- (void)displayLevelFour {
-    
-    [self initCurrWorld];
-    
-}
-
-- (void)displayLevelFive {
-    
-    [self initCurrWorld];
-    
-}
-
-- (void)displayLevelSix {
-    
-    [self initCurrWorld];
-    
-}
-
-- (void)displayLevelSeven {
-    
-    [self initCurrWorld];
-    
-}
-
-- (void)displayLevelEight {
-    
-    [self initCurrWorld];
     
 }
 

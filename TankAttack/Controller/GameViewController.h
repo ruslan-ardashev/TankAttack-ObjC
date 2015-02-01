@@ -35,6 +35,8 @@
 
 @interface GameViewController : UIViewController
 
+@property (nonatomic) NSInteger maximumLevelsDefeated;
+
 // Tank Color
 + (UIColor *)tankColor;
 
@@ -52,12 +54,10 @@
 + (GameViewController *)sharedInstance;
 + (void)increaseDifficulty;
 
-@property (nonatomic, readonly) Boolean isAtEndOfGame;
-
 // Instance Methods
-- (void)startGame;
+
+- (void)stepWorld;
 - (void)displayMainMenu;
-- (void)progressToNextLevel;
 
 @end
 

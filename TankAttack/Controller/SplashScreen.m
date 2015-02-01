@@ -196,7 +196,7 @@
     
     if ([_pressedLabel.text isEqualToString:@"START"]) {
         
-        [[GameViewController sharedInstance] startGame];
+        [[GameViewController sharedInstance] stepWorld];
         
     }
     
