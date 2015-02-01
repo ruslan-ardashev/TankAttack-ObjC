@@ -58,7 +58,8 @@
     SeventhWorld *w7 = [[SeventhWorld alloc] initWithSize:gameSize];
     EighthWorld *w8 = [[EighthWorld alloc] initWithSize:gameSize];
     
-    [_supportingArray addObjectsFromArray:@[w1, w2, w3, w4, w5, w6, w7, w8]];
+    // Includes a bogus object at the beginning. _currentWorldIndex++; below is the reason.
+    [_supportingArray addObjectsFromArray:@[@"", w1, w2, w3, w4, w5, w6, w7, w8]];
     
 }
 
