@@ -9,15 +9,7 @@
 #import "GameViewController.h"
 #import "SplashScreen.h"
 #import "World.h"
-#import "FirstWorld.h"
-#import "SecondWorld.h"
-#import "ThirdWorld.h"
-#import "FourthWorld.h"
-#import "FifthWorld.h"
-#import "SixthWorld.h"
-#import "SeventhWorld.h"
-#import "EighthWorld.h"
-
+#import "WorldManager.h"
 
 @implementation UIColor (HexColor)
 
