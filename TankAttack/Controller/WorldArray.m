@@ -66,7 +66,7 @@
     
     _currentWorldIndex++;
     
-    if (_currentWorldIndex > _supportingArray.count) {
+    if (_currentWorldIndex >= _supportingArray.count) {
         
         return nil;
         
