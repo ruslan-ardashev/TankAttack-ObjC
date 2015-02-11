@@ -46,44 +46,13 @@
 
 // Class Variables
 static GameViewController *sharedInstance;
-static CGSize gameSize;
-static CGFloat gameWidth, gameHeight;
+
+// Sprite-Specific
 static CGFloat minionSpeed, bossSpeed, kamikazeeMinionSpeed;
 
 
 // Class Methods
-+ (UIColor *)tankColor {
-    
-    return [UIColor UIColorFromHexString:@"#003f00"];
-    
-}
-
-+ (CGFloat)width {
-    
-    return gameWidth;
-    
-}
-
-+ (CGFloat)height {
-    
-    return gameHeight;
-    
-}
-
-+ (CGSize)size {
-    
-    return gameSize;
-    
-}
-
-+ (void)setSize:(CGSize)size {
-    
-    gameSize = size;
-    gameWidth = size.width;
-    gameHeight = size.height;
-    
-}
-
+// Sprite-Specific
 + (CGFloat)minionSpeed {
     
     return minionSpeed;
@@ -112,7 +81,7 @@ static CGFloat minionSpeed, bossSpeed, kamikazeeMinionSpeed;
 
 + (CGPoint)playerInitLocation {
     
-    return CGPointMake(gameWidth/2, gameHeight/4);
+    return CGPointMake([ScalingManager width]/2, [ScalingManager height]/3);
     
 }
 
@@ -138,7 +107,8 @@ static CGFloat minionSpeed, bossSpeed, kamikazeeMinionSpeed;
     
     sharedInstance = self;
     
-    [GameViewController setSize:self.view.frame.size];
+    [ScalingManager setSize:[[UIScreen mainScreen] bounds].size];
+    
     [GameViewController setInitialDifficulty];
     
     [self configureAndShowSKView];                  // The JavaFX equivalent of SKView is Stage
@@ -187,13 +157,38 @@ static CGFloat minionSpeed, bossSpeed, kamikazeeMinionSpeed;
 - (void)configureSplashScreen {
     
     // Create and configure the scene.
-    _splashScreen = [[SplashScreen alloc] initWithSize:gameSize];       // The JavaFX equivalent of SKScene is Scene
+    _splashScreen = [[SplashScreen alloc] initWithSize:[ScalingManager size]];       // The JavaFX equivalent of SKScene is Scene
 
 }
 
 - (void)displayScene:(SKScene *)scene {
     
     [_view presentScene:scene];
+    
+}
+
+- (void)presentControlScreen {
+    
+    [ScalingManager TitleFontSize];
+    
+//    CGRect smallerRect = CGRectMake(0, 0, gameSize.width, gameSize.height/4);
+//    
+//    UIView *modalView = [[UIView alloc] initWithFrame:smallerRect];
+//    
+//    [modalView setAutoresizesSubviews:NO];
+//    [modalView setBounds:smallerRect];
+//    [modalView setFrame:smallerRect];
+////    [modalView set];
+//    
+//    [modalView setBackgroundColor:[UIColor blueColor]];
+//    
+//    UIViewController *presentedControlScreenController = [[UIViewController alloc] init];
+//    
+//    [presentedControlScreenController setView:modalView];
+//    
+////    UIPresentationController *presentationController = [[UIPresentationController alloc] initWithPresentedViewController:presentedControlScreenController presentingViewController:self];
+//    
+//    [self presentViewController:presentedControlScreenController animated:YES completion:^{}];
     
 }
 
