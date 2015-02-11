@@ -68,7 +68,7 @@
 - (void)createMaximumLevelsDefeated {
     
     _maximumLevelsDefeated = [[SKLabelNode alloc] initWithFontNamed:DEFAULT_FONT];
-    [_maximumLevelsDefeated setFontSize:20];
+    [_maximumLevelsDefeated setFontSize:[ScalingManager CurrentLevelFontSize]];
     [_maximumLevelsDefeated setPosition:CGPointMake(self.size.width*.24, self.size.height*9.7/10)];
     [_maximumLevelsDefeated setZPosition:5.0];
     
@@ -403,8 +403,8 @@
     
     SKLabelNode *returnLabel = [[SKLabelNode alloc] initWithFontNamed:DEFAULT_FONT];
     
-    [returnLabel setFontSize:65];
-    [returnLabel setPosition:CGPointMake([GameViewController width]/2, [GameViewController height]/2)];
+    [returnLabel setFontSize:[ScalingManager LevelOverFontSize]];
+    [returnLabel setPosition:CGPointMake([ScalingManager width]/2, [ScalingManager height]/2)];
     [returnLabel setZPosition:5.0];
     [self addChild:returnLabel];
     

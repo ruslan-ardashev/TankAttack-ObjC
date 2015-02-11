@@ -20,7 +20,7 @@
         
         [self initHealthBar];
         [self setPosition:CGPointMake(x, y)];
-        [self setScale:BOSS_TANK_SCALE_FACTOR];
+        [self setScale:[ScalingManager largeTankScaleFactor]];
         
 //        [world addChild:self];
         

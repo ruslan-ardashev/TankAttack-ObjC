@@ -30,8 +30,9 @@
         
         [self setName:@"playerSprite"];
         [self initHealthBar];                       // HAS to go before scaling
-        [self setScale:SMALL_TANK_SCALE_FACTOR];
-        [self setPosition:location];
+        
+        [self initializeScreenRelatedParametersWithLocation:location];
+        
         [self setUserInteractionEnabled:NO];
         return self;
         
@@ -45,9 +46,31 @@
     
 }
 
+- (void)initializeScreenRelatedParametersWithLocation:(CGPoint)location {
+    
+    [self setScale:[ScalingManager smallTankScaleFactor]];
+    
+    // 6 Plus fractional size: 0.154589
+    // 6 fractional size: 0.170667
+    // 5 fractional size: 0.200000
+    // 4S fractional size: 0.200000
+    
+    // NSLog(@"size player: %f, %f, fractional size: %f", self.size.width, self.size.height, self.size.width / [ScalingManager size].width);
+    
+    [self setPosition:location];
+    
+    // 6P x location: 207.000000, y location: 245.333333, % up screen: 0.333333, % width screen: 0.500000
+    // 6  x location: 187.500000, y location: 222.333333, % up screen: 0.333333, % width screen: 0.500000
+    // 5  x location: 160.000000, y location: 189.333328, % up screen: 0.333333, % width screen: 0.500000
+    // 4S x location: 160.000000, y location: 160.000000, % up screen: 0.333333, % width screen: 0.500000
+    
+    // NSLog(@"x location: %f, y location: %f, %% up screen: %f, %% width screen: %f", location.x, location.y, location.y / [ScalingManager size].height, location.x / [ScalingManager size].width);
+    
+}
+
 
 - (void)initHealthBar {
-        
+    
     HealthBar *hb = [[HealthBar alloc] initWithHealth:100.0 WithParentWidth:self.size.width WithParentHeight:self.size.height WithParent:self];
     [self setHealthBar:hb];
     

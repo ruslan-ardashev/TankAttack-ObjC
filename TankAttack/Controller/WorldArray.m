@@ -47,7 +47,7 @@
     
     _currentWorldIndex = 0;
     
-    CGSize gameSize = [GameViewController size];
+    CGSize gameSize = [ScalingManager size];
     
     FirstWorld *w1 = [[FirstWorld alloc] initWithSize:gameSize];
     SecondWorld *w2 = [[SecondWorld alloc] initWithSize:gameSize];
