@@ -7,7 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface ScalingManager : NSObject
+
+// Game Parameters
++ (CGFloat)width;
++ (CGFloat)height;
++ (CGSize)size;
++ (void)setSize:(CGSize)size;
+
+// Scaling Parameters
++ (int)TitleFontSize;
++ (int)ButtonFontSize;
++ (int)LevelOverFontSize;
++ (int)CurrentLevelFontSize;
++ (CGFloat)smallTankScaleFactor;
++ (CGFloat)largeTankScaleFactor;
 
 @end
