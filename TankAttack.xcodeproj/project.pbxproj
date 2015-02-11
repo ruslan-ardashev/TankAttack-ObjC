@@ -35,6 +35,7 @@
 		442D36131A683F7C0017DDF6 /* TankAttackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D36121A683F7C0017DDF6 /* TankAttackTests.m */; };
 		442D36221A6840CE0017DDF6 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D361F1A6840CE0017DDF6 /* GameViewController.m */; };
 		442D36251A6849680017DDF6 /* SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 442D36241A6849680017DDF6 /* SplashScreen.m */; };
+		443818F71A8A7B2A008CF92C /* ScalingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 443818F61A8A7B2A008CF92C /* ScalingManager.m */; };
 		44795DFE1A7AF98F00A48E1B /* FifthWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 44795DFD1A7AF98F00A48E1B /* FifthWorld.m */; };
 		44795E011A7AF9BF00A48E1B /* SixthWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 44795E001A7AF9BF00A48E1B /* SixthWorld.m */; };
 		44795E041A7AF9C800A48E1B /* SeventhWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 44795E031A7AF9C800A48E1B /* SeventhWorld.m */; };
@@ -42,7 +43,7 @@
 		44C2C59E1A7D6A1C00FECD92 /* EighthWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2C59D1A7D6A1C00FECD92 /* EighthWorld.m */; };
 		44C2C5A11A7DA95B00FECD92 /* WorldArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2C5A01A7DA95B00FECD92 /* WorldArray.m */; };
 		44C2C5A41A7DACB800FECD92 /* WorldManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2C5A31A7DACB800FECD92 /* WorldManager.m */; };
-		44C2C5A81A7DC49100FECD92 /* UIColor_HexColor.m.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2C5A71A7DC49100FECD92 /* UIColor_HexColor.m.m */; };
+		44C2C5A81A7DC49100FECD92 /* UIColor_HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C2C5A71A7DC49100FECD92 /* UIColor_HexColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,8 @@
 		442D361F1A6840CE0017DDF6 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		442D36231A6849680017DDF6 /* SplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreen.h; sourceTree = "<group>"; };
 		442D36241A6849680017DDF6 /* SplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreen.m; sourceTree = "<group>"; };
+		443818F51A8A7B2A008CF92C /* ScalingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScalingManager.h; sourceTree = "<group>"; };
+		443818F61A8A7B2A008CF92C /* ScalingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScalingManager.m; sourceTree = "<group>"; };
 		44795DFC1A7AF98F00A48E1B /* FifthWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FifthWorld.h; sourceTree = "<group>"; };
 		44795DFD1A7AF98F00A48E1B /* FifthWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FifthWorld.m; sourceTree = "<group>"; };
 		44795DFF1A7AF9BF00A48E1B /* SixthWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SixthWorld.h; sourceTree = "<group>"; };
@@ -121,7 +124,7 @@
 		44C2C5A21A7DACB800FECD92 /* WorldManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldManager.h; sourceTree = "<group>"; };
 		44C2C5A31A7DACB800FECD92 /* WorldManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldManager.m; sourceTree = "<group>"; };
 		44C2C5A61A7DC49100FECD92 /* UIColor_HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColor_HexColor.h; sourceTree = "<group>"; };
-		44C2C5A71A7DC49100FECD92 /* UIColor_HexColor.m.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColor_HexColor.m.m; sourceTree = "<group>"; };
+		44C2C5A71A7DC49100FECD92 /* UIColor_HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColor_HexColor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,10 +150,6 @@
 			children = (
 				440351B11A6C47C300031138 /* KamikazeeMinion.m */,
 				440351B21A6C47C300031138 /* KamikazeeMinion.h */,
-				441451F51A68D08B00D481C0 /* Player.h */,
-				441451F61A68D08B00D481C0 /* Player.m */,
-				4403519F1A6A53D200031138 /* BulletSprite.h */,
-				440351A01A6A53D200031138 /* BulletSprite.m */,
 				440351A51A6ACECF00031138 /* Minion.h */,
 				440351A61A6ACECF00031138 /* Minion.m */,
 				440351AE1A6AE66E00031138 /* Boss.h */,
@@ -201,13 +200,15 @@
 		441451F41A68D07000D481C0 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
-				440351B41A6C631F00031138 /* Subclasses */,
-				440351A21A6ACEC200031138 /* Enemy.h */,
-				440351A31A6ACEC200031138 /* Enemy.m */,
-				440351A81A6AD7B200031138 /* HealthBar.h */,
-				440351A91A6AD7B200031138 /* HealthBar.m */,
 				440351AB1A6AE03300031138 /* Sprite.h */,
 				440351AC1A6AE03300031138 /* Sprite.m */,
+				441451F51A68D08B00D481C0 /* Player.h */,
+				441451F61A68D08B00D481C0 /* Player.m */,
+				443818F21A8A72F7008CF92C /* Enemy */,
+				440351A81A6AD7B200031138 /* HealthBar.h */,
+				440351A91A6AD7B200031138 /* HealthBar.m */,
+				4403519F1A6A53D200031138 /* BulletSprite.h */,
+				440351A01A6A53D200031138 /* BulletSprite.m */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -217,6 +218,7 @@
 			children = (
 				441451F91A697D3400D481C0 /* Overlay.h */,
 				441451FA1A697D3400D481C0 /* Overlay.m */,
+				441451D71A68858200D481C0 /* Joystick */,
 			);
 			name = ControllerOverlay;
 			sourceTree = "<group>";
@@ -242,11 +244,10 @@
 		442D35F01A683F7B0017DDF6 /* TankAttack */ = {
 			isa = PBXGroup;
 			children = (
-				441451F81A697D1200D481C0 /* ControllerOverlay */,
-				441451F41A68D07000D481C0 /* Sprites */,
-				441451D71A68858200D481C0 /* Joystick */,
 				442D361D1A6840CE0017DDF6 /* Game */,
 				442D36201A6840CE0017DDF6 /* Worlds */,
+				441451F81A697D1200D481C0 /* ControllerOverlay */,
+				441451F41A68D07000D481C0 /* Sprites */,
 				442D36211A6840CE0017DDF6 /* View */,
 				442D35F51A683F7B0017DDF6 /* AppDelegate.h */,
 				442D35F61A683F7B0017DDF6 /* AppDelegate.m */,
@@ -285,13 +286,10 @@
 		442D361D1A6840CE0017DDF6 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				44C2C5A61A7DC49100FECD92 /* UIColor_HexColor.h */,
-				44C2C5A71A7DC49100FECD92 /* UIColor_HexColor.m.m */,
 				442D361E1A6840CE0017DDF6 /* GameViewController.h */,
 				442D361F1A6840CE0017DDF6 /* GameViewController.m */,
-				442D36231A6849680017DDF6 /* SplashScreen.h */,
-				442D36241A6849680017DDF6 /* SplashScreen.m */,
-				44C2C5A51A7DC41000FECD92 /* Data Structures */,
+				443818F41A8A747C008CF92C /* SplashScreen */,
+				443818F31A8A73B8008CF92C /* Misc */,
 			);
 			name = Game;
 			path = Controller;
@@ -302,6 +300,7 @@
 			children = (
 				441451E51A68B16100D481C0 /* World.h */,
 				441451E61A68B16100D481C0 /* World.m */,
+				44C2C5A51A7DC41000FECD92 /* Data Structures */,
 				440351B51A6C633E00031138 /* Levels */,
 			);
 			name = Worlds;
@@ -317,6 +316,36 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		443818F21A8A72F7008CF92C /* Enemy */ = {
+			isa = PBXGroup;
+			children = (
+				440351A21A6ACEC200031138 /* Enemy.h */,
+				440351A31A6ACEC200031138 /* Enemy.m */,
+				440351B41A6C631F00031138 /* Subclasses */,
+			);
+			name = Enemy;
+			sourceTree = "<group>";
+		};
+		443818F31A8A73B8008CF92C /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				443818F51A8A7B2A008CF92C /* ScalingManager.h */,
+				443818F61A8A7B2A008CF92C /* ScalingManager.m */,
+				44C2C5A61A7DC49100FECD92 /* UIColor_HexColor.h */,
+				44C2C5A71A7DC49100FECD92 /* UIColor_HexColor.m */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
+		443818F41A8A747C008CF92C /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				442D36231A6849680017DDF6 /* SplashScreen.h */,
+				442D36241A6849680017DDF6 /* SplashScreen.m */,
+			);
+			name = SplashScreen;
+			sourceTree = "<group>";
+		};
 		44C2C5A51A7DC41000FECD92 /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +355,7 @@
 				44C2C5A31A7DACB800FECD92 /* WorldManager.m */,
 			);
 			name = "Data Structures";
+			path = ../Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,7 +476,8 @@
 				440351AD1A6AE03300031138 /* Sprite.m in Sources */,
 				44795E071A7C098E00A48E1B /* SillyBoss.m in Sources */,
 				44795E041A7AF9C800A48E1B /* SeventhWorld.m in Sources */,
-				44C2C5A81A7DC49100FECD92 /* UIColor_HexColor.m.m in Sources */,
+				443818F71A8A7B2A008CF92C /* ScalingManager.m in Sources */,
+				44C2C5A81A7DC49100FECD92 /* UIColor_HexColor.m in Sources */,
 				441451E11A68858200D481C0 /* Joystick.m in Sources */,
 				440351B01A6AE66E00031138 /* Boss.m in Sources */,
 				44C2C5A11A7DA95B00FECD92 /* WorldArray.m in Sources */,
