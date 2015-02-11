@@ -23,4 +23,10 @@
     
 }
 
++ (UIColor *)tankColor {
+    
+    return [UIColor UIColorFromHexString:@"#003f00"];
+    
+}
+
 @end

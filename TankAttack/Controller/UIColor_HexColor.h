@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+
+#define BACKGROUND_GREEN_COLOR @"#629632"
+
+
 @interface UIColor (HexColor)
 
 + (UIColor *)UIColorFromHexString:(NSString *)string;
+
+// Tank Color
++ (UIColor *)tankColor;
 
 @end
