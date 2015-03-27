@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>11AFA8A8-A1DE-45B5-9B49-28B6DE444213</string>
+	<string>9C57A8AC-921B-423F-9302-5454566416A4</string>
 	<key>IDESourceControlProjectName</key>
 	<string>TankAttack</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -20,7 +20,7 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>02FB32A7A3E2EB7AD9DDB23ADBEA3ACEE9028AFF</key>
-		<string>../../TankAttack/Joystick</string>
+		<string>../..TankAttack/Joystick</string>
 		<key>097E6A8CB2A047E911E0D1C3E817C16644718729</key>
 		<string>../..</string>
 	</dict>
