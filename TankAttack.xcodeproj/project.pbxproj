@@ -109,6 +109,7 @@
 		442D36241A6849680017DDF6 /* SplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreen.m; sourceTree = "<group>"; };
 		443818F51A8A7B2A008CF92C /* ScalingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScalingManager.h; path = Controller/ScalingManager.h; sourceTree = "<group>"; };
 		443818F61A8A7B2A008CF92C /* ScalingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScalingManager.m; path = Controller/ScalingManager.m; sourceTree = "<group>"; };
+		446393EE1AC637BB005A3010 /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Defines.h; path = resources/Defines.h; sourceTree = "<group>"; };
 		44795DFC1A7AF98F00A48E1B /* FifthWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FifthWorld.h; sourceTree = "<group>"; };
 		44795DFD1A7AF98F00A48E1B /* FifthWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FifthWorld.m; sourceTree = "<group>"; };
 		44795DFF1A7AF9BF00A48E1B /* SixthWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SixthWorld.h; sourceTree = "<group>"; };
@@ -212,10 +213,10 @@
 		442D35F01A683F7B0017DDF6 /* TankAttack */ = {
 			isa = PBXGroup;
 			children = (
-				446393EC1AC624FA005A3010 /* main */,
 				442D36031A683F7C0017DDF6 /* Images.xcassets */,
 				441451F81A697D1200D481C0 /* controllerOverlay */,
 				442D361D1A6840CE0017DDF6 /* gameViewController */,
+				446393EC1AC624FA005A3010 /* main */,
 				442D35F11A683F7B0017DDF6 /* resources */,
 				443818F41A8A747C008CF92C /* splashScreen */,
 				441451F41A68D07000D481C0 /* sprite */,
@@ -230,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				442D35F21A683F7B0017DDF6 /* Info.plist */,
+				446393EE1AC637BB005A3010 /* Defines.h */,
 			);
 			name = resources;
 			sourceTree = "<group>";
